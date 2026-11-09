@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10161c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Training">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACcElEQVR42u3bIW4CQRSAYSA4DKpBYBGcgHtwgFqSOlJdVd3gmmA5APfgBAgu0AvgaxvStMDOmx1mv9/zdgPfvgxp6Y+fpj3ptwbeAsEhOASH4BAcgkNwCA7BITgkOASH4FBgQ29Bu52WkyYvn+2/4u6t7/85HpRFBiJwPDaLUCLOHJXIiJgMh+CofW1EzIdDcHRgbSS/ChyCQ3AIDsEhOASH4BAcgkNwSHAIDsEhOASH4BAcgkNwCA4JDvX8yv6y0fa5ycvPqx0cWPw1pCNEhlgg0t0zR3IZGSbDITgqXRtdWB42hzqJI89jXfHysDkEh+AQHIJDcAgOwSE4BIfgkOAQHIJDcAgOwSE4BIfgEBwSHOq1/1vZ+frQ5OXHzcKHVCGOhix+DkGkHhxJWCBS4ZkjuYwMk+VAqlZxRD/clofNoepw5HmsLQ+bQ3AIDsEhOASH4JDgEByCQ3AIDsEhOASH4BAcEhyCQ3AIDsEhOASH4BAcgkOCQ3AIDsEhOASH4BAcgkNwCA4JDsEhOASH4BAcgkNwCA7BIcEhOASH4BAcgkNwCA7B8W/HzSLDHV9/lfNql+F+rr/KbP+V4X4SXsXmUC4c0cvj1vnRy+PW+dHLI+18m0MZccQtj/smxy2P+ybHLY/kk/vjp2nQvc7Xh6LAjbbP7bK46LScFMsiHEcSIsn3UEMiyfdQQyKhh5hwHHLmEByCQ4JDcAgOpW2YZMr7x6e3srTeXl/a3xxklFnzz2VABh/OHIJD5eBofupRsWfSQQmnYpX5bcVfZeXMITgEh+AQHIJDcAgOwSE4JDgEh+AQHIJDcAgOwSE41L2+AfOGegrz6PR2AAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACcElEQVR42u3bIW4CQRSAYSA4DKpBYBGcgHtwgFqSOlJdVd3gmmA5APfgBAgu0AvgaxvStMDOmx1mv9/zdgPfvgxp6Y+fpj3ptwbeAsEhOASH4BAcgkNwCA7BITgkOASH4FBgQ29Bu52WkyYvn+2/4u6t7/85HpRFBiJwPDaLUCLOHJXIiJgMh+CofW1EzIdDcHRgbSS/ChyCQ3AIDsEhOASH4BAcgkNwSHAIDsEhOASH4BAcgkNwCA4JDvX8yv6y0fa5ycvPqx0cWPw1pCNEhlgg0t0zR3IZGSbDITgqXRtdWB42hzqJI89jXfHysDkEh+AQHIJDcAgOwSE4BIfgkOAQHIJDcAgOwSE4BIfgEBwSHOq1/1vZ+frQ5OXHzcKHVCGOhix+DkGkHhxJWCBS4ZkjuYwMk+VAqlZxRD/clofNoepw5HmsLQ+bQ3AIDsEhOASH4JDgEByCQ3AIDsEhOASH4BAcEhyCQ3AIDsEhOASH4BAcgkOCQ3AIDsEhOASH4BAcgkNwCA4JDsEhOASH4BAcgkNwCA7BIcEhOASH4BAcgkNwCA7B8W/HzSLDHV9/lfNql+F+rr/KbP+V4X4SXsXmUC4c0cvj1vnRy+PW+dHLI+18m0MZccQtj/smxy2P+ybHLY/kk/vjp2nQvc7Xh6LAjbbP7bK46LScFMsiHEcSIsn3UEMiyfdQQyKhh5hwHHLmEByCQ4JDcAgOpW2YZMr7x6e3srTeXl/a3xxklFnzz2VABh/OHIJD5eBofupRsWfSQQmnYpX5bcVfZeXMITgEh+AQHIJDcAgOwSE4JDgEh+AQHIJDcAgOwSE41L2+AfOGegrz6PR2AAAAAElFTkSuQmCC">
+<title>Trainingsplanner</title>
+<style>
+:root{--bg:#eef1f4;--card:#fff;--text:#14202b;--muted:#5a6b7a;--line:#d5dde4;--f:#2a78d6;--l:#1baf7a;--s:#eb6834;--ft:#1f62b8;--lt:#137a55;--st:#b84a1c;--p0:#008300;--p1:#eda100;--p2:#6250d6;--p3:#e34948;--p4:#2a78d6;--r:#7b8794;--w:#8a3fbf;--hi:#fff6d6;--ac:#b8600c;--sub:#f5f7f9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161c;--card:#19222b;--text:#e8eef3;--muted:#93a3b2;--line:#2a3745;--f:#3987e5;--l:#199e70;--s:#d95926;--ft:#6c9bff;--lt:#4cc38a;--st:#f0905f;--p0:#008300;--p1:#c98500;--p2:#9085e9;--p3:#e66767;--p4:#3987e5;--r:#8a97a3;--w:#c58cf0;--hi:#3a3418;--ac:#f0a04b;--sub:#202b36;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161c;--card:#19222b;--text:#e8eef3;--muted:#93a3b2;--line:#2a3745;--f:#3987e5;--l:#199e70;--s:#d95926;--ft:#6c9bff;--lt:#4cc38a;--st:#f0905f;--p0:#008300;--p1:#c98500;--p2:#9085e9;--p3:#e66767;--p4:#3987e5;--r:#8a97a3;--w:#c58cf0;--hi:#3a3418;--ac:#f0a04b;--sub:#202b36;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{overflow-x:hidden;overscroll-behavior-x:none;max-width:100%}
+body{position:relative;touch-action:pan-y pinch-zoom}
+.tabs,.tbl,.chart{touch-action:pan-x pan-y pinch-zoom}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px 14px 40px}
+h1{font-size:1.5rem;margin:6px 0 6px;letter-spacing:-.01em}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tsw{display:flex;align-items:center;gap:8px;font:inherit;font-size:.88rem;font-weight:600;color:var(--text);background:none;border:0;padding:6px 2px;cursor:pointer}
+.tsw:focus-visible{outline:3px solid var(--f);outline-offset:2px;border-radius:8px}
+.trk{position:relative;width:40px;height:22px;border-radius:99px;background:var(--line);border:1px solid var(--line);transition:background .15s}
+.knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.35);transition:transform .15s}
+.tsw[aria-checked="true"] .trk{background:var(--w);border-color:var(--w)}
+.tsw[aria-checked="true"] .knob{transform:translateX(18px);background:#fff}
+.races{margin:0 0 12px;padding-left:1.1rem;font-size:.95rem}
+.mainG{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--w);border-radius:10px;padding:10px 12px;margin:4px 0 10px}
+.mainG .lbl{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.mainG b{font-size:1.15rem}
+.mainG .md{color:var(--muted);font-weight:600;white-space:nowrap}
+.mainG .md2{display:block;font-size:.88rem;color:var(--muted);margin-top:2px}
+.rcat{font-size:.8rem;color:var(--muted)}
+.prl{margin:0 0 8px;padding-left:1.1rem;font-size:.9rem;color:var(--muted)}
+.prl li{margin:0 0 2px}
+.vlbl{margin:0 0 2px;font-size:.85rem;font-weight:600;color:var(--muted)}
+.card.gcard{padding:0;overflow:hidden}
+.ghd{width:100%;display:flex;align-items:center;gap:10px;font:inherit;color:var(--text);background:none;border:0;padding:12px 14px;text-align:left;cursor:pointer}
+.ghd:focus-visible{outline:3px solid var(--f);outline-offset:-3px}
+.ghd .gt{flex:1;min-width:0}
+.ghd .gt b{display:block;font-size:1.02rem}
+.ghd .gt span{font-size:.85rem;color:var(--muted)}
+.ghd .pb,.rpc .pb{font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:99px;border:1px solid var(--line);white-space:nowrap}
+.ghd .pb.pA,.rpc .pb.pA{background:var(--w);border-color:var(--w);color:#fff}
+.ghd .pb.pT,.rpc .pb.pT{border-color:var(--w);color:var(--w)}
+.ghd .pb.pC,.rpc .pb.pC{border-style:dashed;color:var(--muted)}
+.ghd .chev{transition:transform .15s;color:var(--muted)}
+.gcard.open .chev{transform:rotate(180deg)}
+.gbody{padding:0 14px 12px;border-top:1px solid var(--line)}
+.gbody>.fld:first-child{margin-top:10px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:0 14px 10px;margin:0 -14px;-webkit-overflow-scrolling:touch}
+.tabs button{flex:0 0 auto;font:inherit;font-weight:600;padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+.tabs button.rest{border-style:dashed}
+.tabs button[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.tabs button:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.mnav{border-bottom:1px solid var(--line);margin-bottom:12px;padding-bottom:12px;flex-wrap:wrap;overflow:visible}
+.mnav button{flex:1 1 auto}
+.wk button{font-size:.9rem;padding:7px 12px}
+#sched[hidden]{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 12px;font-size:.85rem;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;background:var(--c)}
+.hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:10px 0 4px}
+.hd h2{margin:0;font-size:1.2rem}
+.tag{font-size:.8rem;font-weight:600;padding:2px 9px;border-radius:99px;background:var(--hi);border:1px solid var(--ac);white-space:nowrap}
+.range{font-weight:600;margin:0 0 4px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.92rem;margin:0 0 10px}
+.note b{display:block;font-size:.8rem;color:var(--muted);font-weight:600}
+.chips.wkm{margin:8px 0 0;align-items:center}
+.wkl{font-size:.8rem;font-weight:600;color:var(--muted)}
+main>section>.chips.wkm{margin:0 0 8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:10px}
+.day.today{background:var(--hi);outline:2px solid var(--ac)}
+.dh{font-weight:700;margin:0 0 8px;display:flex;gap:8px;align-items:center}
+.dh .dt{color:var(--muted);font-weight:500;font-size:.9rem}
+.avb{margin-left:auto;font:inherit;font-size:.78rem;font-weight:600;color:var(--muted);background:none;border:1px solid var(--line);border-radius:99px;padding:3px 9px;cursor:pointer;white-space:nowrap}
+.avb.cut{color:var(--ac);border-color:var(--ac)}
+.avb:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.avb+.add{margin-left:6px}
+.avin{display:flex;align-items:center;gap:4px;margin-top:6px;font-size:.78rem;font-weight:500;color:var(--muted)}
+.avin select{font:inherit;padding:4px 6px;text-align:left;text-align-last:left;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text)}
+.add{margin-left:auto;flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--sub);color:var(--text);font:inherit;font-size:1.3rem;font-weight:600;line-height:1;padding:0}
+.add:focus-visible,.edit:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.it{background:var(--sub);border-left:6px solid var(--r);border-radius:8px;padding:8px 10px}
+.it{position:relative}.it.hasck>.it-t{padding-right:30px}.it.hasck>.edit{margin-right:30px}
+.it+.it{margin-top:8px}
+.it.f{border-left-color:var(--f)}.it.l{border-left-color:var(--l)}.it.s{border-left-color:var(--s)}.it.w{border-left-color:var(--w)}
+.it.f .it-t{color:var(--ft)}.it.l .it-t{color:var(--lt)}.it.s .it-t{color:var(--st)}.it.w .it-t{color:var(--w)}
+.it-t{font-weight:700}
+.it.clk{cursor:pointer}
+.it.clk:hover{outline:1px solid var(--line)}
+.it.clk:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.advice{margin:6px 0 10px;padding:8px 10px;border-radius:8px;background:var(--hi);border:1px dashed var(--ac)}
+.advice b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ac)}
+.advice p{margin:2px 0 0!important;color:var(--text)!important;font-size:.88rem!important}
+.autol{display:inline-flex;flex-wrap:wrap;gap:0 6px;align-items:baseline;margin:3px 0 2px;padding:2px 8px;border-radius:6px;border:1px solid var(--ac);color:var(--ac);font-size:.75rem;font-weight:700}
+.autol span{font-weight:500}
+.chk{position:absolute;top:8px;right:10px;width:22px;height:22px;margin:0;display:flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--muted);background:none;color:#fff;font:inherit;font-size:.8rem;font-weight:800;line-height:1;padding:0;cursor:pointer}
+.chk.ok{background:var(--l);border-color:var(--l)}
+.it .chk.ok,.it .chk.sk{color:#fff}
+.chk.sk{background:var(--muted);border-color:var(--muted)}
+.chk:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.lgb{clear:left;display:inline-block;margin:4px 0 2px;font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:6px}
+.lgb.ok{color:var(--lt);border:1px solid var(--l)}
+.lgb.sk{color:var(--muted);border:1px solid var(--line)}
+.lgb.pend{color:var(--ac);border:1px dashed var(--ac)}
+.it.skipd{opacity:.6}
+.it.skipd .it-t{text-decoration:line-through}
+.pastl{margin-left:auto;font-size:.78rem;color:var(--muted)}
+.fitb{display:inline-block;margin-top:8px;font:inherit;font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+.edit{float:right;margin-left:8px;font:inherit;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+.dd{color:var(--muted);font-size:.93rem;margin-top:2px}
+.dd b{color:var(--text);font-weight:600}
+.sth{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin:4px 0 2px}
+.stl{list-style:none;margin:4px 0 0;padding:0;counter-reset:s}
+.stl li{padding:3px 0;line-height:1.4}
+.stl li.st{counter-increment:s;display:flex;gap:8px;align-items:flex-start}
+.stl li.st::before{content:"";flex:0 0 6px;width:6px;height:6px;margin-top:.55em;border-radius:50%;background:var(--muted)}
+.stl li.rep::before{align-self:center;margin-top:0}
+.sgrp{margin-top:6px;padding:6px 10px 6px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.sgrp+.sgrp{margin-top:8px}
+.sgh{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
+.stl .rx{font-weight:700;color:var(--text);min-width:2.2em;align-self:center}
+.stl .rb{flex:1;border-left:3px solid var(--muted);padding:2px 0 2px 10px}
+.it.f .stl .rb,.alt .stl .rb{border-left-color:var(--f)}.it.l .stl .rb{border-left-color:var(--l)}.it.s .stl .rb{border-left-color:var(--s)}.it.w .stl .rb{border-left-color:var(--w)}
+.stl .rr{font-size:.88rem}
+.stf{margin-top:4px;font-size:.85rem;font-weight:600;color:var(--text)}
+.snote{margin-top:4px;font-size:.85rem;font-style:italic}
+.alt .dd{color:inherit;margin-top:2px}
+.alt .dd b{color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:6px;padding:2px 8px}
+.alt{margin-top:8px;padding:6px 8px;border:1px dashed var(--f);border-radius:6px;font-size:.9rem;color:var(--muted)}
+.alt b{color:var(--ft)}
+.aform{margin-top:10px;border:1px dashed var(--ac);border-radius:10px;padding:10px}
+.aform .aft{font-weight:700;margin:0 0 8px}
+.aform p{font-size:.88rem;color:var(--muted);margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.card h2{font-size:1.05rem;margin:0 0 6px}
+.card h3{font-size:.95rem;margin:12px 0 6px}
+.card p{margin:0 0 8px;font-size:.92rem;color:var(--muted)}
+.card li{margin:0 0 6px;font-size:.95rem}
+.card ul{margin:0;padding-left:1.1rem}
+.fld{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.fld label{font-weight:600}
+.fld.sub label{font-weight:500;color:var(--muted);font-size:.9rem}
+.fld input,.fld select{width:7.5rem;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);text-align:right}
+.fld select{width:auto;max-width:11rem}
+.fld input:focus-visible,.fld select:focus-visible,.btn:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.btn{font:inherit;font-weight:600;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--text);margin:0 6px 6px 0}
+.btn.pri{background:var(--text);color:var(--bg);border-color:var(--text)}
+.warn{color:var(--ac);font-weight:600;font-size:.9rem;margin:6px 0 0}
+.ok{color:var(--l);font-weight:600;font-size:.9rem;margin:6px 0 0}
+.warnl{margin:6px 0 0;padding-left:1.1rem}
+.warnl li{margin:0 0 4px}
+.fld .two{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.fld .two select{max-width:15rem}
+.wtab{width:100%;min-width:0;border-collapse:collapse;margin:4px 0 8px;font-size:1rem;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.wtab th,.wtab td{border-bottom:2px solid var(--line);padding:10px;vertical-align:top}
+.wtab th{width:10.5rem;color:var(--text);font-weight:700;background:var(--sub);border-right:1px solid var(--line)}
+.wtab tr:last-child th,.wtab tr:last-child td{border-bottom:0}
+.wtab .slot{display:flex;align-items:center;gap:8px}
+.wtab .slot+.slot,.wtab .wwkm+.slot{margin-top:6px}
+.wtab .sn{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--sub);border:1px solid var(--line);font-size:.75rem;font-weight:600;color:var(--muted);display:flex;align-items:center;justify-content:center}
+.wtab select{flex:1;min-width:0;width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text)}
+.wtab select:focus-visible,.wwkm input:focus-visible{outline:3px solid var(--f);outline-offset:2px}
+.wtab thead th{background:var(--bg);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;padding:8px 10px;border-right:0}
+.wtab .c3{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}
+.wtab thead th.c2{width:auto}
+.wtab .avin select{flex:1 1 auto;width:auto;min-width:0;padding:4px 6px;font-size:.85rem}
+.sg{border:1px dashed var(--ac);border-radius:8px;padding:8px 10px;background:var(--hi)}
+.sg .sgl{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ac)}
+.sg ul{margin:4px 0 4px;padding-left:1.1rem;font-weight:600;font-size:.92rem}
+.sg li{margin:0 0 2px}
+.warnc{color:var(--ac)}
+.hint{margin:-4px 0 12px!important;font-size:.8rem!important;line-height:1.35;color:var(--muted);max-width:600px}
+.card.sec h3{margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
+.upd{margin:-8px 0 12px;font-size:.78rem;color:var(--muted);font-style:italic}
+.upd.old{color:var(--ac);font-style:normal;font-weight:600}
+.absr{border:1px solid var(--line);border-radius:8px;padding:10px 10px 4px;margin-bottom:8px;max-width:600px}
+.intro{margin:0 0 12px;font-size:.98rem;color:var(--muted)}
+.card.sec{scroll-margin-top:12px}
+.card.sec>.fld,.gbody .fld{max-width:600px}
+.card.sec>h2{font-size:1.2rem}
+.zdet{margin-top:6px}
+.zdet summary{padding:6px 0}
+.zdet .card{margin:8px 0 0}
+.sg li.same{font-weight:400;color:var(--muted)}
+.sg li em{font-style:normal;font-size:.72rem;font-weight:700;color:var(--ac);text-transform:uppercase;letter-spacing:.03em;margin-left:4px}
+.sg p{margin:4px 0 0;font-size:.85rem;color:var(--text)}
+.sgok{color:var(--lt);font-weight:600;font-size:.9rem}
+.wwkm{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 0 28px}
+.wwkm label{font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+@media (max-width:620px){.wtab thead{display:none}.wtab,.wtab tbody,.wtab tr,.wtab th,.wtab td{display:block;width:auto}.wtab th{border-right:0;border-bottom:1px solid var(--line);padding:8px 10px}.wtab .wwkm{margin-left:28px}}
+.wwkm input{width:4.2rem;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);text-align:right}
+.fld .two input{width:4.5rem}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:440px;font-size:.9rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.chart{position:relative;margin:4px 0 2px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .ax{fill:var(--muted);font-size:11px}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .bl{stroke:var(--muted);stroke-width:1}
+.chart .hit{fill:transparent;cursor:default}
+.chart .nowl{stroke:var(--text);stroke-width:2;stroke-dasharray:4 3}
+.chart .nowt{fill:var(--text);font-weight:600}
+.prog{height:10px;border-radius:99px;background:var(--sub);border:1px solid var(--line);overflow:hidden;margin:8px 0 4px}
+.prog i{display:block;height:100%;background:var(--w);border-radius:99px}
+.progl{margin:0 0 8px!important;font-size:.85rem}
+.chart .hit:hover,.chart .hit:focus{fill:var(--text);fill-opacity:.06;outline:none}
+.tip{position:absolute;z-index:2;pointer-events:none;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:.82rem;line-height:1.35;box-shadow:0 4px 14px rgba(0,0,0,.15);white-space:nowrap}
+.tip[hidden]{display:none}
+.tip b{display:block}
+.lgd{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem;color:var(--muted);margin:2px 0 6px}
+.lgd i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.lgd i.h{background-image:repeating-linear-gradient(135deg,transparent 0 3px,var(--card) 3px 5px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:4px 0 2px}
+.stat{background:var(--sub);border-radius:8px;padding:8px 10px}
+.stat b{display:block;font-size:1.25rem;letter-spacing:-.01em}
+.stat span{font-size:.82rem;color:var(--muted)}
+.phl{margin:8px 0 0;padding:0;list-style:none}
+.phl li{display:grid;grid-template-columns:14px 1fr;gap:10px;margin:0 0 10px}
+.phl li i{width:14px;height:14px;border-radius:3px;margin-top:3px}
+.phl b{display:block;font-size:.95rem}
+.phl span{display:block;font-size:.85rem;color:var(--muted)}
+.phl p{margin:2px 0 0;font-size:.9rem;color:var(--text)}
+details summary{cursor:pointer;font-weight:600}
+.ovc summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}.ovc summary::-webkit-details-marker{display:none}.ovc summary h2{margin:0}.ovc details[open]>summary{margin-bottom:8px}.ovc details[open] .chev{transform:rotate(180deg)}
+.rpc summary{list-style:none}.rpc summary::-webkit-details-marker{display:none}.rpc details[open] .chev{transform:rotate(180deg)}
+.rpc summary{display:flex;align-items:center;gap:10px}.rph{display:flex;flex-direction:column;flex:1;min-width:0}.rph span{font-weight:400;font-size:.85rem;color:var(--muted)}
+.rpin{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0 12px;margin:12px 0 4px}
+.rpin .fld{flex-direction:column;align-items:stretch;justify-content:flex-start;gap:4px}.rpin .fld label{font-size:.85rem}.rpin .fld input{width:100%;box-sizing:border-box;text-align:left}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><h1>Trainingsplanner</h1><button type="button" id="themeSw" class="tsw" role="switch" aria-checked="true" aria-label="Donkere modus"><span class="trk" aria-hidden="true"><span class="knob"></span></span><span class="tlb">Donker</span></button></div>
+<div id="goalsum"></div>
+<nav class="tabs mnav" id="mnav" aria-label="Menu"></nav>
+<div id="sched">
+<nav class="tabs wk" id="tabs" aria-label="Weken"></nav>
+<div class="legend">
+<span style="--c:var(--f)">Fietsen</span><span style="--c:var(--l)">Hardlopen</span><span style="--c:var(--s)">Zwemmen</span><span style="--c:var(--w)">Wedstrijd</span><span style="--c:var(--r)">Rust en overig</span>
+</div>
+</div>
+<section id="view"></section>
+</main>
+<script>
+//CORE-START
+var DAYS=["Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag","Zondag"];
+var DEF={ftp:"",p5:"",p10:"",ph:"",pm:"",cs:"",lg:"",hrm:"",lthr:""};
+var V={};for(var k0 in DEF)V[k0]=DEF[k0];
+var T={};
+var WW={h:"",t:"",d:[]};for(var w0=0;w0<7;w0++)WW.d.push({h:"",t:""});
+var ACT=[];
+var AV={d:["","","","","","",""],o:{}};
+var LOG={},FROZ={},ABS=[];
+function loadL(){try{var j=localStorage.getItem("tp-log");if(j){var o=JSON.parse(j);if(o.log)LOG=o.log;if(o.froz)FROZ=o.froz}}catch(e){}}
+function saveL(){try{localStorage.setItem("tp-log",JSON.stringify({log:LOG,froz:FROZ}))}catch(e){}}
+function lkey(ds,t){return ds+"|"+t}
+function avFor(ds,j){var v=AV.o[ds]!==undefined?AV.o[ds]:AV.d[j];return v===""||v===undefined?null:Math.max(0,numf(v))}
+/* Doeltempo’s en -snelheden altijd als bereik */
+function prR(x){return fmt(x-3)+"–"+fmt(x+3)+" /km"}
+function prS(x){return fmt(x-2)+"–"+fmt(x+2)+" /100 m"}
+function prB(x){return nl(Math.round((x-1)*10)/10)+"–"+nl(Math.round((x+1)*10)/10)+" km/u"}
+function sec(s){var m=/^(\d{1,2}):([0-5]\d)$/.exec(String(s||"").trim());return m?(+m[1])*60+(+m[2]):null}
+function fmt(x){x=Math.round(x);var m=Math.floor(x/60),s=x%60;return m+":"+(s<10?"0":"")+s}
+function rg(a,b){return fmt(a)+"–"+fmt(b)+" /km"}
+function rs(a,b){return fmt(a)+"–"+fmt(b)+" /100 m"}
+function nl(x){return String(x).replace(".",",")}
+function fmtM(m){m=Math.round(m);return m>=1000?Math.floor(m/1000)+"."+String(m%1000).padStart(3,"0"):String(m)}
+function numf(s){var x=parseFloat(String(s).replace(",","."));return isNaN(x)?0:x}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+var VU={};
+function loadS(){try{var j=localStorage.getItem("tp-vals");if(j){var o=JSON.parse(j);for(var k in V){if(typeof o[k]==="string")V[k]=o[k]}if(o._u&&typeof o._u==="object")VU=o._u}}catch(e){}}
+function saveS(){try{var o={};for(var k in V)o[k]=V[k];o._u=VU;localStorage.setItem("tp-vals",JSON.stringify(o))}catch(e){}}
+function calc(){
+  var f=parseInt(V.ftp,10);if(!(f>=100&&f<=500))f=200;
+  var p5=sec(V.p5)||300,p10=sec(V.p10)||315,ph=sec(V.ph)||330,pm=sec(V.pm)||345,cs=sec(V.cs)||120;
+  function w(x){return Math.round(f*x)}
+  function pw(a,b){return w(a)+"–"+w(b)+" W"}
+  T.Bz1=pw(.45,.55);T.Bz2=pw(.56,.75);T.Bz3=pw(.76,.87);T.Bss=pw(.88,.94);T.Bth=pw(.95,1);T.Bz4=pw(.95,1.05);T.Bvo=pw(1.1,1.15);
+  T.B95=pw(.93,.97);T.B105=pw(1.03,1.07);
+  T.Ez1=T.Bz1;T.Ez2=T.Bz2;T.Ez3=T.Bz3;T.Ess=T.Bss;T.Eth=T.Bth;T.Evo=T.Bvo;
+  T.Rz1=rg(pm+84,pm+124);T.Rz2=rg(pm+44,pm+84);T.Rz3=rg(ph+Math.round(.55*(pm-ph)),pm+2);T.Rz4=rg(ph-4,ph+2);T.Rz5=rg(p5,p10+1);
+  T.Rlong=rg(pm+64,pm+84);T.Rb2b=rg(pm+64,pm+94);T.Rhve=rg(ph+3,ph+8);T.Rven=rg(ph+3,ph+13);
+  T.Sz1=rs(cs+15,cs+25);T.Sz2=rs(cs+7,cs+14);T.Sz3=rs(cs+3,cs+6);T.Sz4=rs(cs-1,cs+2);T.Sz5=rs(cs-6,cs-2);
+  T.ordered=(p5<p10&&p10<ph&&ph<pm);
+  /* hartslagzones (lopen, % van drempelhartslag) */
+  var hm=parseInt(V.hrm,10),lt=parseInt(V.lthr,10);if(!(lt>=100&&lt<=220))lt=(hm>=120&&hm<=230)?Math.round(hm*.9):0;
+  function hr(a,b){var x=Math.round(lt*a),y=Math.round(lt*b);if(hm>=120)y=Math.min(y,hm);return x+"–"+y+" bpm"}
+  if(lt){T.Hz1=hr(.75,.84);T.Hz2=hr(.85,.89);T.Hz3=hr(.9,.94);T.Hz4=hr(.95,.99);T.Hz5=hr(1,1.06)}else{T.Hz1=T.Hz2=T.Hz3=T.Hz4=T.Hz5=""}
+  /* hoogtemeters per km uit het (hoofd)doel voor trail */
+  var tg=null;(typeof G!=="undefined"?G:[]).forEach(function(g){if(g.type==="trailrun"&&numf(g.hm)>0&&numf(g.dist)>0&&(!tg||g.prio==="A"))tg=g});
+  var ratio=tg?numf(tg.hm)/numf(tg.dist):0;
+  for(var k=1;k<=60;k++)T["HM"+k]=ratio?" met ca. "+fmtM(Math.max(50,Math.round(k*ratio/50)*50))+" hoogtemeters":" met hoogtemeters";
+}
+function sub(s){return String(s).replace(/\{(\w+)\}/g,function(m,k){return T[k]!==undefined?T[k]:m})}
+var B={z1:["Z1 herstel","{Bz1}"],z2:["Z2 duur","{Bz2}"],ss:["Sweet spot","{Bss}"],th:["Z4 drempel","{Bth}"],vo:["Z5 VO₂max","{Bvo}"]};
+var R={z1:["Z1 herstel","{Rz1}"],z2:["Z2 duur","{Rz2}"],z3:["Z3 tempo","{Rz3}"],z4:["Z4 drempel","{Rz4}"],z5:["Z5 interval","{Rz5}"]};
+var SW={z2:["Z2 duur","{Sz2}"],z4:["Z4 CSS","{Sz4}"],z5:["Z5 snelheid","{Sz5}"]};
+function F(t,d,z,a,k){return["f",t,d,z[0],z[1],a||"",k||0]}
+function L(t,d,z,k){return["l",t,d,z[0],z[1],"",k||0]}
+function SWI(t,d,z,m){return["s",t,d,z[0],z[1],"",(m||0)/1000]}
+function X(t,d,a,b,k,sp,alt){return["w",t,d,a,b,alt||"",k||0,sp||"l"]}
+var RU=["r","Rust","","","","",0];
+var HERSTEL=["r","Herstel","30 min wandelen","","","",0];
+var BZ={th:["Z4 drempel","{Bth}","{Eth}","threshold"],ss:["Sweet spot","{Bss}","{Ess}","sweet spot"],vo:["Z5 VO₂max","{Bvo}","{Evo}","VO₂max"]};
+function bset(b,z,e){return b[0]+"×"+b[1]+" min op "+(e?z[2]:z[1])+", "+b[2]+" min op "+(e?"{Ez1}":"{Bz1}")+" ertussen"}
+function bmin(b){return 25+b[0]*b[1]+(b[0]-1)*b[2]}
+function bQ(t,b){var z=BZ[t],m=bmin(b);return F("Fietsen: "+z[3],m+" min: 15 min warm-up op {Bz2}, "+bset(b,z)+", 10 min cooldown op {Bz2}",[z[0],z[1]],""+m+" min: 15 min op {Ez2}, "+bset(b,z,1)+", 10 min op {Ez2}",Math.round(m*.5))}
+/* Woon-werk: placeholders, afstand per dag wordt later ingevuld */
+var CM=["ww","cm"],CMV=["ww","cmv"];
+function bDI(t,b){return["ww","di",t,b]}
+function cmTxt(h,t){return !t?"Heenweg "+nl(h)+" km":(!h?"Terugweg "+nl(t)+" km":(h===t?"2×"+nl(h)+" km":"Heenweg "+nl(h)+" km en terugweg "+nl(t)+" km"))}
+function imin(km){return clamp(Math.round(km*1.3/5)*5,30,180)}
+function cmItem(h,t,v){return F("Fietsen: woon-werk",cmTxt(h,t)+" op {Bz2}"+(v?", dag voor de ultra. Reis deze dag bij voorkeur op een andere manier of neem vrij.":""),B.z2,""+(v?45:imin(h+t))+" min op {Ez2}",h+t)}
+function diItem(ty,b,h,t){
+  if(!t)return cmItem(h,t);
+  var z=BZ[ty];
+  return F("Fietsen: woon-werk met "+z[3],(h?"Heenweg "+nl(h)+" km op {Bz2}. ":"")+"Terugweg "+nl(t)+" km: 15 min warm-up op {Bz2}, "+bset(b,z)+", de rest van de rit op {Bz2}.",[z[0],z[1]],""+(h?imin(h)+" min op {Ez2}, daarna ":"")+"15 min op {Ez2}, "+bset(b,z,1)+", 10 min op {Ez2}",h+t);
+}
+function wwItem(x,h,t){return x[1]==="di"?diItem(x[2],x[3],h,t):cmItem(h,t,x[1]==="cmv")}
+function rit(m,k){return F("Fietsen: duurrit",m+" min op {Bz2}",B.z2,""+m+" min op {Ez2}",k||Math.round(m*.5))}
+function ss(b){return bQ("ss",b)}
+var FTEST=F("Fietsen: FTP-test","55 min: 20 min warm-up op {Bz2} met 3×1 min op {Bvo}, 20 min maximaal op een vlak stuk of lange klim, 15 min cooldown op {Bz1}. Nieuwe FTP = 95% van het gemiddelde vermogen over de 20 min.",["Test","maximale inspanning"],"Ramp-test (ca. 25 min, daarna 10 min cooldown op {Ez1}) of de 20 min-test, met ERG-modus uit",30);
+var OU=F("Fietsen: over-unders","75 min: 15 min warm-up op {Bz2}, 3×12 min met afwisselend 2 min op {B95} en 1 min op {B105}, 5 min op {Bz1} tussen de blokken, 14 min cooldown op {Bz2}",["Z4 drempel","{B95} en {B105}"],"Zelfde opbouw, 2 min op {B95} en 1 min op {B105}, 5 min op {Ez1} tussen de blokken, 14 min op {Ez2}",40);
+function herst(km){return L("Hardlopen: herstelloop",km+" km op {Rz1}",R.z1,km)}
+function zloop(km){return L("Hardlopen: duurloop",km+" km op {Rz2}",R.z2,km)}
+function duur(km,x){return L("Hardlopen: duurloop",km+" km op {Rz2}"+(x?", "+x:""),R.z2,km)}
+function lang(km,x){return L("Hardlopen: lange duurloop",km+" km op {Rlong}"+(x?", "+x:""),["Lange loop","{Rlong}"],km)}
+function tempo(n,m,r,km){return L("Hardlopen: tempoloop","2 km warm-up op {Rz2}, "+n+"×"+m+" min op {Rz3} met "+r+" min op {Rz1} ertussen, cooldown op {Rz2}. Totaal "+km+" km.",R.z3,km)}
+function intv(n,m,r,km){return L("Hardlopen: intervallen","2 km warm-up op {Rz2}, "+n+"×"+m+" min op {Rz5} met "+r+" min op {Rz1} ertussen, cooldown op {Rz2}. Totaal "+km+" km.",R.z5,km)}
+function hill(n,m,km){return L("Hardlopen: heuvelintervallen","2 km warm-up op {Rz2}, "+n+"×"+m+" heuvelop met de inspanning van een 5 km wedstrijd, dribbelend terug naar beneden, cooldown op {Rz2}. Totaal "+km+" km.",["Z5 inspanning","RPE 8 van 10"],km)}
+function b2b(km){return L("Hardlopen: back-to-back dag 2",km+" km op {Rb2b}",["Z2","{Rb2b}"],km)}
+var SHAKE=L("Hardlopen: shake-out","25 min (4 km) op {Rz1} met 4×20 sec versnelling naar {Rz5}",R.z1,4);
+var TRAILX="trail met hoogtemeters, wandel stukken steiler dan 10%";
+function tlang(km,x){return L("Trailrun: lange duurloop",km+" km trail{HM"+Math.min(60,km)+"} op Z2-inspanning (vlak {Rlong}), wandel stukken steiler dan 10%"+(x?", "+x:""),["Z2 inspanning","vlak {Rlong}"],km)}
+var WKM=[];
+var PHW=[];
+WKM.forEach(function(w,i){w.ph=PHW[i]});
+
+var DAY=864e5,W7=7*DAY,START=Date.UTC(2026,10,9);
+var MON=["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
+function pd(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||"");return m?Date.UTC(+m[1],+m[2]-1,+m[3]):null}
+function iso(ms){return new Date(ms).toISOString().slice(0,10)}
+function dnl(ms){var d=new Date(ms);return d.getUTCDate()+" "+MON[d.getUTCMonth()]}
+function rng(mon){var a=new Date(mon),b=new Date(mon+6*DAY);return a.getUTCMonth()===b.getUTCMonth()?a.getUTCDate()+"–"+b.getUTCDate()+" "+MON[a.getUTCMonth()]:a.getUTCDate()+" "+MON[a.getUTCMonth()]+" – "+b.getUTCDate()+" "+MON[b.getUTCMonth()]}
+var TYPES={hardlopen:"Hardlopen",trailrun:"Trailrun",wielrennen:"Wielrennen",mountainbiken:"Mountainbiken",zwemmen:"Zwemmen",triatlon:"Triatlon",ftp:"FTP verhogen"};
+var TRI={sprint:["Sprint","750","20","5"],olympisch:["Olympisch","1500","40","10"],half:["Halve triatlon","1900","90","21.1"],hele:["Hele triatlon","3800","180","42.2"]};
+function isRun(t){return t==="hardlopen"||t==="trailrun"}
+function gname(g){
+  if(g.name)return g.name;
+  if(g.type==="ftp")return "FTP "+g.dist+" W";
+  if(g.type==="zwemmen")return "Zwemmen "+fmtM(numf(g.dist))+" m";
+  if(g.type==="triatlon")return TRI[g.tpre]?(g.tpre==="half"||g.tpre==="hele"?TRI[g.tpre][0]:"Triatlon "+TRI[g.tpre][0].toLowerCase()):"Triatlon";
+  return (TYPES[g.type]||"Doel")+" "+nl(g.dist)+" km";
+}
+var GF=["type","name","dist","pace","hm","date","prio","spec","tpre","swD","swP","bkD","bkP","rnD","rnP","rst","rft","rvp"];
+function norm(g){return GF.slice(0,15).map(function(k){return String(g[k]||"")})}
+var DEFG=[];
+var SLOTS=[
+["rust","Rust","r","Overig"],
+["kr","Kracht: algemeen","r","Kracht"],["krb","Kracht: benen en heuvels","r","Kracht"],["kre","Kracht: excentrisch (afdalen)","r","Kracht"],["krc","Kracht: core en stabiliteit","r","Kracht"],["krm","Mobiliteit en stretching","r","Kracht"],
+["ww","Fiets: woon-werk","f","Fietsen"],["wwq","Fiets: woon-werk + kwaliteit (auto)","f","Fietsen"],
+["wwth","Fiets: woon-werk + threshold","f","Fietsen"],["wwss","Fiets: woon-werk + sweet spot","f","Fietsen"],["wwvo","Fiets: woon-werk + VO₂max","f","Fietsen"],
+["fq","Fiets: kwaliteit (auto)","f","Fietsen"],["fth","Fiets: threshold","f","Fietsen"],["fss","Fiets: sweet spot","f","Fietsen"],["fvo","Fiets: VO₂max","f","Fietsen"],
+["fr","Fiets: duurrit","f","Fietsen"],["mtb","Fiets: mountainbike","f","Fietsen"],["fl","Fiets: lange duurrit","f","Fietsen"],
+["lh","Loop: herstelloop","l","Hardlopen"],["lr","Loop: duurloop","l","Hardlopen"],["lq","Loop: kwaliteit (auto)","l","Hardlopen"],["lt","Loop: tempoloop","l","Hardlopen"],
+["li","Loop: intervallen","l","Hardlopen"],["lhv","Loop: heuvelintervallen","l","Hardlopen"],["ll","Loop: lange duurloop","l","Hardlopen"],["lb","Loop: back-to-back (dag 2)","l","Hardlopen"],
+["ltr","Trail: duurloop","l","Trailrunnen"],["ltl","Trail: lange duurloop","l","Trailrunnen"],["ltb","Trail: bergop-intervallen","l","Trailrunnen"],
+["zr","Zwem: techniek","s","Zwemmen"],["zq","Zwem: CSS-intervallen","s","Zwemmen"],["zl","Zwem: lange duur","s","Zwemmen"],
+["br","Brick: fietsen + hardlopen","b","Combinatie"]];
+var SP={ftest:"f"};SLOTS.forEach(function(r){SP[r[0]]=r[2]});
+var WWK=["ww","wwq","wwth","wwss","wwvo"];
+var BQ=["wwq","wwth","wwss","wwvo","fq","fth","fss","fvo"],RQ=["lq","lt","li","lhv","ltb"],QS=BQ.concat(RQ,["br"]),KEYS=QS.concat(["ll","ltl","fl"]);
+var DOWN={ltb:"ltr",ltl:"ltr",wwq:"ww",wwth:"ww",wwss:"ww",wwvo:"ww",fq:"fr",fth:"fr",fss:"fr",fvo:"fr",fl:"fr",lq:"lr",lt:"lr",li:"lr",lhv:"lr",ll:"lr",lb:"lr",br:"fr",zq:"zr"};
+var MOVE={wwq:"fq",wwth:"fth",wwss:"fss",wwvo:"fvo"};
+var EASYS=["rust","kr","krb","kre","krc","krm","ww","fr","mtb","lh","lr","ltr","zr","zl"];
+var DEFT=[["lh"],["fq"],["lq"],["rust"],["fr"],["ll"],["fq"]],DEFP={rest:4,vo:3};
+/* Oude opslag (vóór de splitsing duurloop / lange duurloop): wijs één weekendduurloop aan als lange duurloop */
+function migrLL(t){
+  var o=t.map(function(d){return d.slice()});if(o.some(function(d){return d.indexOf("ll")>=0}))return o;
+  var order=[5,6,4,3,2,1,0];
+  for(var i=0;i<order.length;i++){var d=order[i],q=o[d].indexOf("lr");if(q>=0){o[d][q]="ll";break}}
+  return o;
+}
+function expT(t){return t.map(function(d){return d.slice()})}
+function cpT(t){return t.map(function(d){return d.slice()})}
+/* Zones voor handmatige activiteiten */
+var ZB=[["z1","Z1 herstel"],["z2","Z2 duur"],["z3","Z3 tempo"],["ss","Sweet spot"],["z4","Z4 drempel"],["z5","Z5 VO₂max"]];
+var ZR=[["z1","Z1 herstel"],["z2","Z2 duur"],["z3","Z3 tempo"],["z4","Z4 drempel"],["z5","Z5 interval"]];
+var ZS=[["z1","Z1 herstel"],["z2","Z2 duur"],["z3","Z3 tempo"],["z4","Z4 CSS"],["z5","Z5 snelheid"]];
+var ZO=[["z1","Z1 zeer licht"],["z2","Z2 licht"],["z3","Z3 gemiddeld"],["z4","Z4 zwaar"],["z5","Z5 maximaal"]];
+var ZN={trail:ZR,run:ZR,bike:ZB,swim:ZS,brick:ZB,other:ZO};
+var ZT={bike:{z1:"{Bz1}",z2:"{Bz2}",z3:"{Bz3}",ss:"{Bss}",z4:"{Bz4}",z5:"{Bvo}"},run:{z1:"{Rz1}",z2:"{Rz2}",z3:"{Rz3}",z4:"{Rz4}",z5:"{Rz5}"},swim:{z1:"{Sz1}",z2:"{Sz2}",z3:"{Sz3}",z4:"{Sz4}",z5:"{Sz5}"}};
+var ZRANK={z1:1,z2:2,z3:3,ss:3,z4:4,z5:5};
+var SLAB={trail:"trailrun",run:"hardlopen",bike:"fietsen",swim:"zwemmen",brick:"brick",ww:"woon-werk",other:"overig",vrij:"vrije dag"};
+function zlab(list,z){var r=list.filter(function(o){return o[0]===z})[0];return r?r[1]:list[1][1]}
+function zval(sp,z){return ZT[sp]&&ZT[sp][z]||ZT[sp]&&ZT[sp].z2||""}
+function ergAlt(z,mm){
+  mm=clamp(Math.round(mm/5)*5,30,180);
+  return mm+" min op "+(ZT.bike[z]||ZT.bike.z2);
+}
+function actHard(a){
+  var z=ZRANK[a.z]||2,km=numf(a.km),mi=numf(a.min);
+  if(a.sport==="run")return z>=3||km>=20||mi>=120;
+  if(a.sport==="trail")return z>=3||km>=18||mi>=120||numf(a.km2)>=800;
+  if(a.sport==="bike")return z>=3||mi>=180||km>=90;
+  if(a.sport==="brick")return z>=3||(ZRANK[a.z2]||2)>=3;
+  if(a.sport==="swim"||a.sport==="other")return z>=4;
+  return false;
+}
+function actItems(a,idx){
+  var km=numf(a.km),km2=numf(a.km2),mi=numf(a.min),nm="Activiteit: "+(a.name||SLAB[a.sport]||"activiteit"),out;
+  function ds(dist,val){var p=[dist,mi?mi+" min":""].filter(Boolean).join(" in ");return(p?p+" op ":"Op ")+val}
+  if(a.sport==="vrij")out=[["r","Vrij",a.name?"Geen training: "+a.name:"Geen training","","","",0,"","vrij"]];
+  else if(a.sport==="brick")out=[
+    ["f",nm+": fietsen",ds(km?nl(km)+" km":"",zval("bike",a.z)),zlab(ZB,a.z),zval("bike",a.z),ergAlt(a.z,mi?mi*.7:(km?km/30*60:60)),km],
+    ["l",nm+": hardlopen direct na de fiets",(km2?nl(km2)+" km":"Afstand niet ingevuld")+" op "+zval("run",a.z2),zlab(ZR,a.z2),zval("run",a.z2),"",km2]];
+  else if(a.sport==="swim")out=[["s",nm,ds(km?fmtM(km)+" m":"",zval("swim",a.z)),zlab(ZS,a.z),zval("swim",a.z),"",km/1000]];
+  else if(a.sport==="trail")out=[["l",nm,ds((km?nl(km)+" km trail":"Trail")+(km2?" met "+fmtM(km2)+" hoogtemeters":""),"Z"+(ZRANK[a.z]||2)+"-inspanning (vlak "+zval("run",a.z)+")"),"Z"+(ZRANK[a.z]||2)+" inspanning","vlak "+zval("run",a.z),"",km]];
+  else if(a.sport==="run")out=[["l",nm,ds(km?nl(km)+" km":"",zval("run",a.z)),zlab(ZR,a.z),zval("run",a.z),"",km]];
+  else if(a.sport==="bike")out=[["f",nm,ds(km?nl(km)+" km":"",zval("bike",a.z)),zlab(ZB,a.z),zval("bike",a.z),ergAlt(a.z,mi||(km?km/30*60:90)),km]];
+  else out=[["r",nm,[km?nl(km)+" km":"",mi?mi+" min":""].filter(Boolean).join(" in ")||"Duur niet ingevuld",zlab(ZO,a.z),"op hartslag en gevoel","",0]];
+  out.forEach(function(x){x[9]=idx});
+  return out;
+}
+function bigRace(x){if(x.ftp||x.swim)return false;if(x.tri)return x.dist>=80||x.rd>=21;return x.run?x.dist>=21:x.dist>=80}
+function runDist(x){return x.tri?x.rd:x.dist}
+function bkPace(x){return numf(x.tri?x.g.bkP:x.g.pace)}
+function swPace(x){return sec(x.tri?x.g.swP:x.g.pace)}
+function prm(x,v0){
+  if(x.ftp)return{S:10,T:1,vp:Math.round(v0*.9),lp:14};
+  if(x.swim)return{S:x.dist<=2000?6:8,T:x.dist<=2000?1:2,vp:Math.round(v0*.9),lp:14};
+  if(x.tri){var b=x.dist,r=x.rd;return{S:b<=40?6:b<=90?8:10,T:b<=40?1:b<=90?2:3,vp:Math.round(v0*(r<=10?1:r<=21.1?1.1:1.3)),lp:clamp(Math.round(r*.9+4),12,30)}}
+  var d=x.dist,S,T2,vp,lp;
+  if(x.run){
+    if(d<=10){S=4;T2=1;vp=v0*1.05;lp=14}
+    else if(d<=22){S=6;T2=1;vp=v0*1.15;lp=24}
+    else if(d<=43){S=8;T2=2;vp=v0*1.35;lp=32}
+    else{S=8;T2=3;vp=v0*1.6;lp=36}
+  }else{S=d<=100?6:d<=200?8:10;T2=d<=100?1:d<=200?2:3;vp=v0*.8;lp=14}
+  return{S:S,T:T2,vp:Math.round(vp),lp:lp};
+}
+function lride(x){return x.dist<=100?clamp(Math.round(x.dist*1.2),50,110):clamp(Math.round(x.dist*.7),90,170)}
+function raceItems(x){
+  var g=x.g,nm=gname(g),gp=sec(g.pace),sp=numf(g.pace),dk=nl(x.dist);
+  if(x.ftp)return[["w","Fietsen: FTP-test"+(g.name?" ("+g.name+")":""),"55 min: 20 min warm-up op {Bz2} met 3×1 min op {Bvo}, 20 min maximaal, 15 min cooldown op {Bz1}. Nieuwe FTP = 95% van het gemiddelde vermogen over de 20 min.","Test","doel "+x.dist+" W","Ramp-test (ca. 25 min, daarna 10 min cooldown op {Ez1}) of de 20 min-test, met ERG-modus uit",30,"f"]];
+  if(x.tri){
+    var sp2=sec(g.swP),bp=numf(g.bkP),rp=sec(g.rnP);
+    return[
+      ["w",nm+": zwemmen",fmtM(x.sd)+" m op "+(sp2?prS(sp2):"{Sz3}")+". Start aan de zijkant als je niet in het gedrang wilt.","Wedstrijd",sp2?prS(sp2):"{Sz3}","",x.sd/1000,"s"],
+      ["w",nm+": fietsen",nl(x.dist)+" km op "+(bp?prB(bp)+" gemiddeld":"{Bz3}")+", "+(x.dist>=80?"80":"60")+" g koolhydraten en 600 ml drinken per uur","Wedstrijd",bp?prB(bp)+"":"{Bz3}","",x.dist,"f"],
+      ["w",nm+": hardlopen",nl(x.rd)+" km op "+(rp?prR(rp):"{Rz4}")+", eerste km 5 sec/km boven doeltempo","Wedstrijd",rp?prR(rp):"{Rz4}","",x.rd,"l"]];
+  }
+  if(x.swim){
+    var sd=fmtM(x.dist)+" m";
+    return[["w","Zwemmen: "+nm,gp?(x.A?sd+" op doeltempo "+prS(gp):sd+": eerste 200 m op "+prS(gp+3)+", daarna op "+prS(gp)):sd+" op {Sz4}","Wedstrijd",gp?prS(gp):"{Sz4}","",x.dist/1000,"s"]];
+  }
+  if(x.run){
+    var tr=g.type==="trailrun",det,hmT=numf(g.hm)?" met "+fmtM(numf(g.hm))+" hoogtemeters":"";
+    if(tr)det=x.dist>=50?dk+" km trail"+hmT+": eerste 20 km op Z2-inspanning (vlak {Rlong}), vanaf het eerste uur 70 g koolhydraten en 600 ml drinken per uur, wandel stukken steiler dan 10%":dk+" km trail"+hmT+" op Z2-inspanning (vlak {Rlong}), 60 g koolhydraten en 500 ml drinken per uur, wandel stukken steiler dan 10%";
+    else if(gp)det=x.A?dk+" km op doeltempo "+prR(gp):dk+" km: km 1–5 op "+prR(gp+5)+", vanaf km 6 op "+prR(gp);
+    else det=dk+" km op "+(x.dist<=10?"{Rz5}":x.dist<=22?"{Rz4}":"{Rz3}");
+    return[["w","Hardlopen: "+nm,det,tr?"Z2 inspanning":"Wedstrijd",tr?"vlak {Rlong}":(gp?prR(gp):(x.dist<=10?"{Rz5}":x.dist<=22?"{Rz4}":"{Rz3}")),"",x.dist,"l"]];
+  }
+  return[["w","Fietsen: "+nm,dk+" km"+(numf(g.hm)?" met "+fmtM(numf(g.hm))+" hoogtemeters":"")+" op "+(sp?prB(sp)+" gemiddeld":"{Bz3}")+", vanaf het eerste uur 60 g koolhydraten en 600 ml drinken per uur","Wedstrijd",sp?prB(sp)+" gemiddeld":"{Bz3}","",x.dist,"f"]];
+}
+function recItems(x){
+  var g=x.g,nm=gname(g),dk=nl(x.dist),it;
+  if(x.ftp)return raceItems(x);
+  if(x.tri)it=[["w",nm+" (recreatief)","Zwemmen "+fmtM(x.sd)+" m op {Sz2}, fietsen "+nl(x.dist)+" km op {Bz2}, lopen "+nl(x.rd)+" km op {Rz2}. Voor de beleving, geen wedstrijdtempo.","Recreatief","Z2","",x.dist,"f"]];
+  else if(x.swim)it=[["w","Zwemmen: "+nm+" (recreatief)",fmtM(x.dist)+" m op {Sz2}, voor de beleving","Recreatief","{Sz2}","",x.dist/1000,"s"]];
+  else if(x.run)it=[["w","Hardlopen: "+nm+" (recreatief)",(g.type==="trailrun"?dk+" km trail op Z2-inspanning, wandel stukken steiler dan 10%":dk+" km op {Rz2}")+", voor de beleving, geen wedstrijdtempo","Recreatief",g.type==="trailrun"?"vlak {Rlong}":"{Rz2}","",x.dist,"l"]];
+  else it=[["w","Fietsen: "+nm+" (recreatief)",dk+" km op {Bz2}, voor de beleving. Eet en drink vanaf het eerste uur.","Recreatief","{Bz2}","",x.dist,"f"]];
+  return it;
+}
+function sumKm(d){var b=0,r=0,s=0;d.forEach(function(day){day.forEach(function(x){var k=x[6]||0;if(x[0]==="f")b+=k;else if(x[0]==="l")r+=k;else if(x[0]==="s")s+=k;else if(x[0]==="w"){if(x[7]==="f")b+=k;else if(x[7]==="s")s+=k;else r+=k}})});return[Math.round(b/5)*5,Math.round(r),Math.round(s*10)*100]}
+function goalRun(dist,gp,km){
+  var blk=dist<=10?"6×1 km op doeltempo "+prR(gp)+" met 2 min op {Rz1} ertussen":dist<=22?"3×10 min op doeltempo "+prR(gp)+" met 3 min op {Rz1} ertussen":"2×6 km op doeltempo "+prR(gp)+" met 3 min op {Rz1} ertussen";
+  return L("Hardlopen: doeltempoloop","2 km warm-up op {Rz2}, "+blk+", cooldown op {Rz2}. Totaal "+km+" km.",["Doeltempo",prR(gp)],km);
+}
+function ftpInfo(g,cur,td){
+  var tgt=numf(g.dist),t=pd(g.date);
+  if(!(tgt>0)||t===null)return{ok:true,txt:"Vul een gewenste FTP en een datum in."};
+  if(tgt<=cur)return{ok:true,txt:"Je huidige FTP ("+cur+" W, zie Startsituatie) is al gelijk aan of hoger dan dit doel."};
+  var from=Math.max(td,START),wk=Math.floor((t-from)/W7);
+  if(wk<1)return{ok:false,txt:"De datum ligt te dichtbij of in het verleden: er is geen tijd om de FTP te laten stijgen."};
+  var gain=(tgt-cur)/cur*100,eff=wk<=16?wk:16+(wk-16)*.5,pw=gain/eff;
+  var lo=Math.round(cur*(1+.004*eff)),hi=Math.round(cur*(1+.008*eff));
+  var lab=tgt<=lo?"Haalbaar":tgt<=hi?"Ambitieus, maar mogelijk":"Onwaarschijnlijk";
+  return{ok:tgt<=hi,txt:lab+": +"+(tgt-cur)+" W ("+gain.toFixed(1).replace(".",",")+"%) in "+wk+" weken, vanaf je huidige "+cur+" W. Realistisch is rond "+lo+"–"+hi+" W op die datum."+(wk<6?" Reken op minimaal 6–8 weken voor een merkbare winst.":"")};
+}
+function bq(c,kind,via){
+  var first=c.bq++===0,t=kind;
+  if(kind==="auto")t=(c.short||c.ph==="taper")?(first?"th":"ss"):(first?(c.voWeek?"vo":"th"):"ss");
+  var f=c.f,kk=c.k%3,b;
+  if(t==="th")b=c.short?(c.ph==="taper"?[2,10,5]:[3,6,5]):(c.k%2===0?(f<.5?[3,12,5]:[3,15,5]):(f<.5?[2,20,5]:[2,25,5]));
+  else if(t==="vo")b=f<.5?[5,4,4]:[6,4,4];
+  else b=c.short?[2,10,5]:(kk===0?[2,20,5]:kk===1?[3,15,5]:[2,30,5]);
+  if(c.blkO)b=[c.blkO[0],c.blkO[1],t==="vo"?4:5];
+  return via==="ww"?bDI(t,b):bQ(t,b);
+}
+function rq(c,kind,km){
+  var t=kind;
+  if(kind==="lq"){
+    if(c.short||c.ph==="taper")t="lt";
+    else if(c.ph==="base")t=(c.k%3===1&&!c.voWeek)?"lhv":"lt";
+    else if(c.tr)t=(c.k%2===0)?"lhv":"lt";
+    else if((c.F0.run||c.F0.tri)&&c.gp)t=c.F0.tri&&c.k%2===1?"lt":"gp";
+    else t="lt";
+  }
+  if(t==="lhv")return hill(c.blkO?c.blkO[0]:8,(c.blkO?c.blkO[1]:2)+" min",km);
+  if(t==="li")return c.blkO?intv(c.blkO[0],c.blkO[1],2,km):intv(5,4,2,km);
+  if(t==="lt"&&c.blkO)return tempo(c.blkO[0],c.blkO[1],3,km);
+  if(t==="gp")return goalRun(runDist(c.F0),c.gp,km);
+  if(c.short)return c.ph==="taper"?tempo(2,10,3,km):tempo(3,5,3,km);
+  return tempo(2,12,3,km);
+}
+function brK(c){if(c.brRun)return c.brRun;if(c.short||c.ph==="taper")return 4;if(c.F0.tri)return clamp(Math.round(c.F0.rd*.3),4,8);return c.f<.5?5:7}
+function brick(c){
+  var sh=c.short||c.ph==="taper",b,z,m;
+  if(sh){b=[3,5,3];z=BZ.th}else if(c.k%2===0){b=[2,15,5];z=BZ.ss}else{b=[3,10,5];z=BZ.th}
+  m=bmin(b);
+  var rk=brK(c),rp=c.F0.tri&&c.gp&&!sh?prR(c.gp):"{Rz3}";
+  return[F("Brick 1 van 2: fietsen",m+" min: 15 min warm-up op {Bz2}, "+bset(b,z)+", 10 min op {Bz2}. Leg je loopspullen klaar voor een wissel binnen 5 min.",[z[0],z[1]],""+m+" min: 15 min op {Ez2}, "+bset(b,z,1)+", 10 min op {Ez2}. Zet je loopschoenen klaar naast de trainer.",Math.round(m*.5)),
+    L("Brick 2 van 2: hardlopen direct na de fiets","1 km op {Rz2}, "+(rk-2)+" km op "+rp+", 1 km cooldown op {Rz2}. Totaal "+rk+" km.",c.F0.tri&&c.gp&&!sh?["Doeltempo",rp]:R.z3,rk)];
+}
+function swim(c,kind){
+  var t=c.swT,SG=c.SG;
+  if(kind==="zl"&&!c.swFix)t=Math.min(4500,Math.round(t*1.3/100)*100);
+  if(kind==="zr"){
+    var kr=Math.max(400,t-800);
+    return[SWI("Zwemmen: techniek en duur",fmtM(t)+" m: 300 m warm-up op {Sz1}, 6×50 m techniekdrills met 15 sec rust, "+fmtM(kr)+" m op {Sz2}, 200 m cooldown op {Sz1}",SW.z2,t)];
+  }
+  if(kind==="zq"){
+    var kern=Math.max(400,t-800),v=(c.short||c.ph==="taper")?0:c.k%3,n,txt,z=SW.z4;
+    if(v===1){n=clamp(Math.round(kern/200),2,10);kern=n*200;txt=n+"×200 m op {Sz4} met 20 sec rust"}
+    else if(v===2){n=clamp(Math.round(kern/50),4,16);kern=n*50;txt=n+"×50 m op {Sz5} met 20 sec rust";z=SW.z5}
+    else{n=clamp(Math.round(kern/100),4,20);kern=n*100;txt=n+"×100 m op {Sz4} met 15 sec rust"}
+    var tot=kern+800;
+    return[SWI("Zwemmen: CSS-intervallen",fmtM(tot)+" m: 400 m warm-up op {Sz1}, 4×50 m opbouwend naar {Sz4}, "+txt+", 200 m cooldown op {Sz1}",z,tot)];
+  }
+  var kl=Math.max(600,t-500),gp=SG?swPace(SG):null;
+  var fin=(SG&&gp&&c.ph==="spec"&&c.f>=.5&&kl>=1000)?", waarvan de laatste 400 m op doeltempo "+prS(gp):"";
+  return[SWI("Zwemmen: lange duur",fmtM(t)+" m: 300 m warm-up op {Sz1}, "+fmtM(kl)+" m aaneengesloten op {Sz2}"+fin+", 200 m cooldown op {Sz1}",SW.z2,t)];
+}
+function mat(s,c){
+  var lite=c.rest||c.ph==="taper";
+  if(s==="rust")return[RU];
+  if(/^kr/.test(s)){
+    var kd=c.durO?(c.durO<23?20:c.durO<28?25:30):0,two=kd?kd===20:lite,st=two?"2":"3",KT={
+      kr:[two?20:(kd||(c.ph==="base"?30:25)),"Kracht: algemeen",st+"×10 squats, "+st+"×10 lunges per been, "+st+"×12 calf raises, "+st+"×45 sec plank, "+st+"×30 sec zijplank per kant"],
+      krb:[two?20:(kd||30),"Kracht: benen en heuvels",st+"×10 Bulgaarse split squats per been, "+st+"×12 step-ups op kniehoogte per been, "+st+"×10 deadlifts op één been per kant, "+st+"×15 calf raises op één been, "+st+"×30 sec wall sit"],
+      kre:[two?20:(kd||25),"Kracht: excentrisch (afdalen)",st+"×8 squats met 4 sec omlaag, "+st+"×8 step-downs met 4 sec omlaag per been, "+st+"×6 Nordic hamstring curls, "+st+"×12 calf drops met 3 sec omlaag per been. Begin licht: spierpijn de eerste weken is normaal, niet de dag voor een kwaliteitstraining"],
+      krc:[two?15:(kd||20),"Kracht: core en stabiliteit",st+"×45 sec plank, "+st+"×30 sec zijplank per kant, "+st+"×10 dead bugs per kant, "+st+"×12 bird dogs per kant, "+st+"×15 glute bridges"],
+      krm:[kd||20,"Mobiliteit en stretching","2×45 sec heupflexorstretch per kant, 2×45 sec kuitstretch per kant, 2×45 sec hamstringstretch per kant, 2×10 heupcirkels per kant, 5 min foamrollen kuiten en bovenbenen"]}[s]||[25,"Kracht: algemeen",""];
+    return[["r",KT[1],KT[0]+" min: "+KT[2],"","","",0]];
+  }
+  if(s==="ww")return[CM];
+  if(s==="wwq")return[bq(c,"auto","ww")];
+  if(s==="wwth")return[bq(c,"th","ww")];
+  if(s==="wwss")return[bq(c,"ss","ww")];
+  if(s==="wwvo")return[bq(c,"vo","ww")];
+  if(s==="fq")return[bq(c,"auto","f")];
+  if(s==="fth")return[bq(c,"th","f")];
+  if(s==="fss")return[bq(c,"ss","f")];
+  if(s==="fvo")return[bq(c,"vo","f")];
+  if(s==="ftest")return[FTEST];
+  if(s==="fr")return[rit(c.durO?c.durO:c.rest?60:c.ph==="taper"?45:Math.round((60+45*c.f)/15)*15)];
+  if(s==="mtb"){var mm=c.durO?c.durO:c.rest?75:c.ph==="taper"?60:Math.round((90+60*c.f)/15)*15;return[F("Fietsen: mountainbike",mm+" min onverhard op {Bz2}",B.z2,""+Math.min(150,Math.round(mm*.85/5)*5)+" min op {Ez2}",Math.round(mm*.33))]}
+  if(s==="fl"){
+    var rd=c.Rd||60,sp=bkPace(c.F0),h=Math.round(rd/(sp||30)*2)/2,hi=Math.min(3,Math.round(h*.75*2)/2);
+    var out=[F("Fietsen: lange duurrit",rd+" km ("+nl(h)+" uur) op {Bz2}"+(!c.F0.run&&!c.F0.ftp&&!c.F0.swim&&sp&&c.ph==="spec"&&c.f>=.5?", laatste uur op doelsnelheid "+prB(sp)+"":"")+". Elke 30 min 30 g koolhydraten, 600 ml drinken per uur.",B.z2,""+nl(hi)+" uur op {Ez2}, zelfde voeding",rd)];
+    if(c.trRun)out.push(L("Hardlopen: transitieloop direct na de rit","Wissel binnen 5 min. "+c.trRun+" km op "+(c.gp?prR(c.gp):"{Rz3}")+".",c.gp?["Doeltempo",prR(c.gp)]:R.z3,c.trRun));
+    return out;
+  }
+  if(s==="lh")return[herst(c.kmOf(s))];
+  if(s==="lr")return[zloop(c.kmOf(s))];
+  if(s==="lq"||s==="lt"||s==="li"||s==="lhv")return[rq(c,s,c.kmOf(s))];
+  if(s==="ll")return[c.tr?tlang(c.Lg,c.lgX):lang(c.Lg,c.lgX)];
+  if(s==="ltl")return[tlang(c.Lg,c.Lg>=26?(c.Lg>=30?"70":"60")+" g koolhydraten per uur":"")];
+  if(s==="ltr"){var tk=c.kmOf("lr");return[L("Trailrun: duurloop",tk+" km trail{HM"+Math.min(60,tk)+"} op Z2-inspanning (vlak {Rz2}), wandel stukken steiler dan 10%",["Z2 inspanning","vlak {Rz2}"],tk)]}
+  if(s==="ltb"){var bk=c.kmOf("ltb"),bn=c.blkO?c.blkO[0]:(c.short?4:6),bl=c.blkO?c.blkO[1]:4;return[L("Trailrun: bergop-intervallen","2 km warm-up op {Rz2}, "+bn+"×"+bl+" min bergop op Z4-inspanning, wandelend terug naar beneden, cooldown op {Rz2}. Totaal "+bk+" km.",["Z4 inspanning","RPE 7 van 10"],bk)]}
+  if(s==="lb"){if(c.b2>0)return[b2b(c.b2)];return[zloop(c.kmOf("lr"))]}
+  if(s==="zr"||s==="zq"||s==="zl")return swim(c,s);
+  if(s==="br")return brick(c);
+  return[RU];
+}
+function reloc(slots,ev,hard,sl){
+  for(var d=0;d<7;d++){
+    if(ev[d].length)continue;
+    var s=slots[d];
+    if(!s.every(function(x){return EASYS.indexOf(x)>=0}))continue;
+    var nbHard=[d-1,d+1].some(function(n){return n>=0&&n<7&&(hard[n]||slots[n].some(function(x){return KEYS.indexOf(x)>=0}))});
+    if(nbHard)continue;
+    var sport=SP[sl],ri=s.indexOf("rust");
+    if(ri>=0){s[ri]=sl;return true}
+    var same=-1;
+    s.forEach(function(x,ix){if(SP[x]===sport)same=ix});
+    if(same>=0){if(["fr","mtb","lr","lh"].indexOf(s[same])>=0){s[same]=sl;return true}continue}
+    if(s.length<2){s.push(sl);return true}
+  }
+  return false;
+}
+function wdOf(ms){return(new Date(ms).getUTCDay()+6)%7}
+function genPlan(goals,v0,tpl,acts,pr){
+  var gs=[];
+  goals.forEach(function(g){
+    var t=pd(g.date),ty=g.type,tri=ty==="triatlon";
+    var d=tri?(numf(g.bkD)||numf(g.rnD)||numf(g.swD)):numf(g.dist);
+    if(t!==null&&t>=START&&d>0)gs.push({g:g,t:t,dist:tri?numf(g.bkD):d,rd:tri?numf(g.rnD):0,sd:tri?numf(g.swD):(ty==="zwemmen"?d:0),tri:tri,ftp:ty==="ftp",swim:ty==="zwemmen",run:isRun(ty),A:g.prio==="A",T:g.prio==="T",C:g.prio==="C",sp:pd(g.spec)});
+  });
+  gs.sort(function(a,b){return a.t-b.t});
+  if(!gs.length)return[];
+  var n=Math.floor((gs[gs.length-1].t-START)/W7)+1,out=[],since=0,k=0,restN=0;
+  for(var i=0;i<n;i++){
+    var mon=START+i*W7,end=mon+W7-1;
+    var inW=gs.filter(function(x){return x.t>=mon&&x.t<=end});
+    var F0=null,SG=null;
+    gs.forEach(function(x){if(!F0&&x.A&&x.t>=mon)F0=x});
+    if(!F0)gs.forEach(function(x){if(!F0&&!x.C&&x.t>=mon)F0=x});
+    if(!F0)gs.forEach(function(x){if(!F0&&x.t>=mon)F0=x});
+    gs.forEach(function(x){if(!SG&&(x.swim||x.tri)&&x.t>=mon)SG=x});
+    var P=prm(F0,v0),wt=Math.floor((F0.t-mon)/W7),rf=F0.run,rv=rf||F0.tri,nm=gname(F0.g);
+    var prevA=null;gs.forEach(function(x){if(x.A&&x.t<F0.t)prevA=x});
+    var seg=prevA?Math.floor((prevA.t-START)/W7)+1:0;
+    var tw=Math.floor((F0.t-(START+seg*W7))/W7);
+    var f=tw-P.T>0?clamp(1-(wt-P.T)/(tw-P.T),0,1):1;
+    var phase;
+    if(wt<P.T)phase="taper";
+    else if(rf&&F0.sp!==null){var spM=F0.sp-wdOf(F0.sp)*DAY;phase=mon>=spM?"spec":"base"}
+    else phase=wt<P.T+P.S?"spec":"base";
+    var recW=inW.filter(function(x){return x.C});inW=inW.filter(function(x){return !x.C});
+    var raceWk=inW.length>0,recRace=null,preT=null;
+    gs.forEach(function(x){if(!x.C&&bigRace(x)&&x.t>=mon-W7&&x.t<mon)recRace=x;if(x.T&&x.t>=mon+W7&&x.t<mon+2*W7)preT=x});
+    var rest=false;
+    if(phase!=="taper"&&!raceWk){if(recRace||(since>=pr.rest-1&&!(phase==="spec"&&wt===P.T))){rest=true;since=0}else since++}
+    var actsW=acts.filter(function(a){var t=pd(a.date);return a.sport!=="ww"&&a.sport!=="slot"&&t!==null&&t>=mon&&t<=end});
+    var trLL={},slots=tpl.map(function(dd,di){var s=dd.filter(function(x){return SP[x]}).map(function(x){if(x==="ltl"){trLL[di]=1;return "ll"}return x});return s.length?s:["rust"]});
+    if(rest){
+      if(phase==="base"&&restN%2===0){var done=false;slots.forEach(function(s){s.forEach(function(x,ix){if(!done&&(x==="fq"||x==="fth"||x==="fss"||x==="fvo")){s[ix]="ftest";done=true}})})}
+      if(phase==="base")restN++;
+      slots.forEach(function(s){s.forEach(function(x,ix){if(DOWN[x]&&x!=="ll")s[ix]=DOWN[x]})});
+    }
+    if(rf&&F0.dist>=40&&(phase==="spec"||(phase==="taper"&&wt>0))&&!rest){
+      var j=-1;slots.forEach(function(s,di){if(j<0&&s.indexOf("ll")>=0)j=di});
+      if(j>=0&&j+1<7){var q=slots[j+1].indexOf("fq");if(q>=0)slots[j+1][q]="lb"}
+    }
+    if(!rf&&!F0.ftp&&!F0.swim&&(phase==="spec"||phase==="taper")&&!rest){
+      [5,6].forEach(function(di){var q=slots[di].indexOf("fq");if(q>=0&&!slots[5].concat(slots[6]).some(function(x){return x==="fl"}))slots[di][q]="fl"});
+    }
+    var ev=[[],[],[],[],[],[],[]],hard=[0,0,0,0,0,0,0],dropped=[],hardBike=false,hardRun=false,runEv=0,actRun=0,vrij=[],actNames=[];
+    inW.forEach(function(x){var wd=wdOf(x.t);ev[wd]=ev[wd].concat(raceItems(x));hard[wd]=1;var rr=x.tri?x.rd:(x.run?x.dist:0);if(rr>=15)runEv=Math.max(runEv,rr)});
+    recW.forEach(function(x){var wd=wdOf(x.t);ev[wd]=ev[wd].concat(recItems(x));var rr=x.tri?x.rd:(x.run?x.dist:0);if(rr>=21||(!x.run&&!x.swim&&x.dist>=100))hard[wd]=1;if(rr>=15)runEv=Math.max(runEv,rr);if(x.run)actRun+=x.dist});
+    actsW.forEach(function(a){
+      var wd=wdOf(pd(a.date)),km=numf(a.km),km2=numf(a.km2);
+      actNames.push((a.name||SLAB[a.sport])+" op "+DAYS[wd].toLowerCase());
+      ev[wd]=ev[wd].concat(actItems(a,acts.indexOf(a)));
+      if(a.sport==="vrij"){vrij.push(wd);return}
+      if(actHard(a)){hard[wd]=1;if(a.sport==="bike"||a.sport==="brick")hardBike=true;if(a.sport==="run"||a.sport==="trail"||a.sport==="brick")hardRun=true}
+      if(a.sport==="run"||a.sport==="trail"){actRun+=km;runEv=Math.max(runEv,km)}
+      if(a.sport==="brick"){actRun+=km2;runEv=Math.max(runEv,km2)}
+    });
+    var relocOK=!raceWk&&!rest&&phase!=="taper";
+    for(var wd=0;wd<7;wd++){
+      if(!ev[wd].length)continue;
+      var keep=[];
+      slots[wd].forEach(function(x){
+        if(vrij.indexOf(wd)>=0){if(MOVE[x])dropped.push(MOVE[x]);else if(KEYS.indexOf(x)>=0)dropped.push(x);return}
+        if(x==="ww")keep.push("ww");
+        else if(MOVE[x]){keep.push("ww");dropped.push(MOVE[x])}
+        else if(KEYS.indexOf(x)>=0)dropped.push(x);
+      });
+      slots[wd]=keep;
+    }
+    for(var h0=0;h0<7;h0++){
+      if(!hard[h0])continue;
+      [h0-1,h0+1].forEach(function(nb){
+        if(nb<0||nb>6||ev[nb].length)return;
+        slots[nb].forEach(function(x,ix){if(DOWN[x]&&x!=="lb"&&SP[x]!=="s"){slots[nb][ix]=DOWN[x];if(KEYS.indexOf(x)>=0)dropped.push(MOVE[x]||x)}});
+      });
+    }
+    function dropLast(list){for(var d2=6;d2>=0;d2--){for(var s2=0;s2<slots[d2].length;s2++){if(list.indexOf(slots[d2][s2])>=0){slots[d2][s2]=DOWN[slots[d2][s2]];return}}}}
+    if(hardBike)dropLast(BQ);
+    if(hardRun)dropLast(RQ);
+    if(runEv>=15)slots.forEach(function(s,di){if(!ev[di].length)s.forEach(function(x,ix){if(x==="ll")s[ix]="lr"})});
+    if(relocOK)dropped.forEach(function(sl){reloc(slots,ev,hard,sl)});
+    var flat=[].concat.apply([],slots);
+    var short=phase==="taper"||(raceWk&&inW.some(function(x){return wdOf(x.t)>=3}));
+    var LRn=numf(V.lg),Zb=LRn>0?Math.round(clamp(LRn,8,Math.max(8,P.lp))):Math.round(Math.max(12,v0*.5)),Vr,Lg,Rd=0;
+    if(rv){Vr=Math.round(v0+(P.vp-v0)*f);Lg=Math.round(Zb+(P.lp-Zb)*f)}
+    else{Vr=P.vp;Lg=Math.round(v0*.45)}
+    if(!rf&&!F0.ftp&&!F0.swim)Rd=Math.round(40+(lride(F0)-40)*f);
+    if(rest){Vr=Math.round(Vr*.7);Lg=Math.round(Lg*.6);Rd=Math.round(Rd*.6)}
+    if(phase==="taper"){var tm=wt===0?[.3,.3]:(P.T===2?[.7,.65]:(wt===2?[.75,.78]:[.55,.47]));Vr=Math.round(P.vp*tm[0]);if(rv)Lg=Math.round(P.lp*tm[1]);Rd=Math.round(Rd*(wt===0?.3:.7))}
+    if(raceWk&&!rest&&phase!=="taper")Vr=Math.round(Vr*(inW.some(function(x){return x.T})?.5:.6));
+    if(preT&&!raceWk&&!rest&&phase!=="taper"){Vr=Math.round(Vr*.85);Lg=Math.round(Lg*.8)}
+    if(actRun>=10&&flat.indexOf("ll")>=0)Lg=Math.max(8,Lg-Math.round(actRun*.5));
+    var swT=2000;
+    if(SG){var tg=clamp(Math.round(SG.sd/100)*100,2000,4000);swT=2000+(tg-2000)*(SG===F0?f:.5)}
+    if(rest)swT*=.7;
+    if(phase==="taper"&&(F0.swim||F0.tri))swT*=(wt===0?.5:.7);
+    swT=Math.max(1200,Math.round(swT/100)*100);
+    var hasLL=flat.indexOf("ll")>=0,hasLB=flat.indexOf("lb")>=0;
+    var b2=(hasLB&&!rest&&!(phase==="taper"&&wt===0))?Math.round(Lg*.45):0;
+    var Lg2=hasLL?Lg:0,wsum=0;
+    var gp=rf?sec(F0.g.pace):(F0.tri?sec(F0.g.rnP):null),tr=rf&&(F0.g.type==="trailrun"||F0.dist>43);
+    var c={ph:phase,rest:rest,short:short,f:f,k:k,F0:F0,SG:SG,swT:swT,Lg:Lg,b2:b2,Rd:Rd,bq:0,gp:gp,tr:tr};
+    c.trRun=(F0.tri&&phase==="spec"&&!rest&&flat.indexOf("fl")>=0)?(f<.5?2:3):0;
+    var brRun=flat.filter(function(x){return x==="br"}).length*brK(c);
+    flat.forEach(function(x){if(x[0]==="l"&&x!=="ll"&&x!=="lb")wsum+=(RQ.indexOf(x)>=0?1.4:(x==="lh"?.7:1))});
+    var base=wsum?Math.max(0,Vr-Lg2-b2-actRun-brRun-c.trRun)/wsum:0;
+    var kmOf=function(x){var w=RQ.indexOf(x)>=0?1.4:(x==="lh"?.7:1),lo=x==="lh"?4:(x==="lr"?5:8),hi=x==="lh"?8:12;if(short)hi=Math.min(hi,x==="lr"?8:9);hi=Math.max(hi,lo);return clamp(Math.round(base*w),lo,Math.max(lo,hi))};
+    var lx=[];
+    if(Lg>=26)lx.push((Lg>=30?"70":"60")+" g koolhydraten per uur");
+    if(rv&&phase==="spec"&&!rest&&!tr&&gp&&f>=.5)lx.push("waarvan de laatste "+(runDist(F0)<=22?5:8)+" km op doeltempo "+prR(gp));
+    c.lgX=lx.join(", ");
+    c.voWeek=!rest&&!short&&!preT&&phase!=="taper"&&(k%pr.vo===pr.vo-1);
+    c.kmOf=kmOf;
+    var d=slots.map(function(sl,di){
+      var items=[];
+      sl.forEach(function(x){if(x==="rust"&&(sl.length>1||ev[di].length))return;items=items.concat(mat(x==="ll"&&trLL[di]?"ltl":x,c))});
+      items=items.concat(ev[di]);
+      return items.length?items:[RU];
+    });
+    var tag,note;
+    if(raceWk){
+      tag=inW.every(function(x){return x.ftp})?"Testweek":"Wedstrijdweek";
+      note=inW.every(function(x){return x.ftp})?"FTP-test op "+DAYS[wdOf(inW[0].t)].toLowerCase()+" met als doel "+inW[0].dist+" W. Volume omlaag, fris aan de start.":(inW.some(function(x){return x.A})?"Wedstrijdweek: ":inW.some(function(x){return x.T})?"Tussendoel: ":"Vormcheck: ")+inW.map(function(x){return gname(x.g)+" op "+DAYS[wdOf(x.t)].toLowerCase()}).join(" en ")+". Volume omlaag, fris aan de start.";
+    }else if(rest){
+      tag="Rustweek";
+      note=recRace?"Herstel na "+gname(recRace.g)+". Lager volume, geen intervallen.":"Rustweek: herstel en opname van de training, ca. 30% minder volume."+(flat.indexOf("ftest")>=0?" FTP-test op de fiets.":"");
+    }else if(phase==="taper"){
+      tag="Taper "+(P.T-wt);note="Volume omlaag en scherp blijven voor "+nm+".";
+    }else if(phase==="spec"){
+      tag="Piek";
+      note=F0.ftp?"FTP-opbouw richting "+F0.dist+" W: threshold, VO₂max en sweet spot, loopvolume op onderhoud.":
+        F0.swim?"Specifieke voorbereiding op "+nm+": CSS-intervallen en lange zwemtrainingen richting de doelafstand, fietsen en hardlopen op onderhoud.":
+        F0.tri?"Specifieke voorbereiding op "+nm+": bricks, een lange duurrit van "+Rd+" km met transitieloop, CSS-intervallen"+(hasLL?" en een duurloop van "+Lg+" km":"")+".":
+        rf?(tr?"Specifieke voorbereiding op "+nm+": lange trailloop van "+Lg+" km"+(b2?", dag 2 van "+b2+" km":"")+", heuvelwerk en voeding oefenen.":"Specifieke voorbereiding op "+nm+": tempoblokken"+(gp?" op doeltempo":"")+" en een duurloop van "+Lg+" km."):
+        "Specifieke voorbereiding op "+nm+": lange duurrit van "+(Rd||60)+" km en intervallen op de fiets.";
+    }else{
+      tag=f<.5?"Basis":"Bouw";
+      note=F0.ftp?"Basisopbouw richting "+F0.dist+" W: aerobe basis en drempelvermogen, loopvolume op onderhoud.":
+        F0.swim?"Basisopbouw richting "+nm+": techniek en aerobe zwembasis, fietsen en hardlopen op onderhoud.":
+        F0.tri?"Basisopbouw richting "+nm+": zwemtechniek, FTP en aerobe basis, loopvolume ca. "+Vr+" km"+(hasLL?" en een duurloop van "+Lg+" km":"")+".":
+        "Basisopbouw richting "+nm+": "+(rf?"FTP en aerobe basis, loopvolume ca. "+Vr+" km"+(flat.indexOf("ll")>=0?" en een duurloop van "+Lg+" km":"")+".":"drempelvermogen en aerobe basis, loopvolume op onderhoud.");
+    }
+    if(preT&&!raceWk&&!rest&&phase!=="taper")note+=" Iets lichter richting tussendoel "+gname(preT.g)+".";
+    if(recW.length)note+=" Recreatief: "+recW.map(function(x){return gname(x.g)+" op "+DAYS[wdOf(x.t)].toLowerCase()}).join(" en ")+", zonder aanpassing van het schema.";
+    if(actNames.length)note+=" Rekening gehouden met: "+actNames.join(", ")+".";
+    if(!rest&&!raceWk&&phase!=="taper")k++;
+    out.push({s:iso(mon),n:rng(mon),tag:tag,note:note,d:d,ctx:c,ph:(raceWk&&inW.some(function(x){return x.A}))?"race":phase==="spec"?"piek":phase==="taper"?"taper":(f<.5?"basis":"bouw")});
+  }
+  return out;
+}
+/* Handmatig schema: activiteiten erin zetten */
+function overlay(weeks,acts){
+  return weeks.map(function(w){
+    var mon=pd(w.s);
+    return{s:w.s,n:w.n,tag:w.tag,note:w.note,ph:w.ph,ctx:w.ctx,d:w.d.map(function(day,j){
+      var ds=iso(mon+j*DAY),list=acts.filter(function(a){return a.date===ds&&a.sport!=="ww"&&a.sport!=="slot"});
+      if(!list.length)return day;
+      var out=day.slice();
+      list.forEach(function(a){
+        var idx=acts.indexOf(a);
+        if(a.sport==="vrij"){out=actItems(a,idx);return}
+        if(actHard(a))out=out.filter(function(x){return x[0]==="ww"||x[0]==="w"||x[9]!==undefined}).map(function(x){return x[0]==="ww"&&x[1]==="di"?CM:x});
+        out=out.filter(function(x){return x!==RU}).concat(actItems(a,idx));
+      });
+      return out;
+    })};
+  });
+}
+/* Handmatig toegevoegde trainingen (zelfde keuzes als de weekindeling) */
+function goalX(g){var ty=g.type,tri=ty==="triatlon",d=tri?numf(g.bkD):numf(g.dist);return{g:g,t:pd(g.date),dist:d,rd:tri?numf(g.rnD):0,sd:tri?numf(g.swD):(ty==="zwemmen"?d:0),tri:tri,ftp:ty==="ftp",swim:ty==="zwemmen",run:isRun(ty),A:g.prio==="A",sp:pd(g.spec)}}
+function ctxFor(w,i){
+  var g=null,l=null;G.forEach(function(x){var t=pd(x.date);if(t===null)return;if(x.prio==="A"&&(!g||t<pd(g.date)))g=x;if(!l||t>pd(l.date))l=x});g=g||l;
+  var F0=g?goalX(g):{g:{},dist:0,rd:0,sd:0,run:true},p=w.ph||"basis";
+  var ph={basis:"base",bouw:"base",piek:"spec",taper:"taper",race:"taper"}[p]||"base",rest=lite(w),short=ph==="taper";
+  var Lg=Math.round(({basis:18,bouw:24,piek:28,taper:16,race:10}[p]||20)*(rest?.7:1));
+  var SG=null,mon=pd(w.s);G.forEach(function(x){var t=pd(x.date);if(!SG&&(x.type==="zwemmen"||x.type==="triatlon")&&t!==null&&t>=mon)SG=x});
+  var c={ph:ph,rest:rest,short:short,f:{basis:.25,bouw:.7}[p]||1,k:i,F0:F0,SG:SG?goalX(SG):null,swT:rest?1400:2000,Lg:Lg,b2:Math.round(Lg*.45),Rd:rest?50:70,bq:0,trRun:0,voWeek:false,
+    gp:F0.run?sec(F0.g.pace):F0.tri?sec(F0.g.rnP):null,tr:F0.run&&(F0.g.type==="trailrun"||F0.dist>43)};
+  c.kmOf=function(x){return Math.round(({lh:6,lr:8}[x]||10)*(rest||short?.75:1))};
+  var lx=[];if(Lg>=26)lx.push("60 g koolhydraten per uur");c.lgX=lx.join(", ");
+  return c;
+}
+/* Geplande trainingen die je hebt aangepast: haal het origineel weg */
+function applyReps(weeks){
+  return weeks.map(function(w){
+    var mon=pd(w.s),rem={};
+    return{s:w.s,n:w.n,tag:w.tag,note:w.note,ph:w.ph,ctx:w.ctx,rem:rem,d:w.d.map(function(day,j){
+      var ds=iso(mon+j*DAY),out=day.slice(),hit=false;
+      ACT.forEach(function(a){
+        if(a.date!==ds||!a.rep)return;
+        var r=a.rep,br=/^Brick /.test(r.t),q=-1;
+        out.forEach(function(x,k){if(q>=0||x[9]!==undefined)return;if(r.ww?x[0]==="ww":x[1]===r.t)q=k});
+        if(q>=0){hit=true;(rem[j]=rem[j]||[]).push(out[q]);out.splice(q,1);if(br)out=out.filter(function(x){return x[9]!==undefined||!/^Brick /.test(x[1])})}
+      });
+      return hit&&!out.length?[RU]:out;
+    })};
+  });
+}
+function applySlots(weeks){
+  return weeks.map(function(w,i){
+    var mon=pd(w.s),c=null;
+    var d=w.d.map(function(day,j){
+      var ds=iso(mon+j*DAY),list=[];ACT.forEach(function(a,ix){if(a.sport==="slot"&&a.date===ds&&(SP[a.slot]||a.slot==="del"))list.push(ix)});
+      if(!list.length)return day;
+      c=c||w.ctx||ctxFor(w,i);
+      var out=day.slice();
+      list.forEach(function(ix){
+        var a=ACT[ix],key=a.slot;
+        if(key==="del")return;
+        if(key==="rust"){if(a.rep)return;out=[["r","Rust","Geen training op deze dag","","","",0,"","vrij",ix]];return}
+        var c2=c,km=numf(a.km),mi=numf(a.min),nr=numf(a.reps),ln=numf(a.len);
+        if(WWK.indexOf(key)<0&&(km||mi)||nr&&ln){
+          c2=Object.assign({},c);
+          if(nr&&ln)c2.blkO=[Math.round(nr),Math.round(ln)];
+          if(km&&key.charAt(0)==="l"){c2.kmOf=function(){return Math.round(km)};c2.Lg=Math.round(km);c2.b2=Math.round(km)}
+          if(km&&key==="fl")c2.Rd=Math.round(km);
+          if(km&&SP[key]==="s"){c2.swT=Math.round(km/100)*100;c2.swFix=true}
+          if(km&&key==="br")c2.brRun=Math.max(3,Math.round(km));
+          if(mi)c2.durO=Math.round(mi);
+        }
+        var items=mat(key,c2).map(function(x){x=x.slice();x[9]=ix;if(x[0]==="ww"){x[6]=a.km;x[7]=a.km2}return x});
+        if(WWK.indexOf(key)>=0){var p=-1;out.forEach(function(x,q){if(p<0&&x[0]==="ww")p=q});if(p>=0){out.splice(p,1,items[0]);items=items.slice(1)}}
+        out=out.filter(function(x){return x!==RU}).concat(items);
+      });
+      return out.length?out:[RU];
+    });
+    return{s:w.s,n:w.n,tag:w.tag,note:w.note,ph:w.ph,ctx:w.ctx,rem:w.rem||{},d:d};
+  });
+}
+/* De rest van de week laten meebewegen met je eigen wijzigingen (alleen vandaag en later) */
+var WWKEY={cm:"ww",cmv:"ww",di:{th:"wwth",ss:"wwss",vo:"wwvo"}};
+function itKey(x){
+  if(x[0]==="ww")return x[1]==="di"?WWKEY.di[x[2]]:"ww";
+  if(x[9]!==undefined){var a=ACT[x[9]];if(a&&a.sport==="slot")return a.slot==="del"?"":a.slot;return ""}
+  if(x[0]==="w"||x[1]==="Rust")return "";
+  return guessSlot(x[1]);
+}
+function itTitle(x){return x[0]==="ww"?wwItem(x,40,40)[1]:x[1]}
+function itInfo(x){
+  var k=itKey(x),i={k:k,sp:"",hard:false,q:false,km:x[0]==="ww"?0:(x[6]||0),own:false};
+  if(x[0]==="w"){i.sp=x[7];i.hard=true;return i}
+  if(x[9]!==undefined&&!k){var a=ACT[x[9]];if(!a)return i;i.own=true;i.sp={run:"l",trail:"l",bike:"f",swim:"s",brick:"b"}[a.sport]||"";i.hard=actHard(a);i.q=i.hard&&(i.sp==="l"||i.sp==="f");if(a.sport==="brick"){i.sp=x[0]}return i}
+  if(!k)return i;
+  i.sp=SP[k]==="b"?x[0]:SP[k];
+  if(k==="ll"||k==="ltl"){i.hard=true;i.long=true;return i}
+  if(RQ.indexOf(k)>=0||k==="br"&&x[0]==="l"){i.hard=true;i.q=true;i.sp="l"}
+  if(BQ.indexOf(k)>=0||k==="fl"||k==="br"&&x[0]==="f"){i.hard=true;i.q=BQ.indexOf(k)>=0||k==="br";i.sp="f"}
+  if(/FTP-test|over-unders/.test(x[1])){i.hard=true;i.q=true;i.sp="f"}
+  return i;
+}
+function rebal(weeks){
+  var td=todayMs();
+  return weeks.map(function(w,wi){
+    var mon=pd(w.s),E={},rem=w.rem||{},skp={};
+    var d=w.d.map(function(day){return day.map(function(x){return x.slice()})});
+    d.forEach(function(day,j){if(rem[j]||day.some(function(x){return x[9]!==undefined}))E[j]=1;
+      var ds=iso(mon+j*DAY);day.forEach(function(x){var L0=LOG[lkey(ds,itTitle(x))];if(L0&&L0.st==="skip"){x.__skip=1;(skp[j]=skp[j]||[]).push(x)}});});
+    if(!Object.keys(E).length&&!Object.keys(skp).length)return w;
+    var c=w.ctx||ctxFor(w,wi);
+    function adj(j){return mon+j*DAY>=td&&!E[j]}
+    function infos(j){return d[j].map(function(x){var i=itInfo(x);if(x.__skip){i.q=false;i.hard=false}return i})}
+    function regen(j,k,key,why,c2){
+      var items=mat(key,c2||c).map(function(y){y=y.slice();y[13]="auto";y[14]=why;return y});
+      d[j].splice.apply(d[j],[k,1].concat(items));
+    }
+    function hardSp(j,sp){return j>=0&&j<7&&infos(j).some(function(i){return i.hard&&i.sp===sp})}
+    /* 1. maximaal 1 kwaliteitsloop en 2 kwaliteitssessies op de fiets per week */
+    [["l",1,"Max. 1 kwaliteitsloop per week"],["f",2,"Max. 2 kwaliteitssessies op de fiets per week"]].forEach(function(r){
+      var cnt=0;d.forEach(function(day,j){infos(j).forEach(function(i){if(i.q&&i.sp===r[0])cnt++})});
+      for(var j=6;j>=0&&cnt>r[1];j--){if(!adj(j))continue;var I=infos(j);
+        for(var k=I.length-1;k>=0&&cnt>r[1];k--){var i=I[k];if(i.q&&i.sp===r[0]&&!i.own&&DOWN[i.k]){regen(j,k,DOWN[i.k],r[2]);cnt--;I=infos(j)}}}
+    });
+    /* 2. geen zware trainingen van dezelfde sport op opeenvolgende dagen naast een gewijzigde dag */
+    Object.keys(E).forEach(function(js){var e=+js;
+      infos(e).forEach(function(ie){if(!ie.hard)return;
+        [e-1,e+1].forEach(function(j){if(j<0||j>6||!adj(j))return;var I=infos(j);
+          I.forEach(function(i,k){if(i.hard&&i.sp===ie.sp&&!i.long&&!i.own&&DOWN[i.k]&&i.k!=="lb"){regen(j,k,DOWN[i.k],"Lichter: "+DAYS[e].toLowerCase()+" is al zwaar")}})})})});
+    /* 3. vervallen kwaliteit naar een andere dag verplaatsen */
+    var mv={};Object.keys(rem).forEach(function(j){mv[j]=rem[j].map(function(x){return[x,"Verplaatst van "]})});
+    Object.keys(skp).forEach(function(j){mv[j]=(mv[j]||[]).concat(skp[j].map(function(x){return[x,"Ingehaald: overgeslagen op "]}))});
+    Object.keys(mv).forEach(function(js){var e=+js;
+      mv[e].forEach(function(xr){var x=xr[0],why=xr[1]+DAYS[e].toLowerCase(),i=itInfo(x);if(!i.q||!i.k)return;
+        if(infos(e).some(function(n){return n.q&&n.sp===i.sp}))return;
+        var lim=i.sp==="l"?1:2,cnt=0;d.forEach(function(day,j){infos(j).forEach(function(n){if(n.q&&n.sp===i.sp)cnt++})});if(cnt>=lim)return;
+        for(var j=0;j<7;j++){if(!adj(j)||hardSp(j-1,i.sp)||hardSp(j+1,i.sp)||hardSp(j,i.sp))continue;
+          var I=infos(j),done=false;
+          I.forEach(function(n,k){if(done)return;
+            if(i.sp==="l"&&(n.k==="lr"||n.k==="lh"||n.k==="ltr")){regen(j,k,i.k,why);done=true}
+            else if(i.sp==="f"&&n.k==="ww"){var kk={fth:"wwth",fss:"wwss",fvo:"wwvo",fq:"wwq"}[i.k]||(WWK.indexOf(i.k)>=0?i.k:"wwq");regen(j,k,kk,why);done=true}
+            else if(i.sp==="f"&&n.k==="fr"){var k2={wwth:"fth",wwss:"fss",wwvo:"fvo",wwq:"fq"}[i.k]||i.k;regen(j,k,k2,why);done=true}});
+          if(done)break}
+      })});
+    /* 4. loopvolume van de week ongeveer gelijk houden */
+    var delta=0;Object.keys(E).forEach(function(js){var e=+js;
+      d[e].forEach(function(x){if(x[9]!==undefined&&(x[0]==="l"))delta+=x[6]||0});
+      (rem[e]||[]).forEach(function(x){if(x[0]==="l")delta-=x[6]||0})});
+    if(Math.abs(delta)>=3){
+      var easy=[];d.forEach(function(day,j){if(!adj(j))return;day.forEach(function(x,k){var i=itInfo(x);if(x[13])return;if(i.k==="lh"||i.k==="lr"||i.k==="ltr")easy.push([j,k,x[6]||0,i.k])})});
+      var tot=easy.reduce(function(a,b){return a+b[2]},0);
+      easy.sort(function(a,b){return b[0]-a[0]||b[1]-a[1]}).forEach(function(e){if(!tot)return;
+        var nk=Math.round(e[2]-delta*e[2]/tot);nk=clamp(nk,Math.max(4,Math.round(e[2]*.6)),Math.round(e[2]*1.4));if(nk===e[2])return;
+        var c2=Object.assign({},c);c2.kmOf=function(){return nk};
+        regen(e[0],e[1],e[3],"Afstand aangepast zodat het weekvolume gelijk blijft",c2)});
+    }
+    return{s:w.s,n:w.n,tag:w.tag,note:w.note,ph:w.ph,ctx:w.ctx,d:d};
+  });
+}
+/* Afwezig (ziek, vakantie, blessure) en daarna rustig herstarten */
+var ABSN={ziek:"ziek",vakantie:"vakantie",blessure:"blessure"};
+function absentPass(weeks){
+  var P=ABS.map(function(a){var f=pd(a.from),t=pd(a.to);if(f===null)return null;if(t===null||t<f)t=f;var len=Math.round((t-f)/DAY)+1,
+    win=a.r==="vakantie"?Math.min(7,Math.max(2,len)):Math.min(14,Math.max(3,len));return{f:f,t:t,r:a.r,len:len,win:win}}).filter(Boolean);
+  if(!P.length)return weeks;
+  return weeks.map(function(w,wi){
+    var mon=pd(w.s),c=null,notes=[],d=w.d.map(function(day,j){
+      var dm=mon+j*DAY,inP=null,aft=null;
+      P.forEach(function(p){if(dm>=p.f&&dm<=p.t)inP=p;else if(dm>p.t&&dm<=p.t+p.win*DAY&&!aft)aft=p});
+      if(inP){var keep=day.filter(function(x){return x[0]==="w"});return [["r","Afwezig: "+ABSN[inP.r],inP.r==="vakantie"?"Geen training gepland":"Geen training, eerst herstellen","","","",0,"","vrij"]].concat(keep)}
+      if(!aft)return day;
+      c=c||w.ctx||ctxFor(w,wi);
+      var half=dm<=aft.t+Math.ceil(aft.win/2)*DAY,fac=aft.r==="vakantie"?.8:(half?.6:.8),why="Rustige herstart na "+(aft.r==="vakantie"?"vakantie":aft.r==="ziek"?"ziekte":"blessure"),out=[];
+      day.forEach(function(x){
+        if(x[0]==="w"||x[9]!==undefined){out.push(x);return}
+        var k=itKey(x);
+        if(x[0]==="ww"){if(x[1]==="di"){var y=CM.slice();y[13]="auto";y[14]=why;out.push(y)}else out.push(x);return}
+        if(!k){out.push(x);return}
+        var nk=DOWN[k]&&(RQ.indexOf(k)>=0||BQ.indexOf(k)>=0||k==="br"||k==="fl")?DOWN[k]:k,c2=c;
+        if(nk.charAt(0)==="l"&&x[6]){var km=Math.max(3,Math.round(x[6]*fac));c2=Object.assign({},c);c2.kmOf=function(){return km};c2.Lg=km;c2.b2=km}
+        else if(nk===k&&!(nk==="fr"||nk==="mtb")){out.push(x);return}
+        if(nk==="fr"||nk==="mtb"){c2=Object.assign({},c2);c2.durO=Math.max(30,Math.round(itemMin(x)*fac/5)*5)}
+        mat(nk,c2).forEach(function(y){y=y.slice();y[13]="auto";y[14]=why;out.push(y)});
+      });
+      return out.length?out:[RU];
+    });
+    P.forEach(function(p){if(p.f<mon+W7&&p.t>=mon)notes.push("Afwezig ("+ABSN[p.r]+") "+dnl(p.f)+(p.t>p.f?" t/m "+dnl(p.t):"")+".");
+      else if(p.t<mon&&p.t+p.win*DAY>=mon)notes.push("Rustige herstart na "+(p.r==="vakantie"?"vakantie":p.r==="ziek"?"ziekte":"blessure")+".")});
+    return{s:w.s,n:w.n,tag:w.tag,note:(w.note||"")+(notes.length?" "+notes.join(" "):""),ph:w.ph,ctx:w.ctx,d:d};
+  });
+}
+/* Beschikbare tijd: trainingen inkorten tot ze passen (woon-werk telt niet mee) */
+var FIXT=/FTP-test|over-unders|Brick |herstelrit|transitieloop|Wedstrijd/;
+function fitAvail(weeks){
+  return weeks.map(function(w,wi){
+    var mon=pd(w.s),c=null,fit={};
+    var d=w.d.map(function(day,j){
+      var av=avFor(iso(mon+j*DAY),j);if(av===null)return day;
+      var adj=[],fixed=0;
+      day.forEach(function(x,k){
+        if(x[0]==="ww"||x[0]==="w"||x[9]!==undefined||FIXT.test(x[1])||x[1]==="Rust"){if(x[0]!=="ww")fixed+=itemMin(x);return}
+        if(x[0]==="r"&&!/^(Kracht|Mobiliteit)/.test(x[1]))return;
+        adj.push(k);
+      });
+      var am=0;adj.forEach(function(k){am+=itemMin(day[k])});
+      if(!adj.length||fixed+am<=av+2)return day;
+      c=c||w.ctx||ctxFor(w,wi);
+      var f=(av-fixed)/am,out=day.slice();fit[j]=av;
+      adj.slice().reverse().forEach(function(k){
+        var x=day[k],tgt=itemMin(x)*f,key=guessSlot(x[1]),c2=Object.assign({},c),rep=null;
+        if(f<.3||tgt<15){out.splice(k,1);return}
+        if(key.charAt(0)==="l"){
+          var pace=itemMin(x)/(x[6]||1),km=Math.floor(tgt/pace);if(km<3){out.splice(k,1);return}
+          c2.kmOf=function(){return km};c2.Lg=km;c2.b2=km;
+          var bm=/(\d+)×(\d+) min/.exec(sub(x[2]));if(bm&&RQ.concat(["ltb"]).indexOf(key)>=0)c2.blkO=[Math.max(1,Math.round(+bm[1]*Math.min(1,f))),+bm[2]];
+        }else if(["fth","fss","fvo"].indexOf(key)>=0){
+          var b=/(\d+)×(\d+) min/.exec(sub(x[2])),n=b?+b[1]:2,ln=b?+b[2]:15,rs=key==="fvo"?4:5;
+          while(n>1&&bmin([n,ln,rs])>tgt)n--;while(ln>5&&bmin([n,ln,rs])>tgt)ln-=5;c2.blkO=[n,ln];
+        }else if(key==="fr"||key==="mtb"||/^kr/.test(key))c2.durO=Math.max(20,Math.floor(tgt/5)*5);
+        else if(key==="fl")c2.Rd=Math.max(20,Math.round(tgt/60*30));
+        else if(SP[key]==="s"){var cs=sec(V.cs)||120;c2.swT=Math.max(800,Math.floor(tgt*60/((cs+10)*1.15)*100/100)*100);c2.swFix=true}
+        else return;
+        rep=mat(key,c2).map(function(y){y=y.slice();y[12]="fit";return y});
+        out.splice.apply(out,[k,1].concat(rep));
+      });
+      return out.length?out:[RU];
+    });
+    return{s:w.s,n:w.n,tag:w.tag,note:w.note,ph:w.ph,d:d,fit:fit};
+  });
+}
+/* Afgelopen dagen vastzetten: wat er stond, blijft staan */
+function frz(x){var y=x.slice();[1,2,3,4,5].forEach(function(i){if(typeof y[i]==="string")y[i]=sub(y[i])});delete y[9];y[10]=undefined;return y}
+function freeze(weeks){
+  var td=todayMs(),ch=false;
+  weeks.forEach(function(w){var mon=pd(w.s),hit=false;
+    w.d=w.d.map(function(day,j){var ds=iso(mon+j*DAY);
+      if(mon+j*DAY===td){var nf=JSON.stringify(day.map(frz));if(JSON.stringify(FROZ[ds])!==nf){FROZ[ds]=JSON.parse(nf);ch=true}return day}
+      if(mon+j*DAY>td)return day;
+      if(!FROZ[ds]){FROZ[ds]=day.map(frz);ch=true}
+      hit=true;return FROZ[ds].map(function(x){x=x.slice();for(var q=6;q<x.length;q++)if(x[q]===null)x[q]=undefined;return x})});
+    if(hit)w.km=sumKm(w.d)});
+  if(ch)saveL();
+  return weeks;
+}
+/* Trainingsbelasting: minuten × intensiteit (Z1=1 … Z5=5), afgevinkt met RPE telt mee */
+function intF(x){var z=x[3]||"",m=/^Z(\d)/.exec(z);if(m)return +m[1];if(/Sweet spot/.test(z))return 3.5;if(/Lange loop|Recreatief/.test(z))return 2.2;if(/Doeltempo|Wedstrijd/.test(z))return 4;if(/Test/.test(z))return 4.5;if(x[0]==="r")return x[1]==="Rust"||x[8]==="vrij"?0:2;return 2}
+function weekLoad(w,nr){var mon=pd(w.s),L=0;w.d.forEach(function(day,j){var ds=iso(mon+j*DAY);day.forEach(function(x){if(nr&&x[0]==="w")return;var m=itemMin(x),f=intF(x),L0=LOG[lkey(ds,x[1])];
+  if(L0){if(L0.st==="skip")return;if(L0.st==="alt"&&L0.min)m=L0.min;if(L0.rpe)f=L0.rpe/2}L+=m*f})});return Math.round(L)}
+function annotLoad(weeks){
+  var ld=weeks.map(function(w){return weekLoad(w,true)});
+  weeks.forEach(function(w,i){w.load=weekLoad(w);w.lw=0;if(i<2)return;var prev=ld.slice(Math.max(0,i-4),i),avg=prev.reduce(function(a,b){return a+b},0)/prev.length;
+    if(avg>0&&ld[i]>avg*1.3){w.lw=Math.round((ld[i]/avg-1)*100);w.note=(w.note||"")+" Let op: deze week is "+w.lw+"% zwaarder dan het gemiddelde van de weken ervoor. Luister goed naar je lichaam."}});
+  return weeks;
+}
+/* Woon-werkafstand per dag invullen */
+function wwFor(ds,j){
+  var ai=-1;ACT.forEach(function(x,i){if(x.sport==="ww"&&x.date===ds)ai=i});
+  var dd=WW.d[j]||{h:"",t:""},h=numf(dd.h!==""?dd.h:WW.h),t=numf(dd.t!==""?dd.t:WW.t);
+  if(ai>=0){var a=ACT[ai];if(a.km!=="")h=numf(a.km);if(a.km2!=="")t=numf(a.km2)}
+  return{h:h,t:t,ai:ai};
+}
+function resolve(weeks){
+  return weeks.map(function(w){
+    var mon=pd(w.s);
+    var d=w.d.map(function(day,j){
+      var ww=wwFor(iso(mon+j*DAY),j),has=false,vr=day.some(function(x){return x[8]==="vrij"});
+      var out=[];
+      day.forEach(function(x){if(x[0]!=="ww"){out.push(x);return}if(vr)return;has=true;var h1=(x[6]!==undefined&&x[6]!=="")?numf(x[6]):ww.h,t1=(x[7]!==undefined&&x[7]!=="")?numf(x[7]):ww.t,it=wwItem(x,h1,t1);if(x[9]!==undefined)it[9]=x[9];else{it[10]=iso(mon+j*DAY);it[11]=j}if(x[13]){it[13]=x[13];it[14]=x[14]}out.push(it)});
+      if(!has&&ww.ai>=0&&!vr){var it=wwItem(CM,ww.h,ww.t);it[10]=iso(mon+j*DAY);it[11]=j;out=[it].concat(out.filter(function(x){return x!==RU}))}
+      return out.length?out:[RU];
+    });
+    var nt=w.note||"",all=[].concat.apply([],d);
+    if(all.some(function(x){return /FTP-test/.test(x[1])})&&!/FTP in/.test(nt))nt+=" Vul na de test je nieuwe FTP in bij Instellingen.";
+    if(all.some(function(x){return x[0]==="w"&&x[7]==="l"&&x[3]==="Wedstrijd"}))nt+=" Liep je duidelijk sneller of langzamer dan je tempo’s? Pas ze na de wedstrijd aan bij Instellingen.";
+    if(all.some(function(x){return x[0]==="w"&&x[7]==="s"}))nt+=" Zwom je duidelijk sneller of langzamer dan verwacht? Pas je CSS na de wedstrijd aan.";
+    return{s:w.s,n:w.n,tag:w.tag,note:nt,ph:w.ph,d:d,km:sumKm(d),fit:w.fit||{}};
+  });
+}
+//CORE-END
+var G=[],V0="",TPL=cpT(DEFT),PR={rest:DEFP.rest,vo:DEFP.vo},WK=[],cur=0,wsel=0,DR=null;
+function applyTheme(t){
+  document.documentElement.setAttribute("data-theme",t);
+  var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="dark"?"#10161c":"#eef1f4");
+  var b=document.getElementById("themeSw");if(b){b.setAttribute("aria-checked",String(t==="dark"));b.querySelector(".tlb").textContent=t==="dark"?"Donker":"Licht"}
+}
+(function(){var t="dark";try{var v=localStorage.getItem("tp-theme");if(v==="light"||v==="dark")t=v}catch(e){}applyTheme(t);
+  document.getElementById("themeSw").addEventListener("click",function(){var n=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";applyTheme(n);try{localStorage.setItem("tp-theme",n)}catch(e){}});})();
+var mnav=document.getElementById("mnav"),tabs=document.getElementById("tabs"),sched=document.getElementById("sched"),view=document.getElementById("view");
+var MENU=[["Trainingsschema","sched"],["Overzicht","opb"],["Wedstrijdplan","race"],["Instellingen","set"]];
+function copyG(a){return a.map(function(g){var o={};GF.forEach(function(k){o[k]=String(g[k]||"")});if(o.type==="fietsultra")o.type="wielrennen";if(!o.prio)o.prio="B";return o})}
+function copyA(a){return a.map(function(x){
+  var z=x.z||({rustig:"z2",stevig:"z3",zwaar:"z4"}[x.int])||"z2";
+  return{date:x.date||"",sport:x.sport||"run",name:x.name||"",km:String(x.km||""),km2:String(x.km2||""),min:String(x.min||(x.uren?Math.round(numf(x.uren)*60):"")),z:z,z2:x.z2||"z3",slot:x.slot||"",reps:String(x.reps||""),len:String(x.len||""),rep:x.rep?{t:String(x.rep.t||""),ww:x.rep.ww?1:0}:undefined};
+})}
+function loadG(){
+  G=copyG(DEFG);
+  try{var j=localStorage.getItem("tp-goals");if(j){var o=JSON.parse(j);
+    if(o&&o.g&&o.g.length!==undefined)G=copyG(o.g);
+    if(typeof o.v==="string")V0=o.v;
+    if(o.t&&o.t.length===7){TPL=o.t.map(function(d){var s=(d||[]).filter(function(x){return SP[x]&&x!=="ftest"}).slice(0,3);return s.length?s:["rust"]});if(o.tv!==2)TPL=migrLL(TPL)}
+    if(o.a&&o.a.length!==undefined)ACT=copyA(o.a);
+    if(o.p&&o.p.rest)PR={rest:+o.p.rest||4,vo:+o.p.vo||3};
+    if(o.abs&&o.abs.length!==undefined)ABS=o.abs.map(function(x){return{from:x.from||"",to:x.to||"",r:x.r||"ziek"}});
+    if(o.av&&o.av.d&&o.av.d.length===7)AV={d:o.av.d.map(function(x){return String(x==null?"":x)}),o:o.av.o||{}};
+    if(o.w){WW.h=String(o.w.h!=null?o.w.h:"");WW.t=String(o.w.t!=null?o.w.t:"");if(o.w.d&&o.w.d.length===7)WW.d=o.w.d.map(function(x){return{h:String(x&&x.h||""),t:String(x&&x.t||"")}})}
+  }}catch(e){}
+}
+function saveG(){try{localStorage.setItem("tp-goals",JSON.stringify({g:G,v:V0,t:TPL,tv:2,a:ACT,p:PR,w:WW,av:AV,abs:ABS}))}catch(e){}}
+function isDef(){return false&&JSON.stringify(G.map(norm))===JSON.stringify(DEFG.map(norm))&&JSON.stringify(TPL)===JSON.stringify(DEFT)&&PR.rest===DEFP.rest&&PR.vo===DEFP.vo}
+function plan(){WK=annotLoad(freeze(resolve(fitAvail(absentPass(rebal(applySlots(applyReps(isDef()?overlay(WKM,ACT):genPlan(G,numf(V0)||45,expT(TPL),ACT,PR)))))))))}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function lite(w){return w.tag==="Rustweek"||w.tag==="Testweek"}
+function diffDays(w){return Math.floor((new Date()-new Date(w.s+"T00:00:00"))/864e5)}
+function opts(list,sel){return list.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===sel?' selected':'')+'>'+o[1]+'</option>'}).join("")}
+function raceList(){
+  var a=[];
+  G.forEach(function(g){var t=pd(g.date);if(t!==null)a.push([t,g])});
+  a.sort(function(x,y){return x[0]-y[0]});
+  var A=a.filter(function(x){return x[1].prio==="A"}),h="";
+  if(!A.length&&a.length)A=[a[a.length-1]];
+  if(A.length){
+    var m=A[A.length-1],wk=Math.max(0,Math.ceil((m[0]-todayMs())/W7));
+    h+='<div class="mainG"><span class="lbl">'+(A.length>1?"Hoofddoelen":"Hoofddoel")+'</span>'+A.map(function(x){return '<b>'+esc(gname(x[1]))+'</b> <span class="md">'+esc(dnl(x[0])+" "+new Date(x[0]).getUTCFullYear())+'</span>'}).join('<br>')+
+      '<span class="md2">Nog '+wk+' weken. Het hele schema werkt hiernaartoe.</span></div>';
+  }
+  var B=a.filter(function(x){return A.indexOf(x)<0});
+  if(B.length)h+='<p class="vlbl">Onderweg</p><ul class="races">'+B.map(function(x){return "<li>"+esc(dnl(x[0])+" – "+gname(x[1]))+' <span class="rcat">'+(PRL[x[1].prio]||"Vormcheck").toLowerCase()+'</span></li>'}).join("")+'</ul>';
+  document.getElementById("goalsum").innerHTML=h;
+}
+function wkTot(w){
+  var mon=pd(w.s),b=0,r=0,sw=0,m={f:0,l:0,s:0,r:0},adj=false;
+  w.d.forEach(function(day,j){var ds=iso(mon+j*DAY);day.forEach(function(x){
+    var c=x[0]==="w"?(x[7]==="f"||x[7]==="s"?x[7]:"l"):x[0],k=x[6]||0,mi=itemMin(x),L0=x[1]!=="Rust"?LOG[lkey(ds,x[1])]:null;
+    if(L0&&L0.st==="skip"){adj=true;return}
+    if(L0&&L0.st==="alt"){adj=true;var lk=numf(L0.km);if(lk>0){mi=L0.min?numf(L0.min):mi*(k?lk/k:1);k=c==="s"&&lk>20?lk/1000:lk}else if(L0.min)mi=numf(L0.min)}
+    if(c==="f")b+=k;else if(c==="l")r+=k;else if(c==="s")sw+=k;
+    if(m[c]!==undefined)m[c]+=mi})});
+  return{km:[Math.round(b/5)*5,Math.round(r),Math.round(sw*10)*100],m:m,adj:adj};
+}
+function tot(w){if(!w.km)return "";var T0=wkTot(w),k=T0.km;return '<div class="chips wkm"><span class="wkl">Weektotalen:</span><span class="chip">Fietsen ca. '+k[0]+' km</span><span class="chip">Hardlopen ca. '+k[1]+' km</span>'+(k[2]?'<span class="chip">Zwemmen ca. '+fmtM(k[2])+' m</span>':'')+'<span class="chip">Duur ca. '+hm((T0.m.f+T0.m.l+T0.m.s+T0.m.r)/60)+'</span>'+(T0.adj?'<span class="wkl">bijgewerkt na afvinken</span>':'')+'</div>'}
+/* Beschrijving van een training als overzichtelijke stappen */
+var NOTE_RE=/Begin licht|koolhydraten|drinken|stukken steiler|voeding|Leg je|Zet je|kleding|laatste lange loop|onverhard$|Reis deze|Start aan|ERG-modus uit|Nieuwe FTP|volledige rustdag|voor de beleving|geen wedstrijdtempo|trainingswedstrijd|trail met hoogtemeters|race-uitrusting|heuvelachtig|eerste trail|Eet en drink|Wissel binnen|eerste km 5 sec/;
+function capF(t){return t.charAt(0).toUpperCase()+t.slice(1)}
+function qty(t){t=t.charAt(0).toUpperCase()+t.slice(1);return esc(t).replace(/^((?:ca\. )?[\d.,]+(?:×[\d.,]+)? ?(?:min|sec|km|m|uur)\b(?: \([^)]*\))?)/,'<b>$1</b>')}
+function parseSteps(raw){
+  var d=sub(raw).trim(),head="",m=/^([\d.,]+ (?:min|m|km|uur)(?: trail)?(?: \([^)]*\))?): /.exec(d);
+  if(m){head=m[1];d=d.slice(m[0].length)}
+  var parts=[];
+  d.split(/\.\s+(?=[A-Z])/).forEach(function(sen){
+    sen=sen.replace(/\.$/,"");
+    var cur="",dep=0;
+    for(var i=0;i<sen.length;i++){var ch=sen[i];if(ch==="(")dep++;if(ch===")")dep--;
+      if(ch===","&&sen[i+1]===" "&&dep===0){parts.push(cur.trim());cur="";i++;continue}cur+=ch}
+    if(cur.trim())parts.push(cur.trim());
+  });
+  var out=[],notes=[],foot="";
+  if(parts.length===1&&!head)return{head:"",steps:[{t:parts[0]}],notes:[],foot:""};
+  parts.forEach(function(p){
+    var r;
+    if(/^Totaal /.test(p)){foot=p;return}
+    if(/^daarna /.test(p))p=p.replace(/^daarna /,"");
+    if((r=/^(Heenweg|Terugweg) ([\d.,]+ km): (.+)$/.exec(p))){out.push({g:r[1]+" "+r[2]});p=r[3]}
+    else if((r=/^(Heenweg|Terugweg) ([\d.,]+ km) (op .+)$/.exec(p))){out.push({g:r[1]+" "+r[2]});p="Hele rit "+r[3]}
+    var last=out[out.length-1];
+    if(last&&last.n&&!last.rec&&(r=/^(.+) (ertussen|tussen de blokken)$/.exec(p))){last.rec=r[1];return}
+    if(last&&last.n&&!last.rec&&/^(dribbelend|wandelend)/.test(p)){last.rec=p;return}
+    if((r=/^(\d+)×(.+?) met (.+?) ertussen$/.exec(p))){out.push({n:r[1],w:r[2],rec:r[3]});return}
+    if((r=/^(\d+)×(.+?) met ([\d.,]+ (?:sec|min)) rust$/.exec(p))){out.push({n:r[1],w:r[2],rec:r[3]});return}
+    if((r=/^(\d+)×(.+)$/.exec(p))){out.push({n:r[1],w:r[2]});return}
+    if(NOTE_RE.test(p)&&out.length){notes.push(p);return}
+    out.push({t:p});
+  });
+  return{head:head,steps:out,notes:notes,foot:foot};
+}
+function stepsHtml(raw){
+  var P=parseSteps(raw),st=P.steps.filter(function(s){return !s.g});
+  if(!P.head&&!P.foot&&st.length<=1&&!st.some(function(s){return s.n})&&P.steps.length===st.length){
+    return '<div class="dd">'+(st.length?qty(st[0].t):"")+(P.notes.length?'<div class="snote">'+esc(capF(P.notes.join(", ")))+'</div>':'')+'</div>';
+  }
+  var h='<div class="dd">'+(P.head?'<div class="sth">Totaal '+esc(P.head)+'</div>':''),inG=false;
+  if(!P.steps.length||!P.steps[0].g)h+='<ol class="stl">';
+  P.steps.forEach(function(s,ix){
+    if(s.g){if(ix>0)h+='</ol>'+(inG?'</div>':'');h+='<div class="sgrp"><div class="sgh">'+esc(s.g)+'</div><ol class="stl">';inG=true;return}
+    if(s.n){h+='<li class="st rep"><span class="rx">'+s.n+'×</span><div class="rb"><div>'+qty(s.w.trim())+'</div>'+(s.rec?'<div class="rr">Herstel: '+qty(s.rec)+'</div>':'')+'</div></li>';return}
+    h+='<li class="st">'+qty(s.t)+'</li>';
+  });
+  h+='</ol>'+(inG?'</div>':'');
+  if(P.foot)h+='<div class="stf">'+esc(P.foot)+'</div>';
+  if(P.notes.length)h+='<div class="snote">'+esc(capF(P.notes.join(", ")))+'</div>';
+  return h+'</div>';
+}
+var TGUESS=[[/^Trailrun: lange/,"ltl"],[/^Trailrun: bergop/,"ltb"],[/^Trailrun: /,"ltr"],[/^Hardlopen: herstelloop|^Hardlopen: shake-out/,"lh"],[/^Hardlopen: lange duurloop/,"ll"],[/^Hardlopen: (duurloop|transitieloop)/,"lr"],[/^Hardlopen: tempoloop/,"lt"],[/^Hardlopen: heuvelintervallen/,"lhv"],[/^Hardlopen: intervallen/,"li"],[/^Hardlopen: doeltempoloop/,"lq"],[/^Hardlopen: back-to-back/,"lb"],
+ [/^Fietsen: woon-werk met threshold/,"wwth"],[/^Fietsen: woon-werk met sweet spot/,"wwss"],[/^Fietsen: woon-werk met VO/,"wwvo"],[/^Fietsen: woon-werk/,"ww"],[/^Fietsen: (threshold|over-unders|FTP-test)/,"fth"],[/^Fietsen: sweet spot/,"fss"],[/^Fietsen: VO/,"fvo"],[/^Fietsen: lange duurrit/,"fl"],[/^Fietsen: (duurrit|herstelrit)/,"fr"],[/^Fietsen: mountainbike/,"mtb"],
+ [/^Zwemmen: techniek/,"zr"],[/^Zwemmen: CSS/,"zq"],[/^Zwemmen: lange duur/,"zl"],[/^Brick /,"br"],[/^Kracht: benen/,"krb"],[/^Kracht: excentrisch/,"kre"],[/^Kracht: core/,"krc"],[/^Mobiliteit/,"krm"],[/^Kracht/,"kr"],[/^(Rust|Herstel)/,"rust"]];
+function guessSlot(t){for(var i=0;i<TGUESS.length;i++)if(TGUESS[i][0].test(t))return TGUESS[i][1];return "lr"}
+/* Garmin: looptraining als FIT-workoutbestand */
+var FCRC=[0x0000,0xCC01,0xD801,0x1400,0xF001,0x3C00,0x2800,0xE401,0xA001,0x6C00,0x7800,0xB401,0x5000,0x9C01,0x8801,0x4400];
+function fitCrc(crc,b){var t=FCRC[crc&0xF];crc=(crc>>4)&0x0FFF;crc=crc^t^FCRC[b&0xF];t=FCRC[crc&0xF];crc=(crc>>4)&0x0FFF;return crc^t^FCRC[(b>>4)&0xF]}
+function fitAscii(t){return String(t).replace(/₂/g,"2").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^\x20-\x7E]/g,"")}
+function buildFit(name,steps,trail,sport,subs){
+  var D=[];
+  function u8(v){D.push(v&255)}function u16(v){u8(v);u8(v>>8)}function u32(v){u16(v&0xFFFF);u16((v>>>16)&0xFFFF)}
+  function str(t,n){t=fitAscii(t).slice(0,n-1);for(var i=0;i<n;i++)u8(i<t.length?t.charCodeAt(i):0)}
+  function def(local,glob,fields){u8(0x40|local);u8(0);u8(0);u16(glob);u8(fields.length);fields.forEach(function(f){u8(f[0]);u8(f[1]);u8(f[2])})}
+  /* file_id */
+  def(0,0,[[0,1,0x00],[1,2,0x84],[2,2,0x84],[3,4,0x8C],[4,4,0x86]]);
+  u8(0);u8(5);u16(255);u16(0);u32((Date.now()/1000)>>>0);u32(Math.max(0,Math.round(Date.now()/1000)-631065600));
+  /* workout */
+  var flat=[];
+  steps.forEach(function(s){if(s.rep){var st=flat.length;s.steps.forEach(function(x){flat.push(x)});flat.push({repFrom:st,n:s.rep})}else flat.push(s)});
+  def(1,26,[[4,1,0x00],[11,1,0x00],[6,2,0x84],[8,16,0x07]]);
+  u8(1);u8(sport||1);u8(subs!==undefined?subs:(trail?3:0));u16(flat.length);str(name,16);
+  /* workout_step */
+  def(2,27,[[254,2,0x84],[1,1,0x00],[2,4,0x86],[3,1,0x00],[4,4,0x86],[5,4,0x86],[6,4,0x86],[7,1,0x00]]);
+  flat.forEach(function(s,i){
+    u8(2);u16(i);
+    if(s.repFrom!==undefined){u8(6);u32(s.repFrom);u8(0xFF);u32(s.n);u32(0xFFFFFFFF);u32(0xFFFFFFFF);u8(0xFF);return}
+    var dt=s.dur.t==="time"?0:s.dur.t==="dist"?1:5,dv=s.dur.t==="time"?Math.round(s.dur.s*1000):s.dur.t==="dist"?Math.round(s.dur.m*100):0xFFFFFFFF;
+    u8(dt);u32(dv);
+    if(s.tgt&&s.tgt.t==="speed"){u8(0);u32(0);u32(Math.round(s.tgt.lo*1000));u32(Math.round(s.tgt.hi*1000))}
+    else if(s.tgt&&s.tgt.t==="pw"){u8(4);u32(0);u32(s.tgt.lo+1000);u32(s.tgt.hi+1000)}
+    else if(s.tgt&&s.tgt.t==="hr"){u8(1);u32(0);u32(s.tgt.lo+100);u32(s.tgt.hi+100)}
+    else{u8(2);u32(0);u32(0xFFFFFFFF);u32(0xFFFFFFFF)}
+    u8(s.int||0);
+  });
+  var hdr=[14,0x20,0x54,0x08];var n=D.length;hdr.push(n&255,(n>>8)&255,(n>>16)&255,(n>>>24)&255);".FIT".split("").forEach(function(ch){hdr.push(ch.charCodeAt(0))});
+  var hc=0;hdr.forEach(function(b){hc=fitCrc(hc,b)});hdr.push(hc&255,hc>>8);
+  var all=hdr.concat(D),fc=0;all.forEach(function(b){fc=fitCrc(fc,b)});all.push(fc&255,fc>>8);
+  return new Uint8Array(all);
+}
+function hrRange(z){var t=T["Hz"+z];if(!t)return null;var m=/(\d+)–(\d+)/.exec(t);return m?{t:"hr",lo:+m[1],hi:+m[2]}:null}
+function stepOf(txt,trail,zone,isRec){
+  var s={dur:{t:"open"},tgt:null,int:isRec?1:0},m;
+  if((m=/^([\d.,]+) km\b/.exec(txt)))s.dur={t:"dist",m:numf(m[1])*1000};
+  else if((m=/^([\d.,]+) min\b/.exec(txt)))s.dur={t:"time",s:numf(m[1])*60};
+  else if((m=/^([\d.,]+) sec\b/.exec(txt)))s.dur={t:"time",s:numf(m[1])};
+  if(/warm-up/i.test(txt))s.int=2;else if(/^cooldown|cooldown op/i.test(txt))s.int=3;
+  if(/dribbelend|wandelend/.test(txt)){s.int=4;s.dur={t:"open"}}
+  var p=/(\d{1,2}:\d\d)–(\d{1,2}:\d\d) \/km/.exec(txt);
+  if(p&&!trail){var a=sec(p[1]),b=sec(p[2]);s.tgt={t:"speed",lo:1000/Math.max(a,b),hi:1000/Math.min(a,b)}}
+  else{var z=isRec?1:zone;if(s.int===2||s.int===3)z=2;s.tgt=z?hrRange(z):null}
+  return s;
+}
+function fitSteps(x){
+  var trail=/trail|Trailrun/i.test(x[1]+" "+x[2]),zm=/^Z(\d)/.exec(x[3]||""),zone=zm?+zm[1]:(x[3]==="Lange loop"?2:null);
+  var P=parseSteps(x[2]),out=[];
+  P.steps.forEach(function(st){
+    if(st.g)return;
+    if(st.n){var blk=[stepOf(st.w,trail,zone,false)];if(st.rec)blk.push(stepOf(st.rec,trail,zone,true));out.push({rep:+st.n,steps:blk});return}
+    out.push(stepOf(st.t,trail,zone,false));
+  });
+  return{steps:out,trail:trail};
+}
+function crc32(b){var c,t=crc32.t;if(!t){t=crc32.t=[];for(var n=0;n<256;n++){c=n;for(var k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}}c=0xFFFFFFFF;for(var i=0;i<b.length;i++)c=t[(c^b[i])&255]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function zip1(name,data){
+  var nm=Array.from(name).map(function(ch){return ch.charCodeAt(0)&127}),cr=crc32(data),L=data.length,o=[];
+  function u16(a,v){a.push(v&255,(v>>8)&255)}function u32(a,v){u16(a,v&0xFFFF);u16(a,(v>>>16)&0xFFFF)}
+  var lh=[];u32(lh,0x04034b50);u16(lh,20);u16(lh,0);u16(lh,0);u16(lh,0);u16(lh,0x21);u32(lh,cr);u32(lh,L);u32(lh,L);u16(lh,nm.length);u16(lh,0);
+  var cd=[];u32(cd,0x02014b50);u16(cd,20);u16(cd,20);u16(cd,0);u16(cd,0);u16(cd,0);u16(cd,0x21);u32(cd,cr);u32(cd,L);u32(cd,L);u16(cd,nm.length);u16(cd,0);u16(cd,0);u16(cd,0);u16(cd,0);u32(cd,0);u32(cd,0);
+  var off=lh.length+nm.length+L,ed=[];u32(ed,0x06054b50);u16(ed,0);u16(ed,0);u16(ed,1);u16(ed,1);u32(ed,cd.length+nm.length);u32(ed,off);u16(ed,0);
+  var out=new Uint8Array(off+cd.length+nm.length+ed.length),p=0;[lh,nm,data,cd,nm,ed].forEach(function(a){out.set(a,p);p+=a.length});return out;
+}
+function bStep(txt,gkm){
+  var s={dur:{t:"open"},tgt:null,int:0},m;
+  if((m=/^(?:ca\. )?([\d.,]+) km\b/.exec(txt)))s.dur={t:"dist",m:numf(m[1])*1000};
+  else if((m=/^([\d.,]+) (min|sec|uur)\b/.exec(txt)))s.dur={t:"time",s:numf(m[1])*(m[2]==="uur"?3600:m[2]==="min"?60:1)};
+  else if(/^Hele rit/.test(txt)&&gkm)s.dur={t:"dist",m:gkm*1000};
+  if(/warm-up/i.test(txt))s.int=2;else if(/cooldown|^de rest van de rit/i.test(txt))s.int=3;
+  var p=/(\d+)–(\d+) W/.exec(txt);if(p)s.tgt={t:"pw",lo:+p[1],hi:+p[2]};
+  return s;
+}
+function bikeSteps(desc){
+  var P=parseSteps(desc),grp=[],cur=null;
+  P.steps.forEach(function(st){if(st.g){cur={name:st.g,km:numf((/([\d.,]+) km/.exec(st.g)||[0,0])[1]),steps:[]};grp.push(cur);return}if(!cur){cur={name:"",km:0,steps:[]};grp.push(cur)}cur.steps.push(st)});
+  var G0=grp.filter(function(g){return g.steps.some(function(t){return t.n})})[0]||grp[0];if(!G0)return null;
+  var out=[];
+  G0.steps.forEach(function(st){var m;
+    if(st.n){
+      var w=st.w.trim(),rec=st.rec?bStep(st.rec,0):null;
+      if(rec)rec.int=1;
+      if((m=/^([\d.,]+) min met afwisselend ([\d.,]+) min op (.+?) en ([\d.,]+) min op (.+)$/.exec(w))){
+        var inn=Math.max(1,Math.round(numf(m[1])/(numf(m[2])+numf(m[4]))));
+        for(var r=0;r<+st.n;r++){out.push({rep:inn,steps:[bStep(m[2]+" min op "+m[3],0),bStep(m[4]+" min op "+m[5],0)]});if(rec&&r<+st.n-1)out.push(rec)}
+        return}
+      var bl=[bStep(w,0)];if(rec)bl.push(rec);out.push({rep:+st.n,steps:bl});return}
+    var t=st.t,mm;
+    if((mm=/^(\d+)×([\d.,]+ km .+)$/.exec(t))){out.push(bStep(mm[2],0));return}
+    out.push(bStep(t,G0.km));
+  });
+  if(!out.some(function(o){return o.rep||o.tgt||o.dur.t!=="open"}))return null;
+  return{steps:out,part:G0.name.replace(/ [\d.,]+ km$/,"")};
+}
+function fitDownload(x,ds,btn,indoor){
+  var nm=x[1].replace(/^(Hardlopen|Trailrun|Fietsen): /,""),d=new Date(pd(ds)),bytes,bike=x[0]==="f";
+  if(bike){var B=bikeSteps(indoor?x[5]:x[2]);if(!B&&indoor)B=bikeSteps(x[2]);if(!B)return;
+    nm=nm.replace(/^woon-werk met /,"")+(B.part&&!indoor?" "+B.part.toLowerCase():"");if(indoor)nm+=" indoor";
+    var label=(d.getUTCDate()+"/"+(d.getUTCMonth()+1)+" "+nm.charAt(0).toUpperCase()+nm.slice(1)).slice(0,15);
+    bytes=buildFit(label,B.steps,false,2,indoor?6:/mountainbike|MTB/i.test(x[1])?8:0)}
+  else{var F=fitSteps(x),label2=(d.getUTCDate()+"/"+(d.getUTCMonth()+1)+" "+nm.charAt(0).toUpperCase()+nm.slice(1)).slice(0,15);bytes=buildFit(label2,F.steps,F.trail)}
+  var base=ds+"_"+fitAscii(nm).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/-$/,"");
+  function plain(){var blob=new Blob([bytes],{type:"application/octet-stream"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=base+".fit";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
+  function note(t){if(!btn)return;var o=btn.textContent;btn.textContent=t;setTimeout(function(){btn.textContent=o},2500)}
+  var cl=window.claude;
+  if(!cl||!cl.use){plain();return}
+  cl.use("downloads").then(function(dl){
+    if(!dl){note("Downloaden kan hier niet");return}
+    dl.save({filename:base+".zip",data:zip1(base+".fit",bytes)}).then(function(){note("Opgeslagen")},function(e){if(!e||e.code!=="declined")note("Downloaden kan hier niet")});
+  },function(){plain()});
+}
+function logBadge(L0,md){
+  if(!L0)return md==="past"?'<div class="lgb pend">Nog afvinken</div>':'';
+  if(L0.st==="skip")return '<div class="lgb sk">Overgeslagen'+(L0.n?' · '+esc(L0.n):'')+'</div>';
+  var t=L0.st==="alt"?"Anders gedaan: "+[L0.km?nl(L0.km)+" km":"",L0.min?L0.min+" min":""].filter(Boolean).join(" in "):"Gedaan";
+  return '<div class="lgb ok">'+esc(t)+(L0.rpe?' · RPE '+L0.rpe:'')+(L0.n?' · '+esc(L0.n):'')+'</div>';
+}
+var FITX=[];
+function item(x,ds,j,md){
+  var ck=ds&&md!=="past"&&x[0]!=="w";
+  var lg=ds&&md!=="future"&&x[1]!=="Rust"&&x[8]!=="vrij",L0=lg?LOG[lkey(ds,x[1])]:null;
+  var at=!ck?'':(x[9]!==undefined?' data-ita="'+x[9]+'"':' data-itr="'+esc(x[1])+'" data-ds="'+ds+'" data-j="'+j+'" data-ww="'+(x[10]!==undefined?1:0)+'"');
+  var h='<div class="it '+x[0]+(ck?' clk':'')+(lg?' hasck':'')+(L0&&L0.st==="skip"?' skipd':'')+'"'+at+(ck?' tabindex="0" role="button" aria-label="'+esc(sub(x[1]))+' aanpassen"':'')+'>'+(ck&&x[9]!==undefined?'<button type="button" class="edit" data-edit="'+x[9]+'">Wijzig</button>':'')+(lg?'<button type="button" class="chk'+(L0?(L0.st==="skip"?' sk':' ok'):'')+'" data-lg="'+ds+'" data-lt="'+esc(x[1])+'" aria-label="'+esc(sub(x[1]))+' afvinken">'+(L0?(L0.st==="skip"?'<svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>':'<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.6 2.6L10 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'):'')+'</button>':'')+'<div class="it-t">'+esc(sub(x[1]))+'</div>'+(lg?logBadge(L0,md):'');
+  if(x[13]==='auto')h+='<div class="autol">Aangepast door je wijziging<span>'+esc(x[14]||'')+'</span></div>';
+  if(x[2])h+=stepsHtml(x[2]);
+  var hz=(T.Hz1&&(x[0]==="l"||x[0]==="w"&&x[7]==="l"))?(/^Z([1-5])/.exec(x[3]||"")||(x[3]==="Lange loop"?[0,2]:null)):null;
+  if(x[3])h+='<div class="chips"><span class="chip">'+esc(sub(x[3]))+'</span><span class="chip">'+esc(sub(x[4]))+'</span>'+(hz?'<span class="chip">'+esc(T["Hz"+hz[1]])+'</span>':'')+'</div>';
+  var fok=ds&&md!=="past"&&x[8]!=="vrij"&&x[2];
+  if(fok&&x[0]==="l"){FITX.push([x,ds]);h+='<button type="button" class="fitb" data-fit="'+(FITX.length-1)+'">⌚ Naar Garmin</button>'}
+  if(fok&&x[0]==="f"&&bikeSteps(x[2])){FITX.push([x,ds]);h+='<button type="button" class="fitb" data-fit="'+(FITX.length-1)+'">⌚ Naar Garmin</button>'}
+  if(x[5])h+='<div class="alt"><b>Indoor alternatief</b>'+stepsHtml(x[5])+(fok&&x[0]==="f"&&bikeSteps(x[5])&&!/Zelfde opbouw|Ramp-test/.test(x[5])?(FITX.push([x,ds,1]),'<button type="button" class="fitb" data-fit="'+(FITX.length-1)+'">⌚ Indoor naar Garmin</button>'):'')+'</div>';
+  return h+'</div>';
+}
+var XOPTS=[["x-run","Eigen: hardlopen"],["x-trail","Eigen: trailrun"],["x-bike","Eigen: fietsen of MTB"],["x-swim","Eigen: zwemmen"],["x-brick","Eigen: brick"],["x-other","Eigen: overig (wandelen, ...)"]];
+function pickSel(val){
+  var h='<select id="af-pick" data-af="pick">';
+  ["Overig","Kracht","Fietsen","Hardlopen","Trailrunnen","Zwemmen","Combinatie"].forEach(function(g){h+='<optgroup label="'+g+'">'+opts(SLOTS.filter(function(r){return r[3]===g&&!r[4]}),val)+'</optgroup>'});
+  return h+'<optgroup label="Eigen activiteit met afstand en zone">'+opts(XOPTS,val)+'</optgroup></select>';
+}
+function afld(f,label,html){return '<div class="fld"><label for="af-'+f+'">'+label+'</label>'+html+'</div>'}
+function ain(f,ph,mode){return '<input id="af-'+f+'" data-af="'+f+'" value="'+esc(DR.a[f]||"")+'" placeholder="'+esc(ph)+'" autocomplete="off" inputmode="'+(mode||"decimal")+'">'}
+function asel(f,list){return '<select id="af-'+f+'" data-af="'+f+'">'+opts(list,DR.a[f])+'</select>'}
+function wwForm(){
+  var j=DR.j,dn=DAYS[j].toLowerCase();
+  return '<div class="aform"><p class="aft">Woon-werk aanpassen</p>'+afld("km","Heenweg (km)",ain("km",""))+afld("km2","Terugweg (km)",ain("km2",""))+
+  afld("scope","Toepassen op",asel("scope",[["day","Alleen deze dag"],["wd","Elke "+dn],["all","Alle woon-werkdagen"]]))+
+  '<p>Bijvoorbeeld een omweg op één dag, of een andere vaste route op elke '+dn+'.</p>'+
+  '<div><button type="button" class="btn pri" id="af-save">Opslaan</button><button type="button" class="btn" id="af-cancel">Annuleren</button>'+(DR.ai>=0?'<button type="button" class="btn" id="af-del">Afwijking verwijderen</button>':'')+'</div></div>';
+}
+function advice(a){
+  var key=a.sport==="slot"?a.slot:"",ds=a.date,t=pd(ds),wi=-1;WK.forEach(function(w,i){var m=pd(w.s);if(t>=m&&t<m+W7)wi=i});if(wi<0)return "";
+  var w=WK[wi],j=wdOf(t),out=[],sp,hard,q;
+  if(key){sp=SP[key]==="b"?"l":SP[key];q=RQ.indexOf(key)>=0||BQ.indexOf(key)>=0||key==="br";hard=q||key==="ll"||key==="ltl"||key==="fl"}
+  else{var fa={sport:a.sport,z:a.z,z2:a.z2,km:a.km,km2:a.km2,min:a.min};sp={run:"l",trail:"l",bike:"f",swim:"s",brick:"l"}[a.sport]||"";hard=actHard(fa);q=hard&&(sp==="l"||sp==="f")}
+  function skip(x){return (DR&&DR.i>=0&&x[9]===DR.i)||(a.rep&&(a.rep.ww?/woon-werk/.test(x[1]):x[1]===a.rep.t))}
+  var lab={l:"looptraining",f:"fietstraining",s:"zwemtraining"}[sp]||"training";
+  if(t<todayMs())out.push("Deze dag is al voorbij. De rest van de week past zich alleen aan vanaf vandaag.");
+  if(key==="rust"&&a.rep){var ri=null;w.d[j].forEach(function(x){if(!ri&&!skip(x)===false)ri=itInfo(x)});if(ri&&ri.q)out.push("Het schema verplaatst deze kwaliteitstraining naar een andere dag in de week, als dat past.")}
+  if(hard&&sp){[j-1,j+1].forEach(function(n){if(n<0||n>6)return;w.d[n].forEach(function(x){if(skip(x))return;var i=itInfo(x);if(i.hard&&i.sp===sp){
+    var can=pd(w.s)+n*DAY>=todayMs()&&!i.long&&x[0]!=="w"&&x[9]===undefined;
+    out.push(DAYS[n]+" is al zwaar ("+x[1].replace(/^\w+: /,"")+"). "+(can?"Het schema maakt die "+lab+" lichter.":"Kies hier liever een rustigere "+lab+".")) }})})}
+  if(q&&sp){var lim=sp==="l"?1:2,cnt=0,where=[],fixd=0;w.d.forEach(function(day,n){day.forEach(function(x){if(skip(x))return;var i=itInfo(x);if(i.q&&i.sp===sp){cnt++;where.push(DAYS[n].toLowerCase());if(x[9]!==undefined||pd(w.s)+n*DAY<todayMs()||n===j)fixd++}})});
+    if(cnt>=lim)out.push("Er staat al "+(sp==="l"?"een kwaliteitsloop":"genoeg fietskwaliteit")+" op "+where.join(" en ")+". "+(fixd>=lim?"Die heb je zelf gekozen of is al voorbij: kies hier liever een rustigere "+lab+".":"Het schema maakt daar een rustigere training van."))}
+  return '<div class="advice"><b>Suggestie</b>'+(out.length?out.map(function(x){return '<p>'+esc(x)+'</p>'}).join(""):'<p>Past goed in deze week.</p>')+'</div>';
+}
+var AVL=[30,45,60,75,90,120,150,180,240,300,360];
+function avLbl(m){m=+m;return m<60?m+" min":Math.floor(m/60)+":"+(m%60<10?"0":"")+(m%60)+" uur"}
+function avOpts(v){v=String(v||"");var l=AVL.slice();if(v&&l.indexOf(+v)<0){l.push(+v);l.sort(function(a,b){return a-b})}
+  return '<option value=""'+(v===""?' selected':'')+'>Onbeperkt</option>'+l.map(function(m){return '<option value="'+m+'"'+(String(m)===v?' selected':'')+'>'+avLbl(m)+'</option>'}).join("")}
+function aform(){
+  if(DR.kind==="ww")return wwForm();
+  if(DR.kind==="log"){var A=DR.a;
+    return '<div class="aform"><p class="aft">Afvinken: '+esc(A.t)+'</p>'+afld("st","Status",asel("st",[["done","Gedaan zoals gepland"],["alt","Anders gedaan"],["skip","Overgeslagen"]]))+
+      (A.st==="alt"?afld("km","Afstand (km)",ain("km","")) +afld("min","Duur (min)",ain("min","","numeric")):'')+
+      (A.st!=="skip"?afld("rpe","Hoe zwaar (RPE 1–10)",asel("rpe",[["",'–']].concat([1,2,3,4,5,6,7,8,9,10].map(function(n){return[String(n),String(n)]})))):'')+
+      afld("n","Notitie",ain("n","optioneel","text"))+
+      (A.st==="skip"?'<p>Was dit een kwaliteitstraining, dan haalt het schema hem later deze week in als dat past.</p>':'')+
+      '<div><button type="button" class="btn pri" id="af-save">Opslaan</button><button type="button" class="btn" id="af-cancel">Annuleren</button>'+(LOG[lkey(A.date,A.t)]?'<button type="button" class="btn" id="af-del">Afvinken wissen</button>':'')+'</div></div>'}
+  if(DR.kind==="av"){var df=AV.d[DR.j];return '<div class="aform"><p class="aft">Beschikbare tijd</p>'+afld("min","Beschikbaar",'<select id="af-min" data-af="min">'+avOpts(DR.a.min)+'</select>')+
+    '<p>Alleen voor deze dag. Standaard voor '+DAYS[DR.j].toLowerCase()+': '+(df!==""?avLbl(df):'onbeperkt')+'. Woon-werk telt niet mee. Past de training niet, dan wordt hij ingekort.</p>'+
+    '<div><button type="button" class="btn pri" id="af-save">Opslaan</button><button type="button" class="btn" id="af-cancel">Annuleren</button>'+(AV.o[DR.a.date]!==undefined?'<button type="button" class="btn" id="af-del">Standaard terugzetten</button>':'')+'</div></div>'}
+  var a=DR.a,sp=a.sport;
+  var h='<div class="aform"><p class="aft">'+(a.rep?"Training aanpassen":DR.i>=0?"Training wijzigen":"Training toevoegen")+'</p>'+(a.rep?'<p>Huidig: '+esc(a.rep.t)+'</p>':'')+afld("pick","Training",pickSel(sp==="slot"?a.slot:"x-"+sp));
+  if(sp==="slot"){
+    var sl=a.slot,AU="automatisch";
+    if(WWK.indexOf(sl)>=0)h+=afld("km","Heenweg (km)",ain("km",""))+afld("km2","Terugweg (km)",ain("km2",""));
+    if(BQ.indexOf(sl)>=0&&sl!=="wwq"&&sl!=="fq"||["lt","li","lhv"].indexOf(sl)>=0)h+=afld("reps","Herhalingen",ain("reps",AU,"numeric"))+afld("len","Minuten per herhaling",ain("len",AU,"numeric"));
+    if(sl.charAt(0)==="l")h+=afld("km","Afstand (km)",ain("km",AU));
+    if(sl==="fl")h+=afld("km","Afstand (km)",ain("km",AU));
+    if(sl==="fr"||sl==="mtb"||/^kr/.test(sl))h+=afld("min","Duur (min)",ain("min",AU,"numeric"));
+    if(SP[sl]==="s")h+=afld("km","Afstand (meter)",ain("km",AU));
+    if(sl==="br")h+=afld("km","Hardlopen na de fiets (km)",ain("km",AU));
+    h+='<p>'+(a.slot==="rust"?(a.rep?"Deze training vervalt.":"Alle training op deze dag vervalt."):"Leeg laten: het schema bepaalt het zelf, passend bij de fase."+(WWK.indexOf(a.slot)>=0&&!a.rep?" Staat er al woon-werk op deze dag, dan wordt die rit vervangen.":""))+'</p>';
+  }
+  else h+=afld("name","Omschrijving",ain("name",sp==="brick"?"bijv. triatlonbrick":"bijv. MTB-tocht","text"));
+  if(sp==="brick")h+=afld("km","Fietsen (km)",ain("km","bijv. 40"))+afld("z","Zone fietsen",asel("z",ZB))+afld("km2","Hardlopen (km)",ain("km2","bijv. 6"))+afld("z2","Zone hardlopen",asel("z2",ZR))+afld("min","Totale duur (min)",ain("min","optioneel","numeric"));
+  else if(sp!=="slot"&&sp!=="vrij")h+=afld("km",sp==="swim"?"Afstand (meter)":"Afstand (km)",ain("km",sp==="swim"?"bijv. 2000":"optioneel"))+(sp==="trail"?afld("km2","Hoogtemeters",ain("km2","optioneel","numeric")):"")+afld("min","Duur (min)",ain("min","optioneel","numeric"))+afld("z","Zone",asel("z",ZN[sp]));
+  if(!(sp==="slot"&&a.slot==="del"))h+=advice(a);
+  return h+'<div><button type="button" class="btn pri" id="af-save">Opslaan</button><button type="button" class="btn" id="af-cancel">Annuleren</button>'+(a.rep?(DR.i>=0?'<button type="button" class="btn" id="af-del">Origineel terugzetten</button>':''):(DR.i>=0?'<button type="button" class="btn" id="af-del">Verwijderen</button>':''))+'</div></div>';
+}
+function week(i){FITX=[];
+  var w=WK[i],ti=diffDays(w),mon=pd(w.s);
+  if(ti<0||ti>6)ti=-1;
+  var h='<div class="hd"><h2>Week '+(i+1)+'</h2>'+(w.tag?'<span class="tag">'+esc(w.tag)+'</span>':'')+'</div><p class="range">'+w.n+'</p>'+(w.note?'<div class="note"><b>Doel van de week</b>'+esc(w.note)+tot(w)+'</div>':tot(w));
+  w.d.forEach(function(day,j){
+    var ms=mon+j*DAY,ds=iso(ms);
+    var av=avFor(ds,j),pm=0,md=ms<todayMs()?"past":ms===todayMs()?"today":"future";day.forEach(function(x){if(!/woon-werk/.test(x[1]))pm+=itemMin(x)});
+    h+='<div class="day'+(j===ti?' today':'')+'"><div class="dh">'+DAYS[j]+' <span class="dt">'+dnl(ms)+'</span>'+(j===ti?'<span class="tag">Vandaag</span>':'')+
+      (md==="past"?'<span class="pastl">Voorbij</span>':'<button type="button" class="avb'+(w.fit&&w.fit[j]!==undefined?' cut':'')+'" data-av="'+ds+'|'+j+'" aria-label="Beschikbare tijd op '+DAYS[j].toLowerCase()+' aanpassen">⏱ '+(pm||av!==null?Math.round(pm/5)*5+(av!==null?' / '+av:'')+' min':'tijd')+(w.fit&&w.fit[j]!==undefined?' · ingekort':'')+'</button>'+
+      '<button type="button" class="add" data-add="'+ds+'" aria-label="Activiteit toevoegen op '+DAYS[j].toLowerCase()+' '+dnl(ms)+'">+</button>')+'</div>'+
+      day.map(function(x){return item(x,ds,j,md)}).join("")+(DR&&DR.a.date===ds?aform():'')+'</div>';
+  });
+  return h;
+}
+function bindWeek(){
+  var ad=view.querySelectorAll("[data-add]");
+  for(var i=0;i<ad.length;i++)ad[i].addEventListener("click",function(e){
+    DR={i:-1,a:{date:e.currentTarget.getAttribute("data-add"),sport:"slot",slot:"lr",name:"",km:"",km2:"",min:"",z:"z2",z2:"z3"}};show(wsel);
+  });
+  var we=view.querySelectorAll("[data-wwe]");
+  for(var q=0;q<we.length;q++)we[q].addEventListener("click",function(e){
+    var pr=e.currentTarget.getAttribute("data-wwe").split("|"),ds=pr[0],j=+pr[1],ww=wwFor(ds,j);
+    DR={kind:"ww",j:j,ai:ww.ai,a:{date:ds,km:String(ww.h),km2:String(ww.t),scope:"day"}};show(wsel);
+  });
+  var ck=view.querySelectorAll(".it.clk");
+  for(var c0=0;c0<ck.length;c0++){
+    var open=function(e){
+      if(e.target.closest&&e.target.closest("button"))return;
+      if(e.type==="keydown"&&e.key!=="Enter"&&e.key!==" ")return;
+      if(e.type==="keydown")e.preventDefault();
+      var el=e.currentTarget,ai=el.getAttribute("data-ita");
+      if(ai!==null){var k=+ai,a=copyA([ACT[k]])[0];if(a.sport==="ww"){a.sport="slot";a.slot="ww"}else if(a.sport==="vrij"){a.sport="slot";a.slot="rust"}DR={i:k,a:a};show(wsel);return}
+      var t=el.getAttribute("data-itr"),ds=el.getAttribute("data-ds"),j=+el.getAttribute("data-j"),isww=el.getAttribute("data-ww")==="1",sl=guessSlot(t),ww=wwFor(ds,j);
+      DR={i:-1,a:{date:ds,sport:"slot",slot:sl,name:"",km:WWK.indexOf(sl)>=0?String(ww.h):"",km2:WWK.indexOf(sl)>=0?String(ww.t):"",min:"",z:"z2",z2:"z3",rep:{t:t,ww:isww?1:0}}};show(wsel);
+    };
+    ck[c0].addEventListener("click",open);ck[c0].addEventListener("keydown",open);
+  }
+  var ed=view.querySelectorAll("[data-edit]");
+  for(var j=0;j<ed.length;j++)ed[j].addEventListener("click",function(e){
+    var k=+e.currentTarget.getAttribute("data-edit"),a=copyA([ACT[k]])[0];
+    if(a.sport==="ww"){a.sport="slot";a.slot="ww"}else if(a.sport==="vrij"){a.sport="slot";a.slot="rust"}
+    DR={i:k,a:a};show(wsel);
+  });
+  var fs=view.querySelectorAll("[data-af]");
+  for(var m=0;m<fs.length;m++)["input","change"].forEach(function(ev){fs[m].addEventListener(ev,function(e){
+    var f=e.target.getAttribute("data-af"),v=e.target.value;
+    if(f==="st"&&DR.kind==="log"){DR.a.st=v;if(ev==="change")show(wsel);return}
+    if(f!=="pick"){DR.a[f]=v;return}
+    if(ev!=="change")return;
+    if(v.indexOf("x-")===0){DR.a.sport=v.slice(2);DR.a.slot="";var zl=ZN[DR.a.sport];if(zl&&!zl.some(function(o){return o[0]===DR.a.z}))DR.a.z="z2"}
+    else{DR.a.sport="slot";DR.a.slot=v;DR.a.km="";DR.a.km2="";DR.a.min="";DR.a.reps="";DR.a.len="";if(WWK.indexOf(v)>=0){var ww=wwFor(DR.a.date,wdOf(pd(DR.a.date)));DR.a.km=String(ww.h);DR.a.km2=String(ww.t)}}
+    show(wsel);
+  })});
+  function on(id,fn){var b=document.getElementById(id);if(b)b.addEventListener("click",fn)}
+  var avb=view.querySelectorAll("[data-av]");
+  for(var v1=0;v1<avb.length;v1++)avb[v1].addEventListener("click",function(e){var pr=e.currentTarget.getAttribute("data-av").split("|"),ds=pr[0],j=+pr[1],cur=AV.o[ds]!==undefined?AV.o[ds]:AV.d[j];DR={kind:"av",j:j,a:{date:ds,min:String(cur||"")}};show(wsel)});
+  var ftb=view.querySelectorAll("[data-fit]");
+  for(var f1=0;f1<ftb.length;f1++)ftb[f1].addEventListener("click",function(e){e.stopPropagation();var r=FITX[+e.currentTarget.getAttribute("data-fit")];if(r)fitDownload(r[0],r[1],e.currentTarget,r[2])});
+  var lgb=view.querySelectorAll("[data-lg]");
+  for(var l1=0;l1<lgb.length;l1++)lgb[l1].addEventListener("click",function(e){e.stopPropagation();var b=e.currentTarget,ds=b.getAttribute("data-lg"),t=b.getAttribute("data-lt"),L0=LOG[lkey(ds,t)]||{};
+    DR={kind:"log",a:{date:ds,t:t,st:L0.st||"done",km:String(L0.km||""),min:String(L0.min||""),rpe:String(L0.rpe||""),n:L0.n||""}};show(wsel)});
+  on("af-save",function(){
+    if(DR.kind==="log"){var A=DR.a,o={st:A.st};if(A.st==="alt"){o.km=numf(A.km)||0;o.min=numf(A.min)||0}if(A.st!=="skip"&&A.rpe)o.rpe=+A.rpe;if(A.n)o.n=A.n;LOG[lkey(A.date,A.t)]=o;saveL();DR=null;refresh();show(wsel);return}
+    if(DR.kind==="av"){var v=String(DR.a.min||"").replace(/[^0-9]/g,"");if(v===AV.d[DR.j])delete AV.o[DR.a.date];else AV.o[DR.a.date]=v;DR=null;saveG();refresh();show(wsel);return}
+    if(DR.kind==="ww"){
+      var a0=DR.a,hh=a0.km,tt=a0.km2;
+      if(a0.scope==="day"){if(DR.ai>=0){ACT[DR.ai].km=hh;ACT[DR.ai].km2=tt}else ACT.push(copyA([{date:a0.date,sport:"ww",km:hh,km2:tt}])[0])}
+      else{
+        if(DR.ai>=0)ACT.splice(DR.ai,1);
+        if(a0.scope==="wd")WW.d[DR.j]={h:hh,t:tt};
+        else{WW.h=hh;WW.t=tt;WW.d=WW.d.map(function(){return{h:"",t:""}})}
+      }
+      DR=null;saveG();refresh();show(wsel);return;
+    }
+    var a=copyA([DR.a])[0];if(DR.i>=0)ACT[DR.i]=a;else ACT.push(a);DR=null;saveG();refresh();show(wsel)});
+  on("af-cancel",function(){DR=null;show(wsel)});
+  on("af-del",function(){if(DR.kind==="log"){delete LOG[lkey(DR.a.date,DR.a.t)];saveL();DR=null;refresh();show(wsel);return}if(DR.kind==="av"){delete AV.o[DR.a.date];DR=null;saveG();refresh();show(wsel);return}ACT.splice(DR.kind==="ww"?DR.ai:DR.i,1);DR=null;saveG();refresh();show(wsel)});
+}
+function tbl(head,rows){
+  return '<div class="tbl"><table><tr>'+head.map(function(t){return '<th>'+t+'</th>'}).join("")+'</tr>'+rows.map(function(r){return '<tr>'+r.map(function(t){return '<td>'+t+'</td>'}).join("")+'</tr>'}).join("")+'</table></div>';
+}
+function ztables(){
+  return (T.ordered?'':'<p class="warn">Controleer je tempo’s: ze moeten oplopen van 5 km naar marathon.</p>')+
+  '<div class="card"><h2>Fietsen: vermogenszones</h2>'+tbl(["Zone","% FTP","Watt","Gebruik"],[
+  ["Z1 herstel","45–55%",sub("{Bz1}"),"Herstel, rust tussen intervallen"],
+  ["Z2 duur","56–75%",sub("{Bz2}"),"Woon-werk, duurritten"],
+  ["Z3 tempo","76–87%",sub("{Bz3}"),"Weinig gebruikt"],
+  ["Sweet spot","88–94%",sub("{Bss}"),"Lange blokken"],
+  ["Z4 drempel","95–105%",sub("{Bz4}"),"Threshold-blokken"],
+  ["Z5 VO₂max","110–115%",sub("{Bvo}"),"Intervallen van 4 min, max. 1 keer per 3 weken"]])+
+  '</div>'+
+  '<div class="card"><h2>Hardlopen: tempozones</h2>'+(T.Hz1?tbl(["Zone","Tempo","Hartslag","Gebruik"],[
+  ["Z1 herstel",sub("{Rz1}"),T.Hz1,"Herstelloop"],
+  ["Z2 duur",sub("{Rz2}"),T.Hz2,"Duurloop, trail"],
+  ["Z3 tempo",sub("{Rz3}"),T.Hz3,"Tempoloop"],
+  ["Z4 drempel",sub("{Rz4}"),T.Hz4,"Rond halve-marathon-tempo"],
+  ["Z5 interval",sub("{Rz5}"),T.Hz5,"Intervallen van 3–5 min"],
+  ["Lange loop",sub("{Rlong}"),T.Hz2,"Lange duurloop"]]):tbl(["Zone","Tempo","Gebruik"],[
+  ["Z1 herstel",sub("{Rz1}"),"Herstelloop"],
+  ["Z2 duur",sub("{Rz2}"),"Duurloop"],
+  ["Z3 tempo",sub("{Rz3}"),"Tempoloop"],
+  ["Z4 drempel",sub("{Rz4}"),"Rond halve-marathon-tempo"],
+  ["Z5 interval",sub("{Rz5}"),"Intervallen van 3–5 min"],
+  ["Lange loop",sub("{Rlong}"),"Lange duurloop"]]))+
+  '<p style="margin-top:8px">'+(T.Hz1?'Op trail loop je op hartslag in plaats van tempo.':'Op trail loop je op gevoel. Met een hartslag bij Startsituatie krijg je ook hartslagzones.')+'</p></div>'+
+  '<div class="card"><h2>Zwemmen: tempozones</h2>'+tbl(["Zone","Tempo","Gebruik"],[
+  ["Z1 herstel",sub("{Sz1}"),"Warm-up, cooldown"],
+  ["Z2 duur",sub("{Sz2}"),"Techniek en lange duur"],
+  ["Z3 tempo",sub("{Sz3}"),"Wedstrijdtempo lange afstand"],
+  ["Z4 CSS",sub("{Sz4}"),"CSS-intervallen van 100–200 m"],
+  ["Z5 snelheid",sub("{Sz5}"),"Herhalingen van 50 m"]])+
+  '</div>';
+}
+function fld(id,label,val){return '<div class="fld"><label for="i-'+id+'">'+label+'</label><input id="i-'+id+'" data-k="'+id+'" inputmode="'+(id==="ftp"?"numeric":"text")+'" autocomplete="off" value="'+esc(val)+'"></div>'}
+function lthrAuto(){var m=parseInt(V.hrm,10);return m>=120&&m<=230?String(Math.round(m*.9)):""}
+function lthrHint(){var a=lthrAuto();return "Gemiddelde hartslag over de laatste 20 min van 30 min voluit lopen."+(V.lthr?"":(a?" Nu automatisch: "+a+" bpm (90% van je maximale hartslag). Vul een gemeten waarde in als je die hebt.":" Leeg: 90% van je maximale hartslag."))}
+function lgHint(){return "Startpunt voor de lange duurloop: wat je de laatste weken echt hebt gelopen. Niet bijwerken."+(isDef()&&numf(V.lg)&&numf(V.lg)*1.15<30?' <b class="warnc">Let op: de eerste lange duurloop in je schema is 30 km, meer dan 15% boven je langste loop. Bouw die week rustiger op.</b>':'')}
+function hint(t,k){return '<p class="hint">'+t+'</p>'+(k?updLine(k):'')}
+var UPDW={ftp:8,p5:8,p10:8,ph:8,pm:12,cs:8};
+function updLine(k){
+  var d=pd(VU[k])||START,wk=Math.floor((todayMs()-d)/W7),old=wk>=UPDW[k];
+  return '<p class="upd'+(old?' old':'')+'" id="u-'+k+'">'+'Bijgewerkt: '+dnl(d)+' '+new Date(d).getUTCFullYear()+(old?' · '+wk+' weken oud, tijd voor een test':'')+'</p>';
+}
+function zones(){
+  return '<div class="card sec" id="sec-start"><h2>1. Startsituatie</h2><p>Je huidige niveau. Werk FTP, tempo’s en CSS bij gedurende het schema als een test of wedstrijd ca. 2–3% of meer afwijkt.</p>'+
+  '<h3>Hartslag</h3>'+fld("hrm","Maximale hartslag (bpm)",V.hrm)+hint("Hoogste hartslag die je hebt gemeten, bijv. aan het eind van een zware klim of test.")+
+  fld("lthr","Drempelhartslag (bpm)",V.lthr).replace('autocomplete="off"','autocomplete="off" placeholder="'+lthrAuto()+'"')+'<p class="hint" id="lth">'+lthrHint()+'</p>'+
+  '<h3>Fietsen</h3>'+fld("ftp","FTP (watt)",V.ftp)+
+  hint("Vermogen dat je ca. 1 uur volhoudt (20 min voluit × 0,95). Bijwerken na elke FTP-test.","ftp")+
+  '<h3>Hardlopen</h3>'+
+  '<div class="fld"><label for="i-v0">Loopvolume per week (km)</label><input id="i-v0" inputmode="numeric" autocomplete="off" value="'+esc(V0)+'"></div>'+
+  hint("Huidige km per week. Startpunt, niet bijwerken.")+
+  fld("lg","Langste loop afgelopen 4 weken (km)",V.lg)+'<p class="hint" id="lgh">'+lgHint()+'</p>'+
+  fld("p5","5 km tempo (min:sec per km)",V.p5)+hint("Huidig 5 km wedstrijdtempo.","p5")+
+  fld("p10","10 km tempo (min:sec per km)",V.p10)+hint("Huidig 10 km wedstrijdtempo.","p10")+
+  fld("ph","Halve marathon tempo (min:sec per km)",V.ph)+hint("Huidig halve-marathontempo (21,1 km).","ph")+
+  fld("pm","Marathon tempo (min:sec per km)",V.pm)+hint("Huidig marathontempo, of halve-marathontempo + 15 sec/km.","pm")+
+  '<h3>Zwemmen</h3>'+fld("cs","CSS (min:sec per 100 m)",V.cs)+
+  hint("Drempeltempo: (tijd 400 m − tijd 200 m) / 2. Test elke 6–8 weken.","cs")+
+  '<details class="zdet"><summary>Zones bekijken</summary><div id="zout">'+ztables()+'</div></details></div>';
+}
+var TOPTS=[["hardlopen","Hardlopen"],["trailrun","Trailrun"],["wielrennen","Wielrennen"],["mountainbiken","Mountainbiken"],["zwemmen","Zwemmen"],["triatlon","Triatlon"],["ftp","FTP verhogen"]];
+var POPTS=[["A","Hoofddoel"],["T","Tussendoel"],["B","Vormcheck"],["C","Recreatief"]];
+var PRL={A:"Hoofddoel",T:"Tussendoel",B:"Vormcheck",C:"Recreatief"};
+var PREOPTS=[["sprint","Sprint (750 m / 20 km / 5 km)"],["olympisch","Olympisch (1.500 m / 40 km / 10 km)"],["half","Halve (1.900 m / 90 km / 21,1 km)"],["hele","Hele (3.800 m / 180 km / 42,2 km)"],["eigen","Eigen afstanden"]];
+function todayMs(){var n=new Date();return Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())}
+function curFtp(){var f=parseInt(V.ftp,10);return f>=100&&f<=500?f:200}
+function hasSlot(sp){return TPL.some(function(s){return s.some(function(x){return SP[x]===sp})})}
+function gf(i,f,label,html){return '<div class="fld"><label for="g'+i+f+'">'+label+'</label>'+html+'</div>'}
+function gin(i,f,val,ph,extra){return '<input id="g'+i+f+'" data-g="'+i+'" data-f="'+f+'" value="'+esc(val)+'" placeholder="'+esc(ph||"")+'" autocomplete="off" '+(extra||"")+'>'}
+function gsel(i,f,list,val){return '<select id="g'+i+f+'" data-g="'+i+'" data-f="'+f+'">'+opts(list,val)+'</select>'}
+function gdate(i,f,val){return '<input type="date" id="g'+i+f+'" data-g="'+i+'" data-f="'+f+'" value="'+esc(val)+'">'}
+function ftpP(g,i){var r=ftpInfo(g,curFtp(),todayMs());return '<p id="gi'+i+'" class="'+(r.ok?"ok":"warn")+'">'+esc(r.txt)+'</p>'}
+var DEC='inputmode="decimal"',TXT='inputmode="text"';
+var GOPEN={};
+function ghead(g){var t=pd(g.date);return '<b>'+esc(gname(g))+'</b><span>'+(t!==null?esc(dnl(t)+" "+new Date(t).getUTCFullYear()):"Nog geen datum")+'</span>'}
+function gcard(g,i){
+  var ty=g.type,run=isRun(ty),ftp=ty==="ftp",sw=ty==="zwemmen",tri=ty==="triatlon";
+  var op=!!GOPEN[i];
+  var h='<div class="card gcard'+(op?' open':'')+'"><button type="button" class="ghd" data-gt="'+i+'" aria-expanded="'+op+'" aria-controls="gb'+i+'"><span class="gt" id="gh'+i+'">'+ghead(g)+'</span><span class="pb p'+(g.prio||"B")+'" id="gp'+i+'">'+(PRL[g.prio]||"Vormcheck")+'</span><span class="chev" aria-hidden="true">▾</span></button><div class="gbody" id="gb'+i+'"'+(op?'':' hidden')+'>'+gf(i,"type","Type",gsel(i,"type",TOPTS,ty))+gf(i,"name","Naam",gin(i,"name",g.name,"optioneel"));
+  if(tri){
+    h+=gf(i,"tpre","Afstand",gsel(i,"tpre",PREOPTS,g.tpre||"eigen"))+
+    '<h3>Zwemmen</h3>'+gf(i,"swD","Afstand (meter)",gin(i,"swD",g.swD,"bijv. 1500",DEC))+gf(i,"swP","Doeltempo (min:sec per 100 m)",gin(i,"swP",g.swP,"bijv. 1:55",TXT))+
+    '<h3>Fietsen</h3>'+gf(i,"bkD","Afstand (km)",gin(i,"bkD",g.bkD,"bijv. 40",DEC))+gf(i,"bkP","Doelsnelheid (km/u)",gin(i,"bkP",g.bkP,"bijv. 33",DEC))+
+    '<h3>Hardlopen</h3>'+gf(i,"rnD","Afstand (km)",gin(i,"rnD",g.rnD,"bijv. 10",DEC))+gf(i,"rnP","Doeltempo (min:sec per km)",gin(i,"rnP",g.rnP,"bijv. 4:15",TXT))+'<h3>Wedstrijd</h3>';
+  }else{
+    h+=gf(i,"dist",ftp?"Gewenste FTP (watt)":sw?"Afstand (meter)":"Afstand (km)",gin(i,"dist",g.dist,ftp?"bijv. 285":sw?"bijv. 1500":"bijv. 21.1",DEC));
+    if(!ftp)h+=gf(i,"pace",run?"Doeltempo (min:sec per km)":sw?"Doeltempo (min:sec per 100 m)":"Doelsnelheid (km/u)",gin(i,"pace",g.pace,run?"bijv. 4:05":sw?"bijv. 1:50":"bijv. 28",run||sw?TXT:DEC));
+  }
+  h+=gf(i,"date","Datum",gdate(i,"date",g.date))+gf(i,"prio","Prioriteit",gsel(i,"prio",POPTS,g.prio));
+  if(ty==="trailrun"||ty==="hardlopen"||ty==="wielrennen"||ty==="mountainbiken")h+=gf(i,"hm","Hoogtemeters",gin(i,"hm",g.hm,"optioneel",'inputmode="numeric"'));
+  if(run)h+=gf(i,"spec","Start specifiek (optioneel)",gdate(i,"spec",g.spec));
+  if(ftp)h+=ftpP(g,i);
+  if((sw||tri)&&!hasSlot("s"))h+='<p class="warn">Voeg 2 zwemtrainingen toe in de weekindeling.</p>';
+  if(tri&&!hasSlot("b"))h+='<p class="warn">Voeg een brick toe in de weekindeling.</p>';
+  return h+'<button type="button" class="btn" data-del="'+i+'">Verwijderen</button></div></div>';
+}
+function statText(){
+  if(!WK.length)return "Nog geen schema: voeg een doel toe.";
+  var l=WK[WK.length-1];
+  return (isDef()?"Handmatig schema":"Automatisch schema")+", "+WK.length+" weken, t/m "+l.n+".";
+}
+function goalsView(){
+  var h='<div class="card sec" id="sec-goals"><h2>2. Trainingsdoelen</h2><ul class="prl"><li><b>Hoofddoel:</b> volledige opbouw en taper.</li><li><b>Tussendoel:</b> belangrijke wedstrijd onderweg, lichtere week ervoor.</li><li><b>Vormcheck:</b> wedstrijd in een lichtere week.</li><li><b>Recreatief:</b> voor de beleving, schema loopt gewoon door.</li></ul><p>Het schema loopt tot en met de week van het laatste doel.</p>'+
+  '</div>';
+  G.map(function(g,i){return i}).sort(function(a,b){var x=pd(G[a].date),y=pd(G[b].date);x=x===null?Infinity:x;y=y===null?Infinity:y;return x-y||a-b}).forEach(function(i){h+=gcard(G[i],i)});
+  h+='<div class="card"><button type="button" class="btn" id="addg">Doel toevoegen</button></div>';
+  return h;
+}
+function slotSel(d,s,val){
+  var gr=["Overig","Kracht","Fietsen","Hardlopen","Trailrunnen","Zwemmen","Combinatie"],h='<select aria-label="'+DAYS[d]+' training '+(s+1)+'" data-t="'+d+'" data-s="'+s+'">'+(s>0?'<option value=""'+(val?'':' selected')+'>–</option>':'');
+  gr.forEach(function(g){h+='<optgroup label="'+g+'">'+SLOTS.filter(function(r){return r[3]===g&&!r[4]}).map(function(r){return '<option value="'+r[0]+'"'+(r[0]===val?' selected':'')+'>'+r[1]+'</option>'}).join("")+'</optgroup>'});
+  return h+'</select>';
+}
+/* Suggesties voor de weekindeling */
+var RH=["lq","lt","li","lhv","ltb","ll","br"],BH=["wwq","wwth","wwss","wwvo","fq","fth","fss","fvo","fl","br"];
+function hasAny(s,l){return s.some(function(x){return l.indexOf(x)>=0})}
+function slotLab(x){var r=SLOTS.filter(function(o){return o[0]===x})[0];return r?r[1]:x}
+function suggest(tpl){
+  var trD={},t=expT(tpl).map(function(s,d){return s.map(function(x){if(x==="ltl"){trD[d]=1;return "ll"}return x})}),notes=[[],[],[],[],[],[],[]],gt=G.map(function(g){return g.type});
+  function note(d,x){if(notes[d].indexOf(x)<0)notes[d].push(x)}
+  function setDay(d,arr){t[d]=arr.length?arr:["rust"]}
+  function isRest(d){return t[d].every(function(x){return x==="rust"})}
+  function nb(d,o){return t[(d+o+7)%7]}
+  /* 1. dubbele sporten en brick-combinaties op één dag */
+  t.forEach(function(s,d){
+    var out=[],seen={},br=s.indexOf("br")>=0,cmIdx=-1;
+    s.forEach(function(x){
+      var sp=SP[x];
+      if(x==="rust"){if(s.length===1)out.push(x);return}
+      if(sp==="r"){out.push(x);return}
+      if(br&&x!=="br"&&WWK.indexOf(x)<0&&(sp==="f"||sp==="l")){note(d,"Een brick met nog een "+(sp==="f"?"fiets":"loop")+"training op dezelfde dag is veel: de brick is genoeg.");return}
+      if(sp==="f"&&seen.f){
+        if(cmIdx>=0&&out[cmIdx]==="ww"&&BQ.indexOf(x)>=0&&WWK.indexOf(x)<0){out[cmIdx]={fq:"wwq",fth:"wwth",fss:"wwss",fvo:"wwvo"}[x];note(d,"Combineer de fietskwaliteit met woon-werk op de terugweg, dan hoef je niet twee keer te fietsen.");return}
+        note(d,"Twee fietstrainingen op één dag: één is genoeg.");return}
+      if(sp==="l"&&seen.l){note(d,"Twee looptrainingen op één dag: één is genoeg.");return}
+      if(sp==="s"&&seen.s){note(d,"Twee zwemtrainingen op één dag: één is genoeg.");return}
+      if(WWK.indexOf(x)>=0)cmIdx=out.length;
+      seen[sp]=1;out.push(x);
+    });
+    setDay(d,out);
+  });
+  /* 2. maximaal 1 VO2max-sessie */
+  var vo=0;t.forEach(function(s,d){s.forEach(function(x,i){if(x==="wwvo"||x==="fvo"){vo++;if(vo>1){s[i]=x==="wwvo"?"wwq":"fq";note(d,"Maximaal 1 VO₂max-sessie per week. Kwaliteit (auto) wisselt zelf af.")}}})});
+  /* 3. back-to-back alleen na de lange duurloop */
+  t.forEach(function(s,d){var i=s.indexOf("lb");if(i>=0&&(d===0||t[d-1].indexOf("ll")<0)){s[i]="lr";note(d,"Back-to-back werkt alleen met de lange duurloop op de dag ervoor: maak er een gewone duurloop van.")}});
+  /* 4. wat je doel nodig heeft */
+  function canAdd(d,sp,hard){
+    var s=t[d];if(s.length>=3||isRest(d)&&t.filter(function(x,i){return isRest(i)}).length<2)return false;
+    if(s.some(function(x){return SP[x]===sp&&!(sp==="f"&&WWK.indexOf(x)>=0&&false)}))return false;
+    if(hard==="l"&&(hasAny(s,RH)||hasAny(nb(d,-1),RH)||hasAny(nb(d,1),RH)))return false;
+    if(hard==="f"&&(hasAny(s,BH)||hasAny(nb(d,-1),BH)||hasAny(nb(d,1),BH)))return false;
+    return true;
+  }
+  function add(pref,key,sp,hard,why){for(var i=0;i<pref.length;i++){var d=pref[i];if(canAdd(d,sp,hard)){if(isRest(d))t[d]=[];t[d].push(key);note(d,why);return true}}return false}
+  var swimG=gt.indexOf("zwemmen")>=0||gt.indexOf("triatlon")>=0,tri=gt.indexOf("triatlon")>=0;
+  var runG=gt.some(function(x){return x==="hardlopen"||x==="trailrun"||x==="triatlon"}),bikeG=gt.some(function(x){return x==="wielrennen"||x==="mountainbiken"||x==="ftp"||x==="triatlon"});
+  var nSw=0;t.forEach(function(s){s.forEach(function(x){if(SP[x]==="s")nSw++})});
+  if(swimG&&nSw<2){
+    if(!t.some(function(s){return s.indexOf("zq")>=0}))if(add([3,0,1,4,2],"zq","s","","Voor je zwem- of triatlondoel: CSS-intervallen, minimaal 2 zwemtrainingen per week."))nSw++;
+    if(nSw<2)add([6,0,4,3,5],"zl","s","","Voor je zwem- of triatlondoel: een lange zwemtraining voor de duur.");
+  }
+  if(tri&&!t.some(function(s){return s.indexOf("br")>=0})){
+    var done=false;[5,6].forEach(function(d){if(done)return;var q=t[d].indexOf("fq");if(q<0)q=t[d].indexOf("fss");if(q<0)q=t[d].indexOf("fth");if(q>=0){t[d][q]="br";done=true;note(d,"Voor je triatlon: een brick (fietsen met direct een loop) in plaats van alleen fietsen.")}});
+    if(!done)add([6,5,3],"br","b","","Voor je triatlon: een brick, fietsen met direct daarna een loop.");
+  }
+  var nLL=0;t.forEach(function(s,d){var q=s.indexOf("ll");if(q>=0){nLL++;if(nLL>1){s[q]="lr";note(d,"Eén lange duurloop per week is genoeg: maak hier een gewone duurloop van.")}}});
+  if(runG&&!nLL){
+    var cv=-1;[5,6].forEach(function(d){var q=t[d].indexOf("lr");if(cv<0&&q>=0){t[d][q]="ll";cv=d;note(d,"Voor je loopdoel: maak van deze duurloop de wekelijkse lange duurloop, die per fase langer wordt.")}});
+    if(cv<0)add([5,6,3],"ll","l","l","Voor je loopdoel: een lange duurloop in het weekend, die per fase langer wordt.");
+  }
+  if(runG&&!t.some(function(s){return hasAny(s,RQ)}))add([2,3,1,4],"lq","l","l","Voor je loopdoel: één kwaliteitsloop per week (tempo, intervallen of heuvels).");
+  if(bikeG&&!t.some(function(s){return hasAny(s,BQ)})){
+    var cm=-1;t.forEach(function(s,d){var i=s.indexOf("ww");if(cm<0&&i>=0&&!hasAny(nb(d,-1),BH)&&!hasAny(nb(d,1),BH)){s[i]="wwq";cm=d;note(d,"Voor je fietsdoel: kwaliteit op de terugweg van woon-werk.")}});
+    if(cm<0)add([1,3,6],"fq","f","f","Voor je fietsdoel: één kwaliteitssessie op de fiets per week.");
+  }
+  /* 5. geen zware dagen van dezelfde sport achter elkaar */
+  function soften(d,list,why){
+    var s=t[d];for(var i=0;i<s.length;i++){var x=s[i];if(list.indexOf(x)>=0&&x!=="ll"&&x!=="br"){s[i]=DOWN[x];note(d,why);return true}}return false;
+  }
+  for(var d=0;d<7;d++){
+    var n=(d+1)%7;
+    if(hasAny(t[d],RH)&&hasAny(t[n],RH)&&!(t[n].indexOf("lb")>=0)){
+      var why="Twee zware looptrainingen op opeenvolgende dagen geven veel kans op blessures: maak er één rustiger.";
+      if(!soften(n,RH,why))soften(d,RH,why);
+    }
+    if(hasAny(t[d],BH)&&hasAny(t[n],BH)){
+      var why2="Twee zware fietstrainingen op opeenvolgende dagen: de tweede wordt dan minder goed. Maak er één rustiger.";
+      if(!soften(n,BH,why2))soften(d,BH,why2);
+    }
+  }
+  /* 6. maximaal 4 zware dagen */
+  var hd=function(){return t.map(function(s){return s.some(function(x){return KEYS.indexOf(x)>=0})})};
+  var h=hd(),nh=h.filter(Boolean).length;
+  for(var e=6;e>=0&&nh>4;e--){if(h[e]&&soften(e,QS.concat(["fl"]),"Meer dan 4 zware dagen per week is veel: deze dag rustiger.")){nh--}}
+  /* 7. minstens één rustdag */
+  if(!t.some(function(s,i){return isRest(i)})){
+    var best=-1,score=99;[0,3,4,1,2,6,5].forEach(function(d){
+      var s=t[d];if(s.some(function(x){return KEYS.indexOf(x)>=0||WWK.indexOf(x)>=0}))return;
+      var sc=s.length;if(sc<score){score=sc;best=d}});
+    if(best>=0){t[best]=["rust"];note(best,"Plan minstens één volledige rustdag: je wordt sterker in het herstel.")}
+  }
+  t.forEach(function(s,d){if(trD[d]){var q=s.indexOf("ll");if(q>=0)s[q]="ltl"}});
+  return{t:t,notes:notes};
+}
+function tplWarn(){
+  var S=suggest(TPL),n=S.notes.filter(function(x){return x.length}).length;
+  return n?'<p class="warn">'+n+(n===1?" dag heeft":" dagen hebben")+' met suggestie (ter info).</p>':'<p class="ok">Geen suggesties.</p>';
+}
+function tplView(){
+  var S=suggest(TPL),XT=expT(TPL);
+  var h='<div class="card sec" id="sec-week"><h2>3. Weekindeling</h2><p>Max. 3 trainingen per dag. Tijd: beschikbare tijd per dag zonder woon-werk; per week aan te passen in het trainingsschema. Het schema bepaalt duur en intensiteit. Suggesties zijn ter info. Wijzigen zet het schema op automatisch.</p>';
+  h+='<table class="wtab"><thead><tr><th scope="col">Dag</th><th scope="col" class="c2">Jouw keuze en suggestie</th></tr></thead><tbody>';
+  DAYS.forEach(function(dn,d){
+    h+='<tr><th scope="row">'+dn+'<label class="avin">Tijd <select data-avd="'+d+'" id="avd'+d+'" aria-label="'+dn+' beschikbare tijd">'+avOpts(AV.d[d])+'</select></label></th><td class="c2">';
+    for(var s=0;s<3;s++){
+      var v=TPL[d][s]||(s?"":"rust");
+      h+='<div class="slot"><span class="sn">'+(s+1)+'</span>'+slotSel(d,s,v)+'</div>';
+      if(WWK.indexOf(v)>=0)h+='<div class="wwkm"><label>Heenweg <input data-wd="'+d+'" data-wf="h" inputmode="decimal" autocomplete="off" aria-label="'+dn+' heenweg km" value="'+esc(WW.d[d].h!==""?WW.d[d].h:WW.h)+'"> km</label><label>Terugweg <input data-wd="'+d+'" data-wf="t" inputmode="decimal" autocomplete="off" aria-label="'+dn+' terugweg km" value="'+esc(WW.d[d].t!==""?WW.d[d].t:WW.t)+'"> km</label></div>';
+    }
+    var same=JSON.stringify(S.t[d])===JSON.stringify(XT[d])&&!S.notes[d].length;
+    h+='<div class="c3">'+(same?'<span class="sgok">✓ Prima</span>':'<div class="sg"><span class="sgl">Suggestie</span><ul>'+S.t[d].map(function(x){var nw=XT[d].indexOf(x)<0;return '<li'+(nw?'':' class="same"')+'>'+esc(slotLab(x))+(nw?' <em>gewijzigd</em>':'')+'</li>'}).join("")+'</ul>'+S.notes[d].map(function(x){return '<p>'+esc(x)+'</p>'}).join("")+'</div>')+'</div></td></tr>';
+  });
+  h+='</tbody></table>';
+  h+='<div id="twarn">'+tplWarn()+'</div></div>';
+  h+='<div class="card sec" id="sec-pref"><h2>4. Voorkeuren</h2>'+
+  '<div class="fld"><label for="p-rest">Rustweek</label><select id="p-rest" data-p="rest">'+opts([["3","elke 3e week"],["4","elke 4e week"],["5","elke 5e week"]],String(PR.rest))+'</select></div>'+
+  '<div class="fld"><label for="p-vo">VO₂max-sessie (auto)</label><select id="p-vo" data-p="vo">'+opts([["2","elke 2e opbouwweek"],["3","elke 3e opbouwweek"],["4","elke 4e opbouwweek"],["5","elke 5e opbouwweek"]],String(PR.vo))+'</select></div>'+
+  '<button type="button" class="btn" id="deft">Standaardinstellingen</button></div>';
+  h+='<div class="card sec" id="sec-abs"><h2>5. Afwezigheid</h2><p>Ziek, op vakantie of geblesseerd: die dagen vervallen, daarna start het schema rustig weer op (minder volume, eerst geen kwaliteit).</p>';
+  ABS.forEach(function(a,i){h+='<div class="absr"><div class="fld"><label for="ab'+i+'f">Van</label><input type="date" id="ab'+i+'f" data-ab="'+i+'" data-af2="from" value="'+esc(a.from)+'"></div>'+
+    '<div class="fld"><label for="ab'+i+'t">Tot en met</label><input type="date" id="ab'+i+'t" data-ab="'+i+'" data-af2="to" value="'+esc(a.to)+'"></div>'+
+    '<div class="fld"><label for="ab'+i+'r">Reden</label><select id="ab'+i+'r" data-ab="'+i+'" data-af2="r">'+opts([["ziek","Ziek"],["vakantie","Vakantie"],["blessure","Blessure"]],a.r)+'</select></div>'+
+    '<button type="button" class="btn" data-abdel="'+i+'">Verwijderen</button></div>'});
+  h+='<button type="button" class="btn" id="addab">Periode toevoegen</button></div>';
+  return h;
+}
+function setView(){
+  return '<p class="intro">Vul de stappen in. Het schema past zich direct aan.</p>'+
+  zones()+goalsView()+tplView();
+}
+function bindAll(){
+  var jp=view.querySelectorAll("[data-jump]");
+  for(var z0=0;z0<jp.length;z0++)jp[z0].addEventListener("click",function(e){var t=document.getElementById(e.currentTarget.getAttribute("data-jump"));if(t&&t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"start"})});
+  var gs=view.querySelectorAll("[data-g]");
+  for(var n=0;n<gs.length;n++){["input","change"].forEach(function(ev){gs[n].addEventListener(ev,function(e){
+    var i=+e.target.getAttribute("data-g"),f=e.target.getAttribute("data-f"),g=G[i];
+    if(g[f]===e.target.value){if(f==="date"&&e.type==="change")show("set");return}
+    g[f]=e.target.value;
+    if(f==="type"&&g.type==="triatlon"&&!g.bkD){g.tpre="olympisch";var p=TRI.olympisch;g.swD=p[1];g.bkD=p[2];g.rnD=p[3]}
+    if(f==="tpre"&&TRI[g.tpre]){var q=TRI[g.tpre];g.swD=q[1];g.bkD=q[2];g.rnD=q[3]}
+    if(f==="swD"||f==="bkD"||f==="rnD")g.tpre="eigen";
+    saveG();refresh();
+    var gh=document.getElementById("gh"+i);if(gh)gh.innerHTML=ghead(g);
+    var gpb=document.getElementById("gp"+i);if(gpb){gpb.textContent=PRL[g.prio]||"Vormcheck";gpb.className="pb p"+(g.prio||"B")}
+    if(f==="type"||f==="tpre"||f==="prio"||(f==="date"&&e.type==="change"))show("set");
+    else if(f==="swD"||f==="bkD"||f==="rnD"){var ps=document.getElementById("g"+i+"tpre");if(ps)ps.value="eigen"}
+    else if(g.type==="ftp"){var pp=document.getElementById("gi"+i);if(pp){var r=ftpInfo(g,curFtp(),todayMs());pp.textContent=r.txt;pp.className=r.ok?"ok":"warn"}}
+  })})}
+  var ts=view.querySelectorAll("[data-t]");
+  for(var q=0;q<ts.length;q++)ts[q].addEventListener("change",function(e){
+    var d=+e.target.getAttribute("data-t"),pair=view.querySelectorAll('[data-t="'+d+'"]'),s=[];
+    for(var z=0;z<pair.length;z++)if(pair[z].value)s.push(pair[z].value);
+    TPL[d]=s.length?s.slice(0,3):["rust"];saveG();refresh();show("set");
+  });
+  var avd=view.querySelectorAll("[data-avd]");
+  for(var a1=0;a1<avd.length;a1++)avd[a1].addEventListener("change",function(e){AV.d[+e.target.getAttribute("data-avd")]=e.target.value.replace(/[^0-9]/g,"");saveG();refresh()});
+  var wd=view.querySelectorAll("[data-wd]");
+  for(var a=0;a<wd.length;a++)wd[a].addEventListener("input",function(e){WW.d[+e.target.getAttribute("data-wd")][e.target.getAttribute("data-wf")]=e.target.value;saveG();refresh()});
+  var wwi=view.querySelectorAll("[data-ww]");
+  for(var b=0;b<wwi.length;b++)wwi[b].addEventListener("input",function(e){WW[e.target.getAttribute("data-ww")]=e.target.value;saveG();refresh();
+    var ph=view.querySelectorAll('[data-wf="'+e.target.getAttribute("data-ww")+'"]');for(var c=0;c<ph.length;c++)ph[c].placeholder=e.target.value});
+  var ps=view.querySelectorAll("[data-p]");
+  for(var r=0;r<ps.length;r++)ps[r].addEventListener("change",function(e){PR[e.target.getAttribute("data-p")]=+e.target.value;saveG();refresh()});
+  function on(id,fn){var el=document.getElementById(id);if(el)el.addEventListener(fn[0],fn[1])}
+  on("i-v0",["input",function(e){V0=e.target.value;saveG();refresh()}]);
+  on("addg",["click",function(){G.push(copyG([{type:"hardlopen",dist:"10",prio:"B"}])[0]);GOPEN[G.length-1]=true;saveG();refresh();show("set")}]);
+  var gt=view.querySelectorAll("[data-gt]");
+  for(var y=0;y<gt.length;y++)gt[y].addEventListener("click",function(e){
+    var b=e.currentTarget,i=+b.getAttribute("data-gt"),op=!GOPEN[i];GOPEN[i]=op;
+    b.setAttribute("aria-expanded",String(op));b.parentNode.classList.toggle("open",op);document.getElementById("gb"+i).hidden=!op;
+  });
+  on("defg",["click",function(){G=copyG(DEFG);V0="";saveG();refresh();show("set")}]);
+  var abi=view.querySelectorAll("[data-ab]");
+  for(var b1=0;b1<abi.length;b1++)abi[b1].addEventListener("change",function(e){var i=+e.target.getAttribute("data-ab");ABS[i][e.target.getAttribute("data-af2")]=e.target.value;if(e.target.getAttribute("data-af2")==="from"&&!ABS[i].to){ABS[i].to=e.target.value;var tt=document.getElementById("ab"+i+"t");if(tt)tt.value=e.target.value}saveG();refresh()});
+  var abd=view.querySelectorAll("[data-abdel]");
+  for(var b2=0;b2<abd.length;b2++)abd[b2].addEventListener("click",function(e){ABS.splice(+e.currentTarget.getAttribute("data-abdel"),1);saveG();refresh();show("set");document.getElementById("sec-abs").scrollIntoView()});
+  on("addab",["click",function(){var t=iso(Math.max(todayMs(),START));ABS.push({from:t,to:t,r:"ziek"});saveG();refresh();show("set");document.getElementById("sec-abs").scrollIntoView()}]);
+  on("deft",["click",function(){PR={rest:DEFP.rest,vo:DEFP.vo};saveG();refresh();show("set")}]);
+  var dl=view.querySelectorAll("[data-del]");
+  for(var u=0;u<dl.length;u++)dl[u].addEventListener("click",function(e){G.splice(+e.target.getAttribute("data-del"),1);GOPEN={};saveG();refresh();show("set")});
+  var ins=view.querySelectorAll("input[data-k]");
+  for(var w=0;w<ins.length;w++)ins[w].addEventListener("input",function(e){
+    var kk=e.target.getAttribute("data-k");V[kk]=e.target.value;VU[kk]=iso(todayMs());saveS();calc();if(kk==="lg"||kk==="hrm"||kk==="lthr")refresh();var lti=document.getElementById("i-lthr");if(lti)lti.placeholder=lthrAuto();var lth=document.getElementById("lth");if(lth)lth.textContent=lthrHint();var lgh=document.getElementById("lgh");if(lgh)lgh.innerHTML=lgHint();
+    var up=document.getElementById("u-"+kk);if(up){up.outerHTML=updLine(kk)}
+    document.getElementById("zout").innerHTML=ztables();
+  });
+  on("reset",["click",function(){for(var k in DEF)V[k]=DEF[k];saveS();calc();show("set")}]);
+}
+function mkBtn(label,attr,val,cls,fn){
+  var b=document.createElement("button");b.type="button";b.textContent=label;
+  if(cls)b.className=cls;
+  b.setAttribute(attr,String(val));b.addEventListener("click",fn);return b;
+}
+function mark(){
+  var isW=typeof cur==="number",b=mnav.children,t=tabs.children;
+  sched.hidden=!isW||!WK.length;
+  for(var i=0;i<b.length;i++){var m=b[i].getAttribute("data-m");b[i].setAttribute("aria-pressed",String(isW?m==="sched":m===cur))}
+  for(var j=0;j<t.length;j++)t[j].setAttribute("aria-pressed",String(isW&&t[j].getAttribute("data-sel")===String(cur)));
+}
+function buildTabs(){
+  mnav.innerHTML="";
+  MENU.forEach(function(m){mnav.appendChild(mkBtn(m[0],"data-m",m[1],"",function(){DR=null;show(m[1]==="sched"?wsel:m[1])}))});
+  tabs.innerHTML="";
+  WK.forEach(function(w,i){tabs.appendChild(mkBtn("Week "+(i+1)+(lite(w)?" (rust)":""),"data-sel",i,lite(w)?"rest":"",function(){DR=null;show(i)}))});
+  if(wsel>WK.length-1)wsel=Math.max(0,WK.length-1);
+  mark();
+}
+function refresh(){
+  calc();plan();raceList();buildTabs();
+  var st=document.getElementById("gstat");if(st)st.textContent=statText();
+}
+/* ===== Tabblad Opbouw ===== */
+var PHO=["basis","bouw","piek","taper","race"];
+var PHN={basis:"Basis",bouw:"Bouw",piek:"Piek",taper:"Taper",race:"Wedstrijdweek"};
+function mainGoal(){
+  var a=null,l=null;
+  G.forEach(function(g){var t=pd(g.date);if(t===null)return;if(g.prio==="A"&&(!a||t<pd(a.date)))a=g;if(!l||t>pd(l.date))l=g});
+  return a||l;
+}
+function phWhy(ph){
+  var g=mainGoal(),ty=g?g.type:"",nm=g?gname(g):"je doel";
+  var spec={hardlopen:"tempoblokken op doeltempo en een langere duurloop met het laatste deel op doeltempo",trailrun:"trail met hoogtemeters, back-to-back lange lopen, heuvelwerk en voeding oefenen",wielrennen:"lange duurritten met het laatste uur op doelsnelheid en intervallen op de fiets",mountainbiken:"lange duurritten en intervallen op de fiets",zwemmen:"CSS-intervallen en lange zwemtrainingen richting de doelafstand",triatlon:"bricks, een lange duurrit met transitieloop en CSS-intervallen",ftp:"threshold, VO₂max en sweet spot"}[ty]||"wedstrijdspecifieke training";
+  return{
+    basis:"Een brede aerobe basis en techniek, met vooral Z2-uren en drempelwerk. Het volume ligt nog laag tot gemiddeld.",
+    bouw:"Volume en duur gaan stap voor stap omhoog richting "+nm+", met een rustweek na elke "+(PR.rest-1)+" opbouwweken.",
+    piek:"De zwaarste en meest specifieke weken voor "+nm+": "+spec+".",
+    taper:"Volume 30–50% omlaag, intensiteit blijft. Het lichaam herstelt van de opgebouwde vermoeidheid en de scherpte blijft.",
+    race:"Weinig en kort trainen, zodat je fris aan de start staat."}[ph];
+}
+function paceOf(s){var m=/(\d{1,2}):([0-5]\d)/.exec(s||"");return m?(+m[1])*60+(+m[2]):null}
+function itemMin(x){
+  var d=sub(x[2]||""),k=x[6]||0,c=x[0]==="w"?x[7]:x[0],m,pm=sec(V.pm)||345,cs=sec(V.cs)||120;
+  if(c==="r"){m=/(\d+) min/.exec(d);return m?+m[1]:0}
+  m=/^(\d+) min/.exec(d)||/ in (\d+) min/.exec(d);if(m)return +m[1];
+  m=/\((\d+(?:,\d)?) uur\)/.exec(d);if(m)return numf(m[1])*60;
+  if(c==="f"){var v=x[0]==="w"?numf(x[4]):0;return k/(v>15?v:30)*60}
+  if(c==="s"){var p=x[0]==="w"?paceOf(x[4]):null;return k*10*(p?p:(cs+10)*1.15)/60}
+  if(c==="l"){
+    var tr=/trail/i.test(x[1]+" "+d),p2;
+    if(x[0]==="w"&&!tr)p2=paceOf(sub(x[4]))||pm;
+    else if(x[3]==="Lange loop"||tr)p2=pm+74;
+    else if(x[3]==="Z1 herstel")p2=pm+104;
+    else p2=pm+50;
+    if(tr)p2*=1.25;
+    return k*p2/60;
+  }
+  return 0;
+}
+function weekStats(w){
+  var T0=wkTot(w),m=T0.m;
+  return{bk:T0.km[0],rn:T0.km[1],sw:T0.km[2],f:m.f/60,l:m.l/60,s:m.s/60,r:m.r/60,t:(m.f+m.l+m.s+m.r)/60};
+}
+function hm(h){var t=Math.round(h*4)/4,u=Math.floor(t),mi=Math.round((t-u)*60);return u+":"+(mi<10?"0":"")+mi+" uur"}
+function nk(x){return Math.round(x).toLocaleString("nl-NL")}
+function phRanges(){
+  var r=[];WK.forEach(function(w,i){var p=w.ph||"basis",l=r[r.length-1];if(l&&l.ph===p)l.b=i;else r.push({ph:p,a:i,b:i})});
+  return r;
+}
+function wkRange(a,b){return (a===b?"Week "+(a+1):"Week "+(a+1)+"–"+(b+1))+" · "+dnl(pd(WK[a].s))+" – "+dnl(pd(WK[b].s)+6*DAY)}
+function doneStats(){
+  var td=todayMs(),r={bk:0,rn:0,sw:0,t:0,days:0,wk:-1,pend:0,planT:0,logged:0};
+  WK.forEach(function(w,i){var mon=pd(w.s);if(td>=mon&&td<mon+W7)r.wk=i;
+    w.d.forEach(function(day,j){var dm=mon+j*DAY,ds=iso(dm);if(dm>td)return;if(dm<td)r.days++;
+      day.forEach(function(x){if(x[1]==="Rust"||x[8]==="vrij")return;var L0=LOG[lkey(ds,x[1])],c=x[0]==="w"?x[7]:x[0],m=itemMin(x),k=x[6]||0;
+        if(dm<td)r.planT+=m/60;
+        if(!L0){if(dm<td&&c!=="r")r.pend++;return}
+        r.logged++;if(L0.st==="skip")return;
+        if(L0.st==="alt"){k=L0.km||0;m=L0.min||m*(k&&x[6]?k/x[6]:1)}
+        if(c==="f")r.bk+=k;else if(c==="l")r.rn+=k;else if(c==="s")r.sw+=(L0.st==="alt"?k:k*1000);r.t+=m/60})})});
+  if(r.wk<0&&WK.length&&td>=pd(WK[WK.length-1].s)+W7)r.wk=WK.length;
+  return r;
+}
+function nowX(W){var n=WK.length,pw=W-ML-MR,d=(todayMs()-pd(WK[0].s))/W7;if(d<0||d>n)return null;return ML+d*pw/n}
+/* Wedstrijdplan hoofddoel */
+function hms(s){var m=/^(\d{1,2})[:u.](\d{2})$/.exec(String(s||"").trim());return m&&+m[2]<60?(+m[1])*3600+(+m[2])*60:null}
+function fhm(sec0){var m=Math.round(sec0/60),u=Math.floor(m/60);m-=u*60;return u+":"+(m<10?"0":"")+m}
+function clk(st,sec0){var t=(st+Math.round(sec0/60))%1440;return fhm(t*60)}
+function rpEst(g){
+  var ty=g.type,d=numf(g.dist),hmv=numf(g.hm),ph=sec(V.ph)||330,pm=sec(V.pm)||345;
+  if(ty==="triatlon"){var sw=numf(g.swD)/100*(sec(g.swP)||(sec(V.cs)||120)+10),bk=numf(g.bkD)/(numf(g.bkP)||30)*3600,rn=numf(g.rnD)*(sec(g.rnP)||pm+20);return sw+bk+rn+300}
+  if(ty==="zwemmen")return numf(g.dist)/100*(sec(g.pace)||(sec(V.cs)||120)+5);
+  if(ty==="wielrennen"||ty==="mountainbiken")return d/(numf(g.pace)||30)*3600*(1+hmv/100/d*0.1);
+  if(!isRun(ty)||!d)return null;
+  if(sec(g.pace)&&ty!=="trailrun")return sec(g.pace)*d;
+  var e=d+hmv/100,t=e<=42.195?ph*21.0975*Math.pow(e/21.0975,1.06):pm*42.195*Math.pow(e/42.195,1.15);
+  return ty==="trailrun"?t*1.1:t;
+}
+function rpCarb(h){return h<1.25?null:h<2?"30 g":h<2.5?"30–60 g":"60–90 g"}
+var RPO=null;
+function rpIn(i,f,label,val,ph,mode){return '<div class="fld"><label for="rp'+i+f+'">'+label+'</label><input id="rp'+i+f+'" data-rp="'+i+'" data-f="'+f+'" value="'+esc(val||"")+'" placeholder="'+esc(ph)+'" autocomplete="off" inputmode="'+mode+'"></div>'}
+function racePlan(g,i){
+  var ty=g.type,sw=ty==="zwemmen",est=rpEst(g),own=hms(g.rft),T0=own||est,gd=pd(g.date);
+  var H=T0?T0/3600:0,run=isRun(ty),tri=ty==="triatlon",trail=ty==="trailrun",d=tri?numf(g.swD)/1000+numf(g.bkD)+numf(g.rnD):sw?numf(g.dist)/1000:numf(g.dist),hmv=numf(g.hm);
+  var st=hms(g.rst);st=st===null?null:st/60;
+  var vp=String(g.rvp||"").split(/[;\s]+/).map(numf).filter(function(x){return x>0&&x<d}).sort(function(a,b){return a-b});
+  var past=gd<todayMs(),op=RPO&&RPO[i];
+  var carb=rpCarb(H),h='<div class="card rpc"><details data-rpo="'+i+'"'+(op?' open':'')+'><summary><span class="rph"><b>'+esc(gname(g))+'</b><span>'+esc(dnl(gd)+" "+new Date(gd).getUTCFullYear())+(past?' · geweest':'')+'</span></span><span class="pb p'+(g.prio||"B")+'">'+(PRL[g.prio]||"Vormcheck")+'</span><span class="chev" aria-hidden="true">▾</span></summary>';
+  h+='<div class="rpin">'+rpIn(i,"rst","Starttijd",g.rst,"bijv. 09:00","numeric")+rpIn(i,"rft","Verwachte finishtijd (u:mm)",g.rft,est?fhm(est):"bijv. 1:30","numeric")+(sw?'':rpIn(i,"rvp","Verzorgingsposten (km)",g.rvp,"bijv. 12 25,5 41","decimal"))+'</div>';
+  if(!T0)return h+'<p>Vul bij Instellingen de afstand van dit doel in.</p></details></div>';
+  h+='<p>'+(sw?fmtM(numf(g.dist))+' m':nl(Math.round(d*10)/10)+' km')+(hmv?' · '+nk(hmv)+' hm':'')+' · '+(own?'verwachte finishtijd ':'geschatte finishtijd ')+fhm(T0)+' uur'+(st!==null?' · start '+fhm(st*60):'')+'.</p>';
+  if(!own)h+='<p class="hint">'+(sec(g.pace)&&!trail||ty==="wielrennen"&&numf(g.pace)?'Berekend met je doeltempo':'Schatting op basis van je huidige tempo\'s'+(trail?', met 100 hm als 1 km extra en 10% voor trailterrein':''))+'. Vul hierboven je eigen verwachting in als je die weet.</p>';
+  /* pacing */
+  h+='<h3>Pacing</h3><ul>';
+  if(sw){var sp0=T0/(d*10);
+    h+='<li>Doeltempo '+rs(Math.round(sp0-2),Math.round(sp0+2))+'.</li><li>Eerste 100–200 m niet sneller dan je doeltempo; zoek snel je ritme.</li><li>Gelijkmatig zwemmen; versnel in het laatste kwart als het gaat.</li>';
+  }else if(run){
+    var avg=T0/d,flat=T0/(d+hmv/100);
+    if(trail||d>42.2){
+      h+='<li>Gemiddeld '+fmt(Math.round(avg))+' /km'+(hmv?', op vlakke stukken '+rg(Math.round(flat-8),Math.round(flat+8)):'')+'.</li>';
+      if(T.Hz2)h+='<li>Eerste helft hartslag onder '+T.Hz2.split("–")[1].replace(/\D+$/,"")+' (bovenkant Z2).</li>';else h+='<li>Eerste helft op Z2-inspanning; je moet kunnen praten.</li>';
+      h+='<li>Wandel bergop steiler dan ca. 10%, met stevige pas en handen op de knieën als het steil is.</li><li>Bergaf ontspannen en met korte passen; bespaar je benen voor de tweede helft.</li><li>Laatste kwart: voel je je goed, verhoog dan het tempo.</li>';
+    }else{
+      h+='<li>Doeltempo '+rg(Math.round(avg-3),Math.round(avg+3))+'.</li><li>Eerste '+(d>25?'5':'2')+' km niet sneller dan je doeltempo.</li><li>Gelijkmatig lopen; vanaf km '+nl(Math.round(d*.75))+' mag het sneller.</li>';
+    }
+  }else if(tri){
+    h+='<li>Zwemmen: '+(g.swP?rs(sec(g.swP),sec(g.swP)+4):'CSS + 5–10 sec /100 m')+'; begin rustig en zoek ritme.</li><li>Fietsen: '+(H>4?T.Bz2.replace(/–\d+/,"")+'–'+Math.round(parseInt(V.ftp,10)*.78)+' W':T.Bss)+'; niet harder bergop.</li><li>Lopen: eerste 2 km bewust rustiger dan doeltempo'+(g.rnP?' ('+g.rnP+' /km)':'')+'.</li>';
+  }else{
+    h+='<li>Rijd op '+T.Bz2+', bergop niet boven '+T.Bz3.split("–")[1]+'.</li><li>Gemiddeld ca. '+nl(Math.round(d/H*10)/10)+' km/u.</li>';
+  }
+  h+='</ul>';
+  /* voeding */
+  h+='<h3>Voeding en drinken</h3><ul><li>Laatste 1–2 dagen extra koolhydraten'+(H<1.5?' zijn niet nodig; eet normaal':' (koolhydraten stapelen)')+'.</li><li>Ontbijt ca. 3 uur voor de start, rijk aan koolhydraten en weinig vezels.</li>';
+  if(carb)h+='<li>Onderweg '+carb+' koolhydraten per uur'+(carb==="60–90 g"?' (glucose + fructose)':'')+', verdeeld over elke 20–30 min. Begin na 30–45 min.</li><li>Drinken 400–800 ml per uur, op dorst. Bij warm weer of veel zweten ook 300–600 mg natrium per uur.</li>';
+  else h+='<li>Onderweg geen voeding nodig; drink op dorst.</li>';
+  h+='<li>Test alles vooraf in je lange trainingen. Niets nieuws op de wedstrijddag.</li></ul>';
+  /* tijdlijn */
+  if(H>=1.5&&!sw){
+    var rows=[],n=Math.ceil(H-1e-6);
+    for(var u=1;u<=n;u++){
+      var t1=Math.min(u*3600,T0),t0=(u-1)*3600,k0=d*t0/T0,k1=d*t1/T0;
+      var posts=vp.filter(function(x){return x>k0&&x<=k1});
+      var f=u===1?'Rustig starten. Eerste voeding na 30–45 min, daarna '+(carb||'')+' per uur.':t1>=T0?'Finish.':u/H>.75?'Blijf eten, ook als het tegenzit. Tempo omhoog als het gaat.':u/H>.45?'Blijf eten en drinken op schema; focus op techniek en houding.':'Elke 20–30 min eten. Inspanning laag houden.';
+      if(tri&&u===1)f='Zwemmen en wissel. Eerste voeding op de fiets.';
+      rows.push(['<span style="white-space:nowrap">Uur '+u+'</span>'+(st!==null?'<br><span style="color:var(--muted)">'+clk(st,t0)+'–'+clk(st,t1)+'</span>':''),'<span style="white-space:nowrap">'+nl(Math.round(k0))+'–'+nl(Math.round(k1))+'</span>',(posts.length?'<b>Post km '+posts.map(nl).join(", ")+'</b><br>':'')+f]);
+    }
+    h+='<h3>Tijdlijn per uur</h3><p class="hint">Bij een gelijkmatig tempo'+(hmv?'; met klimmen loop je in heuvelachtige uren minder km':'')+'.</p>'+tbl(["Uur","Km","Verzorging en focus"],rows).replace('<table>','<table style="min-width:0">');
+  }
+  /* verzorgingsposten */
+  if(vp.length){
+    var pr=vp.map(function(x,i){var tt=x/d*T0,nx=i+1<vp.length?vp[i+1]:d,dt=(nx-x)/d*T0/3600;
+      return ['<span style="white-space:nowrap">Post '+(i+1)+'</span><br><span style="color:var(--muted);white-space:nowrap">km '+nl(x)+'</span>',fhm(tt)+(st!==null?'<br><span style="color:var(--muted)">'+clk(st,tt)+'</span>':''),
+      nl(Math.round((nx-x)*10)/10)+' km tot '+(i+1<vp.length?'post '+(i+2):'finish')+': '+(carb?Math.round(dt*12)*5+'–'+Math.round(dt*18)*5+' g koolhydraten, ':'')+Math.round(dt*8)*50+'–'+Math.round(dt*16)*50+' ml']});
+    h+='<h3>Verzorgingsposten</h3><p class="hint">Wat je bij elke post meeneemt tot de volgende. Begin met genoeg voor de eerste '+nl(vp[0])+' km.</p>'+tbl(["Post","Aankomst","Meenemen"],pr).replace('<table>','<table style="min-width:0">');
+  }
+  h+='<h3>Laatste week</h3><ul><li>Uitrusting, schoenen en voeding klaarleggen; niets nieuws.</li><li>Dag ervoor: shake-out van 20–25 min, vroeg naar bed.</li>'+(trail?'<li>Check verplichte uitrusting en het parcours (hoogteprofiel, posten).</li>':'')+'</ul>';
+  return h+'</details></div>';
+}
+function raceView(){
+  var L=G.map(function(g,i){return{g:g,i:i,t:pd(g.date)}}).filter(function(o){return o.t!==null&&o.g.type!=="ftp"}).sort(function(a,b){return a.t-b.t});
+  if(!L.length)return '<div class="card"><p>Voeg bij Instellingen een wedstrijddoel toe; hier komt dan het plan.</p></div>';
+  if(!RPO)RPO={};
+  return '<div class="card"><h2>Wedstrijdplan</h2><p>Per doel: pacing, voeding en drinken, en bij lange wedstrijden een tijdlijn per uur. Vul starttijd, verwachte finishtijd en verzorgingsposten in voor een plan op de klok.</p></div>'+L.map(function(o){return racePlan(o.g,o.i)}).join("");
+}
+function bindRace(){
+  var ds=view.querySelectorAll("[data-rpo]");
+  for(var a=0;a<ds.length;a++)ds[a].addEventListener("toggle",function(e){RPO[e.currentTarget.getAttribute("data-rpo")]=e.currentTarget.open?1:0});
+  var ins=view.querySelectorAll("[data-rp]");
+  for(var b=0;b<ins.length;b++)ins[b].addEventListener("change",function(e){var i=+e.target.getAttribute("data-rp"),f=e.target.getAttribute("data-f");G[i][f]=e.target.value.trim();saveG();var y=window.scrollY,id=e.target.id;show("race");window.scrollTo(0,y);var n=document.getElementById(id);if(n&&n.focus)n.focus({preventScroll:true})});
+}
+var OVO={};
+function ovFold(){
+  var cards=view.querySelectorAll(":scope > .card");
+  for(var i=0;i<cards.length;i++){var cd=cards[i],h=cd.firstElementChild;if(!h||h.tagName!=="H2")continue;
+    var key=h.textContent.replace(/\d+/g,"#"),dt=document.createElement("details"),sm=document.createElement("summary");
+    cd.classList.add("ovc");sm.appendChild(h);sm.insertAdjacentHTML("beforeend",'<span class="chev" aria-hidden="true">▾</span>');dt.appendChild(sm);
+    while(cd.firstChild)dt.appendChild(cd.firstChild);cd.appendChild(dt);if(OVO[key])dt.open=true;
+    dt.addEventListener("toggle",(function(k){return function(e){OVO[k]=e.currentTarget.open?1:0;if(e.currentTarget.open)drawCharts()}})(key))}
+}
+function opbView(){
+  if(!WK.length)return '<div class="card"><p>Er is nog geen schema. Voeg een doel toe bij Instellingen.</p></div>';
+  var st=WK.map(weekStats),n=WK.length,sum=function(k){return st.reduce(function(a,b){return a+b[k]},0)};
+  var anySw=sum("sw")>0,rests=[];WK.forEach(function(w,i){if(lite(w))rests.push(i+1)});
+  var h='<div class="card"><h2>Hoe het schema is opgebouwd</h2><ul>'+
+  '<li><b>Van algemeen naar specifiek.</b> Basis, bouw, piek en taper: eerst conditie, daarna training die op de wedstrijd lijkt, zodat je op het juiste moment piekt.</li>'+
+  '<li><b>Belasting en herstel.</b> Na '+(isDef()?"3":(PR.rest-1))+' opbouwweken een rustweek met ca. 30% minder volume. Sterker word je in het herstel.</li>'+
+  '<li><b>Vooral rustig.</b> Het meeste in Z2, met 2 kwaliteitssessies op de fiets en 1 bij het hardlopen per week: genoeg prikkel, weinig blessurerisico.</li>'+
+  '<li><b>Geleidelijk langer.</b> De lange duurloop groeit ca. 2 km per week, zodat pezen en botten mee kunnen.</li>'+
+  '<li><b>Fiets als motor.</b> Fietsen bouwt conditie op zonder de stootbelasting van hardlopen.</li></ul></div>';
+  h+='<div class="card"><h2>Fases</h2><div class="lgd" id="phlgd"></div><div class="chart" data-c="ph"></div><ul class="phl">';
+  var seen={};
+  phRanges().forEach(function(r){
+    var why=seen[r.ph]?"":phWhy(r.ph);seen[r.ph]=1;
+    h+='<li><i style="background:var(--p'+PHO.indexOf(r.ph)+')"></i><div><b>'+PHN[r.ph]+'</b><span>'+esc(wkRange(r.a,r.b))+'</span>'+(why?'<p>'+esc(why)+'</p>':'')+'</div></li>';
+  });
+  h+='</ul>'+(rests.length?'<p style="margin:0">Rust- en testweken: week '+rests.join(", ")+'.</p>':'')+'</div>';
+  h+='<div class="card"><h2>Totaal over '+n+' weken</h2><div class="stats">'+
+  '<div class="stat"><b>'+nk(sum("bk"))+' km</b><span>fietsen</span></div>'+
+  '<div class="stat"><b>'+nk(sum("rn"))+' km</b><span>hardlopen</span></div>'+
+  (anySw?'<div class="stat"><b>'+nk(sum("sw")/1000*10/10)+' km</b><span>zwemmen</span></div>':'')+
+  '<div class="stat"><b>'+nk(sum("t"))+' uur</b><span>training, gem. '+hm(sum("t")/n)+' per week</span></div></div></div>';
+  var D=doneStats(),pc=sum("t")?Math.round(D.t/sum("t")*100):0;
+  h+='<div class="card"><h2>Progressie</h2><p>'+(D.days||D.logged?'Op basis van wat je hebt afgevinkt'+(D.wk>=0&&D.wk<n?' (je zit in week '+(D.wk+1)+' van '+n+')':'')+'.':'Het schema start vandaag. Vink trainingen af in het trainingsschema; hier zie je dan wat je al gedaan hebt.')+'</p>'+
+  (D.pend?'<p class="warnc">'+D.pend+(D.pend===1?' training':' trainingen')+' uit afgelopen dagen nog niet afgevinkt.</p>':'')+
+  '<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+pc+'" aria-label="Voortgang in uren"><i style="width:'+pc+'%"></i></div><p class="progl">'+pc+'% van de trainingsuren</p>'+
+  '<div class="stats"><div class="stat"><b>'+nk(D.bk)+' km</b><span>fietsen van '+nk(sum("bk"))+'</span></div>'+
+  '<div class="stat"><b>'+nk(D.rn)+' km</b><span>hardlopen van '+nk(sum("rn"))+'</span></div>'+
+  (anySw?'<div class="stat"><b>'+nk(D.sw/1000)+' km</b><span>zwemmen van '+nk(sum("sw")/1000)+'</span></div>':'')+
+  '<div class="stat"><b>'+hm(D.t)+'</b><span>training van '+nk(sum("t"))+' uur</span></div></div></div>';
+  h+='<div class="card"><h2>Afstanden per week</h2><p>Gearceerde kolommen zijn rust- of testweken.</p>'+
+  '<h3>Fietsen (km)</h3><div class="chart" data-c="bk"></div>'+
+  '<h3>Hardlopen (km)</h3><div class="chart" data-c="rn"></div>'+
+  (anySw?'<h3>Zwemmen (m)</h3><div class="chart" data-c="sw"></div>':'')+'</div>';
+  h+='<div class="card"><h2>Verwachte trainingsduur per week</h2><p>Schatting op basis van afstand, tempo en wattage uit je zones. Kracht en wandelen tellen mee in het totaal.</p>'+
+  '<div class="lgd"><span><i style="background:var(--f)"></i>Fietsen</span><span><i style="background:var(--l)"></i>Hardlopen</span>'+(anySw?'<span><i style="background:var(--s)"></i>Zwemmen</span>':'')+'</div>'+
+  '<div class="chart" data-c="t"></div></div>';
+  h+='<div class="card"><h2>Trainingsbelasting per week</h2><p>Minuten × intensiteit (Z1 = 1 tot Z5 = 5). Afgevinkte trainingen tellen met je eigen RPE. Oranje: meer dan 30% boven het gemiddelde van de weken ervoor.</p>'+
+  '<div class="lgd"><span><i style="background:var(--w)"></i>Belasting</span><span><i style="background:var(--ac)"></i>Sterke stijging</span></div><div class="chart" data-c="ld"></div>'+
+  (WK.some(function(w){return w.lw})?'<p class="warnc">Sterke stijging in week '+WK.map(function(w,i){return w.lw?(i+1):0}).filter(Boolean).join(", ")+'.</p>':'<p>Geen weken met een sterke stijging.</p>')+'</div>';
+  h+='<div class="card"><details><summary>Tabel per week</summary>'+tbl(["Week","Fase","Fietsen","Hardlopen"].concat(anySw?["Zwemmen"]:[]).concat(["Duur"]),WK.map(function(w,i){
+    var s=st[i];return["Week "+(i+1)+'<br><span style="color:var(--muted)">'+w.n+'</span>',PHN[w.ph||"basis"]+(lite(w)?" ("+w.tag.toLowerCase()+")":""),s.bk+" km",s.rn+" km"].concat(anySw?[fmtM(s.sw)+" m"]:[]).concat([hm(s.t)]);
+  }))+'</details></div>';
+  return h;
+}
+/* SVG-grafieken */
+function niceMax(m){if(m<=0)return 1;var e=Math.pow(10,Math.floor(Math.log10(m))),f=m/e;return(f<=1?1:f<=2?2:f<=3?3:f<=4?4:f<=5?5:f<=6?6:f<=8?8:10)*e}
+function rTop(x,y,w,h,r){r=Math.min(r,h,w/2);return 'M'+x+','+(y+h)+'V'+(y+r)+'Q'+x+','+y+' '+(x+r)+','+y+'H'+(x+w-r)+'Q'+(x+w)+','+y+' '+(x+w)+','+(y+r)+'V'+(y+h)+'Z'}
+var ML=40,MR=6;
+function xLabels(n,pw,H,mb){
+  var step=Math.ceil(n/Math.max(4,Math.floor(pw/34))),h='';
+  for(var i=0;i<n;i+=step)h+='<text class="ax" x="'+(ML+(i+.5)*pw/n)+'" y="'+(H-mb+15)+'" text-anchor="middle">'+(i+1)+'</text>';
+  return h;
+}
+var HID=0;
+function hatchDefs(id){return '<defs><pattern id="'+id+'" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2" height="5" fill="var(--card)"/></pattern></defs>'}
+function barsSvg(W,vals,cols,fmtV){
+  var n=vals.length,H=178,mt=16,mb=22,pw=W-ML-MR,ph=H-mt-mb;
+  var tot=vals.map(function(v){return v.reduce(function(a,b){return a+b},0)}),mx=niceMax(Math.max.apply(null,tot));
+  var sw=pw/n,bw=Math.max(3,Math.min(20,sw*.66)),hid='hatch'+(++HID),h='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Staafgrafiek per week">'+hatchDefs(hid);
+  for(var g=0;g<=4;g++){var y=mt+ph-ph*g/4;h+=(g?'<line class="gl" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+y+'" y2="'+y+'"/>':'')+'<text class="ax" x="'+(ML-6)+'" y="'+(y+4)+'" text-anchor="end">'+fmtV(mx*g/4)+'</text>'}
+  vals.forEach(function(v,i){
+    var x=ML+i*sw+(sw-bw)/2,y0=mt+ph,top=-1;
+    v.forEach(function(val,j){if(val>0)top=j});
+    v.forEach(function(val,j){
+      if(!(val>0))return;
+      var hh=val/mx*ph,y=y0-hh,gap=j===top?0:2,d=j===top?rTop(x,y,bw,Math.max(.5,hh),4):'M'+x+','+(y+gap)+'h'+bw+'v'+Math.max(0,hh-gap)+'h'+(-bw)+'Z';
+      if(j===top||hh>gap)h+='<path d="'+d+'" fill="var('+cols[j]+')"/>';
+      if(lite(WK[i]))h+='<path d="'+d+'" fill="url(#'+hid+')"/>';
+      y0=y;
+    });
+  });
+  h+='<line class="bl" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+(mt+ph)+'" y2="'+(mt+ph)+'"/>'+xLabels(n,pw,H,mb);
+  var nx=nowX(W);if(nx!==null)h+='<line class="nowl" x1="'+nx+'" x2="'+nx+'" y1="'+(mt-4)+'" y2="'+(mt+ph)+'"/><text class="ax nowt" x="'+nx+'" y="'+(mt-6)+'" text-anchor="middle">vandaag</text>';
+  for(var i=0;i<n;i++)h+='<rect class="hit" data-i="'+i+'" tabindex="0" x="'+(ML+i*sw)+'" y="'+mt+'" width="'+sw+'" height="'+ph+'"/>';
+  return h+'</svg>';
+}
+function phaseSvg(W){
+  var n=WK.length,H=46,pw=W-ML-MR,sw=pw/n,hid='hatch'+(++HID),h='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Fases per week">'+hatchDefs(hid);
+  WK.forEach(function(w,i){
+    var x=ML+i*sw,c='var(--p'+PHO.indexOf(w.ph||"basis")+')';
+    var nx=WK[i+1],gp=(nx&&(nx.ph||"basis")!==(w.ph||"basis"))?3:1,bw2=Math.max(1,sw-gp);
+    h+='<rect x="'+(x+.5)+'" y="12" width="'+bw2+'" height="20" fill="'+c+'"/>';
+    if(lite(w))h+='<rect x="'+(x+.5)+'" y="12" width="'+bw2+'" height="20" fill="url(#'+hid+')"/>';
+    if(w.tag==="Wedstrijdweek"||w.ph==="race"||/Trailweek/.test(w.tag))h+='<path d="M'+(x+sw/2-4)+',2 h8 l-4,7 z" fill="var(--text)"/>';
+    h+='<rect class="hit" data-i="'+i+'" tabindex="0" x="'+x+'" y="0" width="'+sw+'" height="34"/>';
+  });
+  var nx=nowX(W);if(nx!==null)h+='<line class="nowl" x1="'+nx+'" x2="'+nx+'" y1="9" y2="35"/>';
+  return h+xLabels(n,pw,H+2,0).replace(/y="(\d+(\.\d+)?)"/g,'y="44"')+'</svg>';
+}
+function drawCharts(){
+  var cs=view.querySelectorAll(".chart[data-c]");if(!cs.length)return;
+  var st=WK.map(weekStats);
+  var lg=document.getElementById("phlgd");
+  if(lg){var ps=PHO.filter(function(p){return WK.some(function(w){return(w.ph||"basis")===p})});
+    lg.innerHTML=ps.map(function(p){return '<span><i style="background:var(--p'+PHO.indexOf(p)+')"></i>'+PHN[p]+'</span>'}).join("")+'<span><i class="h" style="background-color:var(--muted)"></i>Rust- of testweek</span><span>▼ Wedstrijd</span>'}
+  for(var i=0;i<cs.length;i++){
+    var c=cs[i],k=c.getAttribute("data-c"),W=Math.max(300,Math.round(c.clientWidth||600)),svg;
+    if(k==="ph")svg=phaseSvg(W);
+    else if(k==="bk")svg=barsSvg(W,st.map(function(s){return[s.bk]}),["--f"],nk);
+    else if(k==="rn")svg=barsSvg(W,st.map(function(s){return[s.rn]}),["--l"],nk);
+    else if(k==="sw")svg=barsSvg(W,st.map(function(s){return[s.sw]}),["--s"],function(v){return v>=1000?nl(Math.round(v/100)/10)+"k":nk(v)});
+    else if(k==="ld")svg=barsSvg(W,WK.map(function(w){return[w.lw?0:w.load,w.lw?w.load:0]}),["--w","--ac"],nk);
+    else svg=barsSvg(W,st.map(function(s){return[s.f,s.l,s.s]}),["--f","--l","--s"],function(v){return nl(Math.round(v*10)/10)+"u"});
+    c.innerHTML=svg+'<div class="tip" hidden></div>';
+    bindTip(c,k,st);
+  }
+}
+function tipHtml(k,i,s){
+  var w=WK[i],hd='<b>Week '+(i+1)+' · '+w.n+'</b>'+PHN[w.ph||"basis"]+(w.tag&&w.tag!==PHN[w.ph]?' · '+esc(w.tag):'')+'<br>';
+  if(k==="ph")return hd+(w.note?esc(w.note.length>90?w.note.slice(0,88)+"…":w.note):"");
+  if(k==="bk")return hd+'Fietsen: '+nk(s.bk)+' km';
+  if(k==="rn")return hd+'Hardlopen: '+nk(s.rn)+' km';
+  if(k==="sw")return hd+'Zwemmen: '+fmtM(s.sw)+' m';
+  if(k==="ld")return hd+'Belasting: '+nk(w.load)+(w.lw?'<br><b>'+w.lw+'% boven de weken ervoor</b>':'');
+  return hd+'Fietsen: '+hm(s.f)+'<br>Hardlopen: '+hm(s.l)+(s.s?'<br>Zwemmen: '+hm(s.s):'')+(s.r?'<br>Kracht en overig: '+hm(s.r):'')+'<br><b>Totaal: '+hm(s.t)+'</b>';
+}
+function bindTip(c,k,st){
+  var tip=c.querySelector(".tip"),hs=c.querySelectorAll(".hit");
+  function on(e){
+    var r=e.currentTarget,i=+r.getAttribute("data-i"),cb=c.getBoundingClientRect(),rb=r.getBoundingClientRect();
+    tip.innerHTML=tipHtml(k,i,st[i]);tip.hidden=false;
+    var x=rb.left-cb.left+rb.width/2,tw=tip.offsetWidth||160;
+    tip.style.left=clamp(x-tw/2,0,Math.max(0,c.clientWidth-tw))+"px";
+    tip.style.top=(k==="ph"?48:-6)+"px";
+    if(k!=="ph")tip.style.transform="translateY(-100%)";
+  }
+  function off(){tip.hidden=true}
+  for(var j=0;j<hs.length;j++){["mouseenter","focus","click"].forEach(function(ev){hs[j].addEventListener(ev,on)});["mouseleave","blur"].forEach(function(ev){hs[j].addEventListener(ev,off)})}
+}
+var rsz=null;
+window.addEventListener("resize",function(){if(cur!=="opb")return;clearTimeout(rsz);rsz=setTimeout(drawCharts,120)});
+function show(sel,first){
+  
+  if(typeof sel==="number"&&WK.length){sel=clamp(sel,0,WK.length-1);wsel=sel}
+  cur=sel;mark();
+  if(sel==="set")view.innerHTML=setView();
+  else if(sel==="opb"){view.innerHTML=opbView();ovFold();drawCharts()}
+  else if(sel==="race"){view.innerHTML=raceView();bindRace()}
+  else if(WK[sel]){view.innerHTML=week(sel);bindWeek()}
+  else view.innerHTML='<div class="card"><p>Er is nog geen schema. Voeg een doel toe bij Instellingen.</p></div>';
+  if(typeof sel==="string"&&sel!=="opb"&&sel!=="race")bindAll();
+  if(DR){var fm=view.querySelector(".aform");if(fm&&fm.scrollIntoView)fm.scrollIntoView({block:"nearest"})}
+  if(first){
+    var t=view.querySelector(".today");
+    if(t)t.scrollIntoView({block:"center"});
+    var tb=tabs.children;
+    for(var j=0;j<tb.length;j++)if(tb[j].getAttribute("aria-pressed")==="true")tb[j].scrollIntoView({inline:"center",block:"nearest"});
+  }
+}
+loadS();loadG();loadL();calc();plan();raceList();
+var start=0;
+WK.forEach(function(w,i){var d=diffDays(w);if(d>=0)start=i});
+wsel=start;cur=WK.length?start:"set";
+buildTabs();
+show(cur,true);
+</script>
+</body>
+</html>
