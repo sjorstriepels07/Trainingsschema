@@ -1,3 +1,0 @@
-# Trainingsschema
-
-FietsenHardlopenWedstrijdRust
